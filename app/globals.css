@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ebeae6;
+  --color-button-dark: #090909;
+  --color-button-white: #fbfbfb;
+  --color-border-button: #979797;
+  --color-font-main: #1b1818;
+}
+
+html {
+  scroll-behavior: smooth;
+}
