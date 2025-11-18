@@ -5,8 +5,8 @@ const josefin = Josefin_Sans({ subsets: ["latin"], weight: "400" });
 
 export default function Intro() {
   return (
-    <div className="my-[75px] mx-32 flex justify-between items-center">
-      <div className="flex flex-col text-font-main">
+    <div className="my-[75px] mx-20 flex justify-between items-center">
+      <div className="flex flex-col text-font-main ml-16">
         <div className={`${josefin.className} text-6xl`}>
           <h6>Solicite sua</h6>
           <h6>Nacionalidade Portuguesa</h6>
@@ -27,7 +27,7 @@ export default function Intro() {
       </div>
 
       <Image
-        src="/Foto 1.png"
+        src="/Intro - Amanda.png"
         alt="Imagem de Amanda Dantas"
         className="rounded-[86px] shadow-2xl"
         width={800}
