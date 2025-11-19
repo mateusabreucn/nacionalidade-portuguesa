@@ -19,7 +19,7 @@ export default function Equipa() {
 
         <div className="relative flex-1 h-[478px]">
           <Image
-            src="/Ellipse.svg"
+            src="/Icons/Ellipse.svg"
             fill
             alt="Detalhe Fundo"
             className="object-fill"
