@@ -2,6 +2,7 @@ import Header from "./Header";
 import Intro from "./Intro";
 import Equipa from "./Equipa";
 import Footer from "./Footer";
+import Servicos from "./Servicos";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <Intro />
       <Equipa />
+      <Servicos />
       <Footer />
     </div>
   );
