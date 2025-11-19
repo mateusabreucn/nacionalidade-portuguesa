@@ -2,17 +2,27 @@ import Image from "next/image";
 import CardBranco from "./components/CardBranco";
 import CardFoto from "./components/CardFoto";
 import { NomeEquipa } from "./enums/NomeEquipa";
+import IconBadge from "./components/IconBagde";
 
 export default function Equipa() {
   return (
     <CardBranco titulo="Quem somos nós">
       <div className="w-full flex justify-between gap-x-20">
-        <CardFoto
-          src={`/Equipa - ${NomeEquipa.AmandaCDantas}.jpg`}
-          nome={NomeEquipa.AmandaCDantas}
-          width={510}
-          height={478}
-        />
+        <div className="relative">
+          <CardFoto
+            src={`/Equipa - ${NomeEquipa.AmandaCDantas}.jpg`}
+            nome={NomeEquipa.AmandaCDantas}
+            width={510}
+            height={478}
+          />
+
+          <div className="absolute bottom-10 -right-16">
+            <IconBadge
+              icon="/Icons/Equipa/Trofeu.svg"
+              altText="Ícone de Troféu"
+            />
+          </div>
+        </div>
 
         <div className="relative flex-1 h-[478px]">
           <Image
