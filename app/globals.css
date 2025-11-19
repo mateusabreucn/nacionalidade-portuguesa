@@ -7,6 +7,13 @@
   --color-border-button: #979797;
   --color-font-main: #1b1818;
   --color-card-branco: #f6f6f6;
+  --color-icon-badge: #d9d9d9;
+
+  --font-inter: var(--font-inter);
+  --font-josefin: var(--font-josefin);
+
+  --font-family-sans: var(--font-inter);
+  --font-family-josefin: var(--font-josefin);
 }
 
 html {

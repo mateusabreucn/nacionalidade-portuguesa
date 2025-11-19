@@ -1,10 +1,7 @@
 import Image from "next/image";
 import CardBranco from "./components/CardBranco";
 import CardFoto from "./components/CardFoto";
-import { Josefin_Sans } from "next/font/google";
 import { NomeEquipa } from "./enums/NomeEquipa";
-
-const josefin = Josefin_Sans({ subsets: ["latin"], weight: "400" });
 
 export default function Equipa() {
   return (
@@ -26,7 +23,7 @@ export default function Equipa() {
           />
 
           <div className="absolute inset-0 flex items-center pl-24 pr-20 mb-10 z-10">
-            <div className={`${josefin.className} text-5xl leading-16`}>
+            <div className="font-josefin text-5xl leading-16">
               Há mais de sete anos, ajudamos brasileiros a transformarem o sonho
               da cidadania portuguesa em realidade.
             </div>

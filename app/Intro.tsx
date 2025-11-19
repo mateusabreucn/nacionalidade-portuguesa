@@ -1,13 +1,10 @@
 import Image from "next/image";
-import { Josefin_Sans } from "next/font/google";
-
-const josefin = Josefin_Sans({ subsets: ["latin"], weight: "400" });
 
 export default function Intro() {
   return (
     <div className="my-[75px] mx-20 flex justify-between items-center">
       <div className="flex flex-col text-font-main ml-16">
-        <div className={`${josefin.className} text-6xl`}>
+        <div className="font-josefin text-6xl">
           <h6>Solicite sua</h6>
           <h6>Nacionalidade Portuguesa</h6>
         </div>
