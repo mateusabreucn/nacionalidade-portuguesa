@@ -1,33 +1,26 @@
 import Image from "next/image";
+import CustomLink from "./components/CustomLink";
 
 export default function Header() {
   return (
-    <header className="w-full h-fit flex justify-between items-center">
+    <header className="h-fit flex justify-between items-center mx-10">
       <Image src="/logo.png" alt="Logo" width={407} height={90} />
 
-      <nav className="flex gap-16">
-        <a href="#" className="text-black">
-          Home
-        </a>
+      <nav className="flex gap-16 text-xl font-medium">
+        <CustomLink name="Home" href="home" />
 
-        <a href="#" className="text-black">
-          Equipa
-        </a>
+        <CustomLink name="Equipa" href="equipa" />
 
-        <a href="#" className="text-black">
-          Serviços
-        </a>
+        <CustomLink name="Serviços" href="servicos" />
 
-        <a href="#" className="text-black">
-          Contato
-        </a>
+        <CustomLink name="Contato" href="contato" />
       </nav>
 
       <div>
         <button
           className="
-            bg-button-dark text-white rounded px-6 py-4 
-            border border-border-button cursor-pointer 
+            bg-button-dark text-white rounded-xl px-6 py-4
+            border border-border-button cursor-pointer
             hover:brightness-80 transition-all
           "
         >

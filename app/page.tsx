@@ -8,10 +8,18 @@ export default function Home() {
   return (
     <div className="flex flex-col p-10 min-h-screen bg-background">
       <Header />
-      <Intro />
-      <Equipa />
-      <Servicos />
-      <Footer />
+      <section id="home">
+        <Intro />
+      </section>
+      <section id="equipa">
+        <Equipa />
+      </section>
+      <section id="servicos">
+        <Servicos />
+      </section>
+      <section id="contato">
+        <Footer />
+      </section>
     </div>
   );
 }
