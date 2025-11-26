@@ -23,13 +23,15 @@ export default function Intro() {
         </button>
       </div>
 
-      <Image
-        src="/Intro - Amanda.png"
-        alt="Imagem de Amanda Dantas"
-        className="rounded-[86px] shadow-2xl"
-        width={800}
-        height={800}
-      />
+      <div className="relative w-full lg:max-w-[650px] xl:max-w-[500px] 2xl:max-w-[750px] aspect-square shrink-0">
+        <Image
+          src="/Intro - Amanda.png"
+          alt="Imagem de Amanda Dantas"
+          fill
+          className="rounded-[86px] shadow-2xl object-cover"
+          priority
+        />
+      </div>
     </div>
   );
 }
