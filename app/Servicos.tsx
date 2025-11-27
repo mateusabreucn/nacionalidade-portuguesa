@@ -5,7 +5,7 @@ import IconBadge from "./components/IconBagde";
 export default function Servicos() {
   return (
     <CardBranco titulo="Serviços">
-      <div className="w-full grid grid-cols-3 gap-y-40 gap-x-60 justify-items-center relative">
+      <div className="w-full grid grid-cols-3 gap-y-40 justify-items-center relative gap-x-20 lg:gap-x-36 xl:gap-x-40 2xl:gap-x-60">
         <Image
           src="/Icons/Servicos/Ellipse.svg"
           alt="Detalhe fundo"
