@@ -26,7 +26,7 @@ export default function Header() {
       </nav>
 
       {/* Desktop Button */}
-      <div className="hidden lg:block lg:text-base xl:text-lg 2xl:text-xl">
+      <div className="hidden lg:block text-base xl:text-lg 2xl:text-xl">
         <button
           className="
             bg-button-dark text-white rounded-xl px-6 py-4
