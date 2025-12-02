@@ -8,21 +8,20 @@ interface IconBadgeProps {
 
 export default function IconBadge({ icon, altText, titulo }: IconBadgeProps) {
   return (
-    <div className="w-fit flex flex-col gap-y-2 xl:gap-y-4 2xl:gap-y-6 items-center z-20">
-      <div className="rounded-full bg-icon-badge flex justify-center items-center aspect-square w-16 sm:w-20 md:w-24 lg:w-28 xl:w-36 2xl:w-44">
-        <div className="relative aspect-square w-12 sm:w-14 md:w-18 lg:w-20 xl:w-24 2xl:w-32">
+    <div className="w-full flex flex-col gap-y-1 xl:gap-y-2 2xl:gap-y-4 items-center z-20">
+      <div className="w-[35%] rounded-full bg-icon-badge flex justify-center items-center aspect-square">
+        <div className="relative aspect-square w-[60%]">
           <Image
             src={icon}
             alt={altText}
             fill
-            objectFit="cover"
-            className="relative"
+            className="relative object-cover"
           />
         </div>
       </div>
 
       {titulo && (
-        <div className="text-xl xl:text-2xl 2xl:text-4xl text-center">
+        <div className="text-base xl:text-xl 2xl:text-3xl text-center relative">
           {titulo}
         </div>
       )}

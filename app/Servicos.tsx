@@ -10,10 +10,10 @@ export default function Servicos() {
           src="/Icons/Servicos/Ellipse.svg"
           alt="Detalhe fundo"
           fill
-          className="max-w-[75%] mx-auto z-0 object-fill"
+          className="max-w-full mx-auto z-0 object-fill"
         />
 
-        <div className="w-[90%] mx-auto grid grid-cols-3 gap-y-2 lg:gap-y-14 xl:gap-y-20 2xl:gap-y-40 justify-items-center z-10">
+        <div className="w-full mx-auto grid grid-cols-3 gap-y-2 lg:gap-y-14 xl:gap-y-20 2xl:gap-y-40 justify-items-center z-10">
           <IconBadge
             icon="/Icons/Servicos/Nacionalidade.svg"
             altText="Ícone de Nacionalidade"

@@ -19,8 +19,7 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
         <Image
           src={src}
           alt={`Foto de ${nome}`}
-          className="rounded-[64px] shadow-2xl aspect-square"
-          objectFit="cover"
+          className="rounded-[64px] shadow-2xl aspect-square object-cover"
           fill
         />
       </div>

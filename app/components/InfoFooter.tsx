@@ -14,7 +14,7 @@ export default function InfoFooter({
   return (
     <div className="flex gap-x-2 items-center justify-center">
       <div className="relative aspect-square w-[120px] lg:w-[140px] xl:w-[150px]">
-        <Image src={icon} alt={altText} fill objectFit="cover" />
+        <Image src={icon} alt={altText} fill className="object-cover" />
       </div>
 
       <div className="text-md lg:text-md xl:text-xl 2xl:text-2xl">

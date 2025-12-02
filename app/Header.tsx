@@ -9,29 +9,30 @@ export default function Header() {
 
   return (
     <header className="h-fit flex justify-between items-center py-4 relative">
-      <Image
-        src="/logo.png"
-        alt="Logo"
-        width={400}
-        height={90}
-        className="w-[400px] lg:w-[300px] 2xl:w-[400px] h-auto mx-auto lg:mx-0"
-      />
+      <a
+        href="#"
+        className="w-[50%] lg:w-[22%] h-auto mx-auto lg:mx-0 hover:scale-105 duration-300"
+      >
+        <Image src="/logo.png" alt="Logo" width={400} height={90} />
+      </a>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex lg:gap-6 xl:gap-12 2xl:gap-16 text-xl font-medium">
-        <CustomLink name="Home" href="#home" />
-        <CustomLink name="Equipa" href="#equipa" />
-        <CustomLink name="Serviços" href="#servicos" />
-        <CustomLink name="Contato" href="#contato" />
+      <nav className="hidden lg:flex lg:gap-6 xl:gap-10 2xl:gap-12">
+        <CustomLink name="Home" href="" />
+        <CustomLink name="Equipa" href="equipa" />
+        <CustomLink name="Serviços" href="servicos" />
+        <CustomLink name="Contato" href="contato" />
       </nav>
 
       {/* Desktop Button */}
-      <div className="hidden lg:block text-base xl:text-lg 2xl:text-xl">
+      <div className="hidden lg:block">
         <button
           className="
-            bg-button-dark text-white rounded-xl px-6 py-4
+            bg-button-dark text-white rounded-xl p-3 xl:p-4
             border border-border-button cursor-pointer
             hover:brightness-80 transition-all
+            hover:scale-105 duration-300
+            text-xs xl:text-sm 2xl:text-base
           "
         >
           Fale com um Especialista
@@ -65,10 +66,10 @@ export default function Header() {
       {isMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-lg rounded-b-2xl mt-4 py-6 px-4 flex flex-col gap-4 z-50">
           <nav className="flex flex-col gap-4 text-lg font-medium">
-            <CustomLink name="Home" href="#home" />
-            <CustomLink name="Equipa" href="#equipa" />
-            <CustomLink name="Serviços" href="#servicos" />
-            <CustomLink name="Contato" href="#contato" />
+            <CustomLink name="Home" href="home" />
+            <CustomLink name="Equipa" href="equipa" />
+            <CustomLink name="Serviços" href="servicos" />
+            <CustomLink name="Contato" href="contato" />
           </nav>
 
           <button

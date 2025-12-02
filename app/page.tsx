@@ -6,7 +6,7 @@ import Servicos from "./Servicos";
 
 export default function Home() {
   return (
-    <div className="flex flex-col p-10 min-h-screen bg-background">
+    <div className="flex flex-col p-10 min-h-screen max-w-screen-2xl mx-auto bg-background">
       <Header />
       <section id="home">
         <Intro />
