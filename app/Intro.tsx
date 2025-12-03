@@ -9,7 +9,7 @@ export default function Intro() {
           <h1>Nacionalidade Portuguesa</h1>
         </div>
 
-        <p className="text-base xl:text-xl 2xl:text-2xl mt-">
+        <p className="text-base xl:text-lg 2xl:text-xl mt-2">
           Apoio jurídico em processos de nacionalidade e imigração.
         </p>
 
@@ -19,7 +19,8 @@ export default function Intro() {
             lg:mt-10 w-fit border border-border-button
             cursor-pointer hover:brightness-80 transition-all
             hover:scale-105 duration-300
-            text-lg 2xl:text-xl mx-auto lg:mx-0
+            text-lg 2xl:text-xl
+            mx-auto lg:mx-0 mt-4
           "
         >
           Faça um Orçamento
