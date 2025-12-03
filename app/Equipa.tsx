@@ -124,7 +124,7 @@ export default function Equipa() {
             className={`
               absolute
               inset-0
-              -left-8
+              -left-6
               transition-all duration-500 ease-in-out
               ${
                 showModal
