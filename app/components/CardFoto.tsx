@@ -15,7 +15,7 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
     >
       <div
         className={`
-          relative aspect-square w-full shadow-2xl
+          relative aspect-square w-full img-shadow
           rounded-4xl md:rounded-[48px] lg:rounded-[64px]
           overflow-hidden
           ${

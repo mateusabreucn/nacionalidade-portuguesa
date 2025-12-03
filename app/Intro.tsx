@@ -31,8 +31,7 @@ export default function Intro() {
           src="/Intro - Amanda.png"
           alt="Imagem de Amanda Dantas"
           fill
-          className="rounded-4xl object-cover"
-          style={{ boxShadow: "12px 20px 50px rgba(0, 0, 0, 0.3)" }}
+          className="rounded-4xl object-cover img-shadow"
           priority
         />
       </div>
