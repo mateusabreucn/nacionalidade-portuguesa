@@ -26,7 +26,7 @@ export default function IconBadge({
       onMouseLeave={onMouseLeave}
       className={`
         flex flex-col items-center cursor-pointer
-        w-full max-w-[200px] gap-4 z-20
+        w-full max-w-[200px] gap-4
         transition-all duration-500
         ${isActive ? "rotate-180" : "hover:scale-110"}
       `}
@@ -36,10 +36,11 @@ export default function IconBadge({
         relative flex items-center justify-center
         bg-icon-badge rounded-full shrink-0
         aspect-square
-        w-24 lg:w-32 xl:w-36
+        w-24 lg:w-24 xl:w-36
+        z-10
       "
       >
-        <div className="relative aspect-square w-3/4">
+        <div className="relative aspect-square w-3/4 z-30">
           <Image src={icon} alt={altText} fill className="object-contain" />
         </div>
       </div>

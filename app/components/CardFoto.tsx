@@ -11,19 +11,14 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
     <div
       className="
       flex flex-col items-center
-      gap-y-8 w-full"
+      gap-y-4 xl:gap-y-8
+      w-full"
     >
       <div
-        className={`
+        className="
           relative aspect-square w-full img-shadow
-          rounded-4xl md:rounded-[48px] lg:rounded-[64px]
-          overflow-hidden
-          ${
-            bigger
-              ? "w-[280px] md:w-[360px] lg:w-[300px] xl:w-[360px] 2xl:w-[420px]"
-              : "w-[180px] md:w-[210px] lg:w-[210px] xl:w-[250px]"
-          }
-        `}
+          rounded-4xl
+          overflow-hidden"
       >
         <Image
           src={src}
@@ -33,7 +28,15 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
         />
       </div>
 
-      <h3 className="text-base md:text-xl lg:text-2xl text-center font-medium">
+      <h3
+        className={`
+          text-center font-medium
+          text-base lg:text-xl xl:text-2xl
+          whitespace-nowrap
+          ${
+            bigger ? "xl:text-3xl lg:absolute lg:-bottom-12 xl:-bottom-16" : ""
+          }`}
+      >
         {nome}
       </h3>
     </div>
