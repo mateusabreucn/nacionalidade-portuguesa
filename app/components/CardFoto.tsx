@@ -3,30 +3,39 @@ import Image from "next/image";
 interface CardFotoProps {
   src: string;
   nome: string;
-  bigger?: boolean;
+  bigger?: boolean; // Prop para diferenciar a foto da Amanda das outras
 }
 
 export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
   return (
     <div
-      className={`flex flex-col items-center gap-y-10 shrink-0 ${
-        bigger
-          ? `w-[300px] xl:w-[360px] 2xl:w-[500px]`
-          : `w-[260px] xl:w-[300px] 2xl:w-[330px]`
-      }`}
+      className="
+      flex flex-col items-center
+      gap-y-8 w-full"
     >
-      <div className="relative aspect-square w-full">
+      <div
+        className={`
+          relative aspect-square w-full shadow-2xl
+          rounded-4xl md:rounded-[48px] lg:rounded-[64px]
+          overflow-hidden
+          ${
+            bigger
+              ? "w-[280px] md:w-[360px] lg:w-[300px] xl:w-[360px] 2xl:w-[420px]"
+              : "w-[180px] md:w-[210px] lg:w-[210px] xl:w-[250px]"
+          }
+        `}
+      >
         <Image
           src={src}
           alt={`Foto de ${nome}`}
-          className="rounded-[64px] shadow-2xl aspect-square object-cover"
           fill
+          className="object-cover"
         />
       </div>
 
-      <div className="text-2xl xl:text-3xl 2xl:text-4xl w-full text-center">
+      <h3 className="text-base md:text-xl lg:text-2xl text-center font-medium">
         {nome}
-      </div>
+      </h3>
     </div>
   );
 }

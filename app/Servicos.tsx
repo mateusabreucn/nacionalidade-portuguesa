@@ -1,19 +1,24 @@
 import Image from "next/image";
 import CardBranco from "./components/CardBranco";
-import IconBadge from "./components/IconBagde";
+import IconBadge from "./components/IconBadge";
 
 export default function Servicos() {
   return (
     <CardBranco titulo="Serviços">
-      <div className="w-full mx-auto relative">
-        <Image
-          src="/Icons/Servicos/Ellipse.svg"
-          alt="Detalhe fundo"
-          fill
-          className="max-w-full mx-auto z-0 object-fill"
-        />
+      <div className="relative w-full mx-auto">
+        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+          <div className="relative w-3/4 h-3/4 opacity-60 lg:opacity-100">
+            <Image
+              src="/Icons/Servicos/Ellipse.svg"
+              alt="Detalhe fundo"
+              fill
+              className="object-contain hidden md:block"
+              priority
+            />
+          </div>
+        </div>
 
-        <div className="w-full mx-auto grid grid-cols-3 gap-y-2 lg:gap-y-14 xl:gap-y-20 2xl:gap-y-40 justify-items-center z-10">
+        <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-14 lg:gap-y-16 justify-items-center">
           <IconBadge
             icon="/Icons/Servicos/Nacionalidade.svg"
             altText="Ícone de Nacionalidade"
