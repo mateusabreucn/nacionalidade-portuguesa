@@ -4,15 +4,32 @@ interface IconBadgeProps {
   icon: string;
   altText: string;
   titulo?: string;
+  onClick?: () => void;
+  isActive?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export default function IconBadge({ icon, altText, titulo }: IconBadgeProps) {
+export default function IconBadge({
+  icon,
+  altText,
+  titulo,
+  onClick,
+  isActive = false,
+  onMouseEnter,
+  onMouseLeave,
+}: IconBadgeProps) {
   return (
     <div
-      className="
-      flex flex-col items-center cursor-pointer
-      w-full max-w-[200px] gap-4 z-20
-      hover:scale-110 transition-all duration-300"
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className={`
+        flex flex-col items-center cursor-pointer
+        w-full max-w-[200px] gap-4 z-20
+        transition-all duration-500
+        ${isActive ? "rotate-180" : "hover:scale-110"}
+      `}
     >
       <div
         className="
@@ -29,10 +46,11 @@ export default function IconBadge({ icon, altText, titulo }: IconBadgeProps) {
 
       {titulo && (
         <h3
-          className="
+          className={`
           text-center font-medium
           text-lg lg:text-xl xl:text-2xl
-        "
+          ${isActive ? "rotate-180" : ""}
+        `}
         >
           {titulo}
         </h3>

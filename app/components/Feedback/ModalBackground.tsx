@@ -1,0 +1,27 @@
+import React from "react";
+
+interface ModalBackgroundProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function ModalBackground({
+  children,
+  className = "",
+}: ModalBackgroundProps) {
+  return (
+    <div
+      className={`
+        relative w-full h-full
+        bg-[#EFEBE9]
+        rounded-[3rem]
+        shadow-lg
+        flex items-center justify-center
+        p-6 md:p-8 lg:p-8
+        ${className}
+      `}
+    >
+      {children}
+    </div>
+  );
+}
