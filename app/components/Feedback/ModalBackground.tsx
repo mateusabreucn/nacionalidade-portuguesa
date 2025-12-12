@@ -15,7 +15,7 @@ export default function ModalBackground({
         relative w-full h-full
         bg-[#EFEBE9]
         rounded-[3rem]
-        shadow-lg
+        shadow-xl
         flex items-center justify-center
         p-6 md:p-8 lg:p-8
         ${className}

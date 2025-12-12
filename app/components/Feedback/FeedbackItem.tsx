@@ -17,28 +17,30 @@ export default function FeedbackItem({
 }: FeedbackItemProps) {
   return (
     <div className="flex flex-col gap-4 w-full h-full justify-center">
-      {/* Header: Avatar + Info */}
+      {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
-          <div className="relative w-18 h-18 md:w-22 md:h-22">
+        <div className="relative w-20 h-20 md:w-22 md:h-22 shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+          <div className="w-full h-full">
             <Image
               src={avatarSrc}
               alt={name}
               fill
-              className="object-contain rounded-full"
+              className="object-contain rounded-full scale-125"
             />
           </div>
         </div>
-        <div className="flex flex-col gap-1">
-          <div className="relative w-48 h-10 md:w-64 md:h-14">
+
+        <div className="w-full flex flex-col gap-1 ">
+          <div className="relative w-48 h-10 md:w-full md:h-">
             <Image
               src="/Icons/Feedback/Stars.svg"
               alt="5 estrelas"
-              fill
-              className="object-contain object-left"
+              width={124}
+              height={60}
             />
           </div>
-          <h4 className="font-josefin text-xl md:text-2xl text-[#4A3B32]">
+
+          <h4 className="font-josefin text-2xl md:text-2xl text-[#4A3B32]">
             {name}, {city}
           </h4>
         </div>
