@@ -30,13 +30,13 @@ export default function FeedbackItem({
           </div>
         </div>
 
-        <div className="w-full flex flex-col gap-1 ">
-          <div className="relative w-48 h-10 md:w-full md:h-">
+        <div className="w-full flex flex-col gap-1">
+          <div className="relative self-start w-48 h-10 md:w-20 md:h-14">
             <Image
-              src="/Icons/Feedback/Stars.svg"
+              src="/Icons/Feedback/Stars.png"
               alt="5 estrelas"
-              width={50}
-              height={50}
+              width={120}
+              height={80}
             />
           </div>
 
