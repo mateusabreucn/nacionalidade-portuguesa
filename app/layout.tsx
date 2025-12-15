@@ -9,7 +9,7 @@ const inter = Inter({
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500"],
   variable: "--font-josefin",
 });
 

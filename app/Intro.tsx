@@ -2,14 +2,16 @@ import Image from "next/image";
 
 export default function Intro() {
   return (
-    <div className="my-14 mx-14 xl:mx-16 2xl:mx-20 flex flex-col lg:flex-row justify-between items-center gap-x-6 xl:gap-x-8 gap-y-10 xl:gap-y-16">
+    <div className="my-6 mx-0 xl:mx-16 2xl:mx-20 flex flex-col-reverse lg:flex-row justify-between items-center gap-x-6 xl:gap-x-8 gap-y-10 xl:gap-y-16">
       <div className="flex flex-col text-font-main mx-auto text-center lg:text-left">
-        <div className="font-josefin font-bold text-5xl lg:text-[2rem] xl:text-[2.8rem] 2xl:text-5xl leading-tight">
-          <h1>Solicite sua</h1>
-          <h1>Nacionalidade Portuguesa</h1>
+        <div className="font-josefin leading-tight">
+          <h2 className="font-normal text-xl lg:text-3xl">Solicite sua</h2>
+          <h1 className="font-medium text-2xl lg:text-[2rem] xl:text-[2.8rem] 2xl:text-5xl">
+            Nacionalidade Portuguesa
+          </h1>
         </div>
 
-        <p className="text-base xl:text-lg 2xl:text-xl mt-2">
+        <p className="text-[0.6rem] xl:text-lg 2xl:text-xl mt-2">
           Apoio jurídico em processos de nacionalidade e imigração.
         </p>
 
@@ -27,7 +29,7 @@ export default function Intro() {
         </button>
       </div>
 
-      <div className="relative w-full aspect-21/20 shrink-0 max-w-[90%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[45%]">
+      <div className="relative w-full aspect-video lg:aspect-21/20 shrink-0 max-w-[90%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[45%]">
         <Image
           src="/Intro - Amanda.png"
           alt="Imagem de Amanda Dantas"

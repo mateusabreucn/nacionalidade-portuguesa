@@ -8,10 +8,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="h-fit flex justify-between items-center py-4 relative">
+    <header className="h-fit flex justify-between items-center py-0 md:py-4 relative">
       <a
         href="#"
-        className="w-[50%] lg:w-[22%] h-auto mx-auto lg:mx-0 hover:scale-105 duration-300"
+        className="w-[55%] md:w-[50%] lg:w-[22%] h-auto mx-auto lg:mx-0 hover:scale-105 duration-300"
       >
         <Image src="/logo.png" alt="Logo" width={400} height={90} />
       </a>
@@ -42,7 +42,7 @@ export default function Header() {
       {/* Mobile Hamburger Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="lg:hidden absolute right-0 flex flex-col gap-1.5 w-12 h-12 justify-center items-center z-50"
+        className="lg:hidden absolute right-0 flex flex-col gap-1.5 w-8 h-8 md:w-12 md:h-12 justify-center items-center z-50"
         aria-label="Menu"
       >
         <Image src="/Icons/Header/Menu.svg" alt="Menu" fill />
