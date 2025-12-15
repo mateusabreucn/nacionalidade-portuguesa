@@ -48,7 +48,7 @@ export default function FeedbackItem({
 
       {/* Body: Text + Arrow */}
       <div className="flex items-center gap-4 justify-between h-[250px]">
-        <div className="flex flex-col gap-2 max-w-[85%] max-h-full overflow-auto">
+        <div className="flex flex-col gap-2 max-w-[85%] max-h-full overflow-auto custom-scrollbar pr-1">
           {text.split("\n").map((paragraph, index) => (
             <p
               key={index}
