@@ -42,48 +42,72 @@ export default function Header() {
       {/* Mobile Hamburger Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="lg:hidden flex flex-col gap-1.5 w-8 h-8 justify-center items-center"
+        className="lg:hidden absolute right-0 flex flex-col gap-1.5 w-12 h-12 justify-center items-center z-50"
         aria-label="Menu"
       >
-        <span
-          className={`w-6 h-0.5 bg-button-dark transition-all ${
-            isMenuOpen ? "rotate-45 translate-y-2" : ""
-          }`}
-        />
-        <span
-          className={`w-6 h-0.5 bg-button-dark transition-all ${
-            isMenuOpen ? "opacity-0" : ""
-          }`}
-        />
-        <span
-          className={`w-6 h-0.5 bg-button-dark transition-all ${
-            isMenuOpen ? "-rotate-45 -translate-y-2" : ""
-          }`}
-        />
+        <Image src="/Icons/Header/Menu.svg" alt="Menu" fill />
       </button>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-lg rounded-b-2xl mt-4 py-6 px-4 flex flex-col gap-4 z-50">
-          <nav className="flex flex-col gap-4 text-lg font-medium">
-            <CustomLink name="Home" href="home" />
-            <CustomLink name="Equipa" href="equipa" />
-            <CustomLink name="Serviços" href="servicos" />
-            <CustomLink name="Contato" href="contato" />
-          </nav>
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`lg:hidden fixed inset-0 bg-black/30 z-40 transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
 
-          <button
-            className="
-              bg-button-dark text-white rounded-xl px-6 py-4
-              border border-border-button cursor-pointer
-              hover:brightness-80 transition-all
-              mt-2
-            "
-          >
-            Fale com um Especialista
-          </button>
+      {/* Mobile Menu Panel */}
+      <div
+        className={`lg:hidden fixed top-0 right-0 h-full w-[65%] max-w-[300px] bg-card-branco text-font-secondary shadow-2xl z-50 transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full py-8 px-6">
+          {/* Menu Title */}
+          <h2 className="font-josefin text-5xl text-center mt-4 mb-8">Menu</h2>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col items-center text-center text-xl">
+            <a
+              href="#"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-9 hover:text-gray-600 transition-colors"
+            >
+              Home
+            </a>
+
+            <div className="w-28 border-t border-black" />
+
+            <a
+              href="#equipa"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-9 hover:text-gray-600 transition-colors"
+            >
+              Equipa
+            </a>
+
+            <div className="w-28 border-t border-black" />
+
+            <a
+              href="#servicos"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-9 hover:text-gray-600 transition-colors"
+            >
+              Serviços
+            </a>
+
+            <div className="w-28 border-t border-black" />
+
+            <a
+              href="#contato"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-9 hover:text-gray-600 transition-colors"
+            >
+              Contacto
+            </a>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }
