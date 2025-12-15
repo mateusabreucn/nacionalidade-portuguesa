@@ -35,8 +35,8 @@ export default function FeedbackItem({
             <Image
               src="/Icons/Feedback/Stars.svg"
               alt="5 estrelas"
-              width={124}
-              height={60}
+              width={50}
+              height={50}
             />
           </div>
 
@@ -47,8 +47,8 @@ export default function FeedbackItem({
       </div>
 
       {/* Body: Text + Arrow */}
-      <div className="flex items-center gap-4 justify-between">
-        <div className="flex flex-col gap-2 max-w-[85%]">
+      <div className="flex items-center gap-4 justify-between h-[250px]">
+        <div className="flex flex-col gap-2 max-w-[85%] max-h-full overflow-auto">
           {text.split("\n").map((paragraph, index) => (
             <p
               key={index}
