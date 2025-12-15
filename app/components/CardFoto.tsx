@@ -16,15 +16,22 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
     >
       <div
         className="
-          relative aspect-square w-full img-shadow
-          rounded-4xl
+          relative
+          aspect-477/235 lg:aspect-square
+          w-full
+          img-shadow
+          rounded-[3.2rem]
+          lg:rounded-4xl
           overflow-hidden"
       >
         <Image
           src={src}
           alt={`Foto de ${nome}`}
           fill
-          className="object-cover"
+          className={`object-cover ${bigger ? "" : ""}`}
+          style={{
+            objectPosition: "50% 23%",
+          }}
         />
       </div>
 
