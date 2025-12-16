@@ -73,6 +73,7 @@ export default function Equipa() {
                 isActive={isLocked}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                size="sm:w-24 md:w-24 xl:w-32 2xl:w-36"
               />
             </div>
           </div>

@@ -11,14 +11,14 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
     <div
       className="
       flex flex-col items-center
-      gap-y-4 xl:gap-y-8
+      gap-y-2 md:gap-y-4 xl:gap-y-8
       w-full"
     >
       <div
         className={`
           ${bigger ? "aspect-2/1" : "aspect-square rounded-full"}
           lg:aspect-2/2
-          rounded-[4rem]
+          rounded-[3rem]
           lg:rounded-4xl
           relative
           w-full
@@ -38,11 +38,12 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
 
       <h3
         className={`
-          text-center font-medium
-          text-base lg:text-xl xl:text-2xl
+          text-center
           whitespace-nowrap
           ${
-            bigger ? "xl:text-3xl lg:absolute lg:-bottom-12 xl:-bottom-16" : ""
+            bigger
+              ? "text-base sm:text-xl md:text-2xl xl:text-3xl lg:absolute lg:-bottom-12 xl:-bottom-16"
+              : "text-[0.5rem] sm:text-base md:text-xl"
           }`}
       >
         {nome}

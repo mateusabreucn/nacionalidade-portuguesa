@@ -4,6 +4,7 @@ interface IconBadgeProps {
   icon: string;
   altText: string;
   titulo?: string;
+  size?: string;
   onClick?: () => void;
   isActive?: boolean;
   onMouseEnter?: () => void;
@@ -14,6 +15,7 @@ export default function IconBadge({
   icon,
   altText,
   titulo,
+  size,
   onClick,
   isActive = false,
   onMouseEnter,
@@ -32,13 +34,13 @@ export default function IconBadge({
       `}
     >
       <div
-        className="
+        className={`
         relative flex items-center justify-center
         bg-icon-badge rounded-full shrink-0
         aspect-square
-        w-24 lg:w-24 xl:w-36
         z-10
-      "
+        ${size ? size : "w-24 lg:w-24 xl:w-36"}
+      `}
       >
         <div className="relative aspect-square w-3/4 z-30">
           <Image src={icon} alt={altText} fill className="object-contain" />
