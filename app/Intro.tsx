@@ -30,12 +30,27 @@ export default function Intro() {
         </button>
       </div>
 
-      <div className="relative w-full aspect-video lg:aspect-21/20 shrink-0 max-w-[98%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[45%]">
+      <div
+        className="
+          relative w-full shrink-0
+          aspect-2/1 lg:aspect-21/20
+          overflow-hidden
+          rounded-[4rem] lg:rounded-4xl
+          img-shadow
+          max-w-[98%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[45%]"
+      >
         <Image
           src="/Intro - Amanda.png"
           alt="Imagem de Amanda Dantas"
           fill
-          className="rounded-4xl object-cover img-shadow"
+          className="
+            object-cover
+            scale-108 lg:scale-100
+
+          "
+          style={{
+            objectPosition: "50% 60%",
+          }}
           priority
         />
       </div>

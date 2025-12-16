@@ -15,23 +15,24 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
       w-full"
     >
       <div
-        className="
+        className={`
+          ${bigger ? "aspect-2/1" : "aspect-square rounded-full"}
+          lg:aspect-2/2
+          rounded-[4rem]
+          lg:rounded-4xl
           relative
-          aspect-477/235 lg:aspect-square
           w-full
           img-shadow
-          rounded-[3.2rem]
-          lg:rounded-4xl
-          overflow-hidden"
+          overflow-hidden
+        `}
       >
         <Image
           src={src}
           alt={`Foto de ${nome}`}
           fill
-          className={`object-cover ${bigger ? "" : ""}`}
-          style={{
-            objectPosition: "50% 23%",
-          }}
+          className={`object-cover ${
+            bigger ? "object-[50%_23%] lg:origin-[50%_35%] lg:scale-150" : ""
+          }`}
         />
       </div>
 

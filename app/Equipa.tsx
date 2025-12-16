@@ -50,7 +50,7 @@ export default function Equipa() {
           w-full"
         >
           {/* Foto Amanda - sempre primeiro */}
-          <div className="relative w-[90%] aspect-video lg:aspect-square lg:w-[50%] order-1">
+          <div className="relative w-[90%] lg:w-[50%] order-1">
             <CardFoto
               src={`/Equipa - ${NomeEquipa.AmandaCDantas}.png`}
               nome={NomeEquipa.AmandaCDantas}
