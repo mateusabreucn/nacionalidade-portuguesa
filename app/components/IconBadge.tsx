@@ -28,7 +28,8 @@ export default function IconBadge({
       onMouseLeave={onMouseLeave}
       className={`
         flex flex-col items-center cursor-pointer
-        w-full max-w-[200px] gap-4
+        w-full max-w-[200px]
+        gap-2 sm:gap-4
         transition-all duration-500
         ${isActive ? "rotate-180" : "hover:scale-110"}
       `}
@@ -39,7 +40,7 @@ export default function IconBadge({
         bg-icon-badge rounded-full shrink-0
         aspect-square
         z-10
-        ${size ? size : "w-24 lg:w-24 xl:w-36"}
+        ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-36"}
       `}
       >
         <div className="relative aspect-square w-3/4 z-30">
@@ -51,7 +52,7 @@ export default function IconBadge({
         <h3
           className={`
           text-center font-medium
-          text-lg lg:text-xl xl:text-2xl
+          text-xs sm:text-lg lg:text-xl xl:text-2xl
           ${isActive ? "rotate-180" : ""}
         `}
         >

@@ -55,12 +55,12 @@ export default function Servicos() {
     <CardBranco titulo="Serviços">
       <div className="relative w-full mx-auto">
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-          <div className="relative w-3/4 h-3/4 opacity-60 lg:opacity-100">
+          <div className="relative w-3/4 h-3/4 opacity-100">
             <Image
               src="/Icons/Servicos/Ellipse.svg"
               alt="Detalhe fundo"
               fill
-              className="object-contain hidden md:block"
+              className="object-contain hidden lg:block"
               priority
             />
           </div>
@@ -68,8 +68,8 @@ export default function Servicos() {
 
         <div className="relative z-10">
           {/* Grid de ícones */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-14 lg:gap-y-16 justify-items-center">
-            {servicosData.map((servico, index) => (
+          <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:gap-y-14 lg:gap-y-16 justify-items-center">
+            {servicosData.map((servico) => (
               <div key={servico.id} className="relative z-20">
                 <IconBadge
                   icon={

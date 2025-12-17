@@ -83,7 +83,7 @@ export default function Equipa() {
             className="
             relative
             w-full max-w-[900px]
-            aspect-3/1
+            aspect-13/4 sm:aspect-3/1
             flex items-center justify-center
             order-3 lg:order-2"
           >
