@@ -61,7 +61,7 @@ export default function Equipa() {
               className="
               absolute
               bottom-4 md:bottom-8 lg:-bottom-6 xl:-bottom-10
-              right-0 md:-right-8 lg:-right-10 xl:-right-16
+              -right-4 sm:-right-6 md:-right-8 lg:-right-10 xl:-right-16
             "
             >
               <IconBadge
@@ -73,7 +73,7 @@ export default function Equipa() {
                 isActive={isLocked}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                size="sm:w-24 md:w-24 xl:w-32 2xl:w-36"
+                size="w-14 sm:w-24 xl:w-32 2xl:w-36"
               />
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Equipa() {
             className="
             relative
             w-full max-w-[900px]
-            aspect-video md:aspect-2/1
+            aspect-3/1
             flex items-center justify-center
             order-3 lg:order-2"
           >
@@ -117,10 +117,12 @@ export default function Equipa() {
             >
               <p
                 className="font-josefin
-                text-xl
+                text-[0.7rem]
+                sm:text-xl
                 md:text-2xl
                 xl:text-[2rem]
                 2xl:text-4xl
+                text-center lg:text-left
                 leading-tight md:leading-snug
               "
               >
@@ -148,13 +150,15 @@ export default function Equipa() {
             </div>
           </div>
 
-          {/* Três fotos - segundo no mobile, terceiro no desktop */}
+          {/* Três fotos - versão mobile */}
           <div
             className="
             w-full
             flex flex-row
-            gap-x-4 md:gap-x-8
-            items-center justify-center
+            sm:mt-6 md:mt-8
+            sm:mb-4
+            gap-x-6 sm:gap-x-10 md:gap-x-12
+            items-center justify-evenly
             order-2 lg:hidden"
           >
             <div className="w-1/4">
@@ -180,15 +184,15 @@ export default function Equipa() {
           </div>
         </div>
 
-        {/* Três fotos - versão desktop (embaixo) */}
+        {/* Três fotos - versão desktop */}
         <div
           className="
           hidden lg:flex
           relative
-          mx-auto
-          mt-18 md:mt-24 lg:mt-36
+          w-full
+          lg:mt-32 xl:mt-40
+          gap-14 xl:gap-20
           flex-row
-          md:gap-x-20
           items-center justify-center"
         >
           <div className="w-1/2 md:w-1/4 lg:w-1/5">

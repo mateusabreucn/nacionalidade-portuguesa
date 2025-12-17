@@ -17,8 +17,8 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
       <div
         className={`
           ${bigger ? "aspect-2/1" : "aspect-square rounded-full"}
-          lg:aspect-2/2
-          rounded-[3rem]
+          lg:aspect-square
+          rounded-[2.5rem]
           lg:rounded-4xl
           relative
           w-full
