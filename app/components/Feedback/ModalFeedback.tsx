@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import ModalBackground from "./ModalBackground";
 import FeedbackItem from "./FeedbackItem";
 
@@ -33,14 +34,42 @@ const feedbacks = [
 
 interface ModalFeedbackProps {
   isActive?: boolean;
+  onClose?: () => void;
+  isMobile?: boolean;
 }
 
 export default function ModalFeedback({
   isActive = false,
+  onClose,
+  isMobile = false,
 }: ModalFeedbackProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const isTransitioning = useRef(false);
+
+  // Swipe state
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+
+    if (isLeftSwipe) {
+      changeFeedback();
+    }
+  };
 
   const changeFeedback = () => {
     if (isTransitioning.current) return;
@@ -70,8 +99,31 @@ export default function ModalFeedback({
   const currentFeedback = feedbacks[currentIndex];
 
   return (
-    <div className="w-full h-full">
+    <div
+      className="w-full h-full"
+      onTouchStart={isMobile ? onTouchStart : undefined}
+      onTouchMove={isMobile ? onTouchMove : undefined}
+      onTouchEnd={isMobile ? onTouchEnd : undefined}
+    >
       <ModalBackground>
+        {/* Close Button - Mobile Only */}
+        {isMobile && onClose && (
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 z-50 p-2 hover:scale-110 transition-transform"
+            aria-label="Fechar"
+          >
+            <div className="relative w-6 h-6">
+              <Image
+                src="/Icons/Close.svg"
+                alt="Fechar"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </button>
+        )}
+
         <div
           className={`w-full h-full transition-opacity duration-300 ${
             isFading ? "opacity-0" : "opacity-100"
@@ -83,6 +135,7 @@ export default function ModalFeedback({
             city={currentFeedback.city}
             text={currentFeedback.text}
             onNext={handleNext}
+            isMobile={isMobile}
           />
         </div>
       </ModalBackground>

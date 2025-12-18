@@ -26,11 +26,15 @@ export default function Equipa() {
     setIgnoreHover(false);
   };
 
+  const handleClose = () => {
+    setIsLocked(false);
+    setIgnoreHover(true);
+    setIsHovered(false);
+  };
+
   const handleIconClick = () => {
     if (isLocked) {
-      setIsLocked(false);
-      setIgnoreHover(true);
-      setIsHovered(false);
+      handleClose();
     } else {
       setIsLocked(true);
       setIgnoreHover(false);
@@ -40,7 +44,7 @@ export default function Equipa() {
   return (
     <CardBranco titulo="Quem somos nós">
       {/* Container principal com ordenação flexível */}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full relative">
         {/* Seção superior: Amanda + Texto/Modal */}
         <div
           className="
@@ -83,7 +87,7 @@ export default function Equipa() {
             className="
             relative
             w-full max-w-[900px]
-            aspect-13/4 sm:aspect-3/1
+            aspect-13/4 sm:aspect-3/1 lg:aspect-video
             flex items-center justify-center
             order-3 lg:order-2"
           >
@@ -131,11 +135,13 @@ export default function Equipa() {
               </p>
             </div>
 
+            {/* Modal Desktop - dentro da div do texto */}
             <div
               className={`
                 absolute
                 inset-0
                 -left-6
+                hidden lg:block
                 transition-all duration-500 ease-in-out
                 ${
                   showModal
@@ -182,6 +188,29 @@ export default function Equipa() {
               />
             </div>
           </div>
+        </div>
+
+        {/* Modal Mobile - posicionado absolutamente sobre o container */}
+        <div
+          className={`
+            absolute
+            inset-0
+            z-10
+            lg:hidden
+            transition-all duration-500 ease-in-out
+            img-shadow
+            rounded-[3rem]
+            top-[45%]
+            -left-8 -right-8 -bottom-10
+            md:-left-16 md:-right-18 md:-bottom-12
+            ${
+              showModal
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 translate-y-4 pointer-events-none"
+            }
+          `}
+        >
+          <ModalFeedback isActive={showModal} onClose={handleClose} isMobile />
         </div>
 
         {/* Três fotos - versão desktop */}
