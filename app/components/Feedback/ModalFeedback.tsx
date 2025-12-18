@@ -110,17 +110,23 @@ export default function ModalFeedback({
         {isMobile && onClose && (
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-50 p-2 hover:scale-110 transition-transform"
-            aria-label="Fechar"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-[#D7CCC8] hover:bg-[#BCAAA4] transition-colors z-10"
+            aria-label="Fechar modal"
           >
-            <div className="relative w-6 h-6">
-              <Image
-                src="/Icons/Close.svg"
-                alt="Fechar"
-                fill
-                className="object-contain"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5 text-[#4A3B32]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
               />
-            </div>
+            </svg>
           </button>
         )}
 

@@ -175,7 +175,7 @@ export default function Servicos() {
             </div>
 
             {/* Conteúdo com scroll */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
+            <div className="flex-1 overflow-y-auto custom-scrollbar pr-3">
               <div className="flex flex-col gap-4 w-full">
                 {/* Body: Lista de tópicos */}
                 <div className="flex flex-col gap-2 pl-2">
@@ -263,7 +263,6 @@ export default function Servicos() {
                   }
                 }}
                 onMouseLeave={handleMouseLeave}
-                onClose={handleCloseModal}
               />
             )}
           </div>

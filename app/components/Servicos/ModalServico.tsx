@@ -18,7 +18,6 @@ interface ModalServicoProps {
   isActive?: boolean;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
-  onClose?: () => void;
 }
 
 export default function ModalServico({
@@ -27,7 +26,6 @@ export default function ModalServico({
   isActive = false,
   onMouseEnter,
   onMouseLeave,
-  onClose,
 }: ModalServicoProps) {
   const [swipeOffset, setSwipeOffset] = useState(0);
   const [isClosing, setIsClosing] = useState(false);

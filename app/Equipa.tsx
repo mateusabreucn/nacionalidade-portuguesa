@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import CardBranco from "./components/CardBranco";
 import CardFoto from "./components/CardFoto";
 import { NomeEquipa } from "./enums/NomeEquipa";
@@ -12,8 +12,50 @@ export default function Equipa() {
   const [isHovered, setIsHovered] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
   const [ignoreHover, setIgnoreHover] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
-  const showModal = isHovered || isLocked;
+  const showModal = isHovered || isLocked || (isInView && isMobile);
+
+  // Detectar se é mobile (< 1024px)
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  // Intersection Observer para detectar quando a seção está visível (apenas mobile)
+  useEffect(() => {
+    if (!isMobile) {
+      setIsInView(false);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1, // 50% da seção visível para ativar
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isMobile]);
 
   const handleMouseEnter = () => {
     if (!ignoreHover) {
@@ -44,7 +86,7 @@ export default function Equipa() {
   return (
     <CardBranco titulo="Quem somos nós">
       {/* Container principal com ordenação flexível */}
-      <div className="flex flex-col w-full relative">
+      <div ref={sectionRef} className="flex flex-col w-full relative">
         {/* Seção superior: Amanda + Texto/Modal */}
         <div
           className="

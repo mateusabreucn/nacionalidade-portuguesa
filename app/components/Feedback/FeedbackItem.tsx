@@ -70,7 +70,13 @@ export default function FeedbackItem({
       </div>
 
       {/* Body: Text + Arrow */}
-      <div className="flex items-center md:gap-1 xl:gap-4 justify-between h-[125px] sm:h-[250px] md-[275px] lg:h-[165px] xl:h-[250px]">
+      <div
+        className="
+          flex items-center
+          md:gap-1 xl:gap-4
+          justify-between
+          min-h-[60px]"
+      >
         <div
           className="
             flex flex-col gap-2
