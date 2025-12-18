@@ -42,7 +42,7 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
           whitespace-nowrap
           ${
             bigger
-              ? "text-base sm:text-xl md:text-2xl xl:text-3xl lg:absolute lg:-bottom-12 xl:-bottom-16"
+              ? "text-sm sm:text-xl md:text-2xl xl:text-3xl lg:absolute lg:-bottom-12 xl:-bottom-16"
               : "text-[0.5rem] sm:text-base md:text-xl"
           }`}
       >
