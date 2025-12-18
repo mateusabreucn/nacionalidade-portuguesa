@@ -17,7 +17,7 @@ export default function ModalBackground({
         rounded-[3rem]
         shadow-xl
         flex items-center justify-center
-        p-6 md:p-8 lg:p-8
+        p-6 md:p-8 xl:p-8
         ${className}
       `}
     >
