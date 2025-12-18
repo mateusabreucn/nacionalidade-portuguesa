@@ -14,9 +14,11 @@ export default function Equipa() {
   const [ignoreHover, setIgnoreHover] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [manuallyClosed, setManuallyClosed] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const showModal = isHovered || isLocked || (isInView && isMobile);
+  const showModal =
+    isHovered || isLocked || (isInView && isMobile && !manuallyClosed);
 
   // Detectar se é mobile (< 1024px)
   useEffect(() => {
@@ -42,6 +44,10 @@ export default function Equipa() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
+        // Reseta o estado de fechamento manual quando a seção sai da viewport
+        if (!entry.isIntersecting) {
+          setManuallyClosed(false);
+        }
       },
       {
         threshold: 0.1, // 50% da seção visível para ativar
@@ -72,6 +78,7 @@ export default function Equipa() {
     setIsLocked(false);
     setIgnoreHover(true);
     setIsHovered(false);
+    setManuallyClosed(true);
   };
 
   const handleIconClick = () => {
