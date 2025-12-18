@@ -4,10 +4,11 @@ export default function Footer() {
   return (
     <footer
       className="
-      mt-16 lg:mt-20 xl:mt-24
+      w-full mx-auto
+      mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24
       mb-4 lg:mb-8 xl:mb-12
       flex justify-center items-center
-      gap-x-6 lg:gap-x-36 xl:gap-x-48 2xl:gap-x-64
+      gap-x-4 md:gap-x-8 lg:gap-x-36 xl:gap-x-48 2xl:gap-x-64
     "
     >
       <InfoFooter icon="/Icons/Footer/Loc.svg" altText="Ícone de Localização">
