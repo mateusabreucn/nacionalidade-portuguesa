@@ -48,3 +48,21 @@ html {
 .img-shadow {
   box-shadow: 12px 20px 50px rgba(0, 0, 0, 0.3);
 }
+
+/* Animação de pulsar para WhatsApp popup */
+@keyframes pulse-whatsapp {
+  0%,
+  100% {
+    transform: scale(1);
+    /* box-shadow: 0 0 0 0 rgba(70, 25, 1, 0.2); */
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-pulse-whatsapp {
+  animation: pulse-whatsapp 2.5s ease-in-out infinite;
+}
