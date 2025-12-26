@@ -1,32 +1,49 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface InfoFooterProps {
   icon: string;
   altText: string;
+  link: string;
+  linkMobile?: string;
   children: React.ReactNode;
 }
 
 export default function InfoFooter({
   icon,
   altText,
+  link,
+  linkMobile,
   children,
 }: InfoFooterProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
-    <div
-      className="
-        flex w-fit
-        gap-x-1 md:gap-x-2
-        items-center justify-center
-        truncate"
-    >
-      <div
-        className="relative aspect-square w-10 sm:w-16 md:w-20 lg:w-32 xl:w-36
-"
+    <div className="flex w-full items-center justify-start gap-x-1 truncate md:gap-x-2">
+      <a
+        href={isMobile ? linkMobile : link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative aspect-square w-16 sm:w-24 md:w-20 lg:w-32 xl:w-36"
       >
         <Image src={icon} alt={altText} fill className="object-cover" />
-      </div>
+      </a>
 
-      <div className="text-[0.4rem] sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl truncate">
+      <div className="truncate text-xs sm:text-lg lg:text-base xl:text-xl 2xl:text-2xl">
         {children}
       </div>
     </div>
