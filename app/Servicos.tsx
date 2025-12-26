@@ -199,7 +199,7 @@ export default function Servicos() {
       <CardBranco titulo="Serviços">
         <div className="relative w-full mx-auto">
           <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-            <div className="relative w-3/4 h-3/4 opacity-100">
+            <div className="relative w-3/4 h-3/4 opacity-80">
               <Image
                 src="/Icons/Servicos/Ellipse.svg"
                 alt="Detalhe fundo"
