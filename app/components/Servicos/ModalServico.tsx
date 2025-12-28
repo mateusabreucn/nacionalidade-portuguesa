@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import ModalBackground from "../Feedback/ModalBackground";
+import ModalBackground from "../ModalBackground";
 
 export interface ServicoData {
   id: string;
