@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import ModalBackground from "./ModalBackground";
+import ModalBackground from "../../ModalBackground";
 import FeedbackItem from "./FeedbackItem";
 
 const feedbacks = [
@@ -47,30 +46,6 @@ export default function ModalFeedback({
   const [isFading, setIsFading] = useState(false);
   const isTransitioning = useRef(false);
 
-  // Swipe state
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  const minSwipeDistance = 50;
-
-  const onTouchStart = (e: React.TouchEvent) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const onTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-
-    if (isLeftSwipe) {
-      changeFeedback();
-    }
-  };
-
   const changeFeedback = () => {
     if (isTransitioning.current) return;
     isTransitioning.current = true;
@@ -84,33 +59,21 @@ export default function ModalFeedback({
 
   useEffect(() => {
     if (!isActive) return;
-
     const interval = setInterval(() => {
       changeFeedback();
     }, 7000);
-
     return () => clearInterval(interval);
   }, [isActive, currentIndex]);
-
-  const handleNext = () => {
-    changeFeedback();
-  };
 
   const currentFeedback = feedbacks[currentIndex];
 
   return (
-    <div
-      className="w-full h-full"
-      onTouchStart={isMobile ? onTouchStart : undefined}
-      onTouchMove={isMobile ? onTouchMove : undefined}
-      onTouchEnd={isMobile ? onTouchEnd : undefined}
-    >
+    <div className="w-full h-full">
       <ModalBackground>
-        {/* Close Button - Mobile Only */}
-        {isMobile && onClose && (
+        {onClose && (
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-[#D7CCC8] hover:bg-[#BCAAA4] transition-colors z-10"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-[#D7CCC8] hover:bg-[#BCAAA4] transition-colors z-20"
             aria-label="Fechar modal"
           >
             <svg
@@ -119,7 +82,7 @@ export default function ModalFeedback({
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth={2}
+              strokeWidth={3}
             >
               <path
                 strokeLinecap="round"
@@ -136,11 +99,8 @@ export default function ModalFeedback({
           }`}
         >
           <FeedbackItem
-            avatarSrc={currentFeedback.avatarSrc}
-            name={currentFeedback.name}
-            city={currentFeedback.city}
-            text={currentFeedback.text}
-            onNext={handleNext}
+            {...currentFeedback}
+            onNext={changeFeedback}
             isMobile={isMobile}
           />
         </div>
