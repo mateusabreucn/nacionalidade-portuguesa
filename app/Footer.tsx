@@ -9,7 +9,7 @@ export default function Footer() {
       flex-col md:flex-row
       mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24
       mb-4 lg:mb-8 xl:mb-12
-      gap-8 lg:gap-x-36 xl:gap-x-48 2xl:gap-x-64
+      gap-8 lg:gap-x-36 xl:gap-x-48
     "
     >
       <InfoFooter

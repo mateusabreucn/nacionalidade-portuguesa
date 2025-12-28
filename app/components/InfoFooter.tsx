@@ -33,17 +33,17 @@ export default function InfoFooter({
   }, []);
 
   return (
-    <div className="flex w-full items-center justify-start gap-x-1 truncate md:gap-x-2">
+    <div className="flex w-full items-center justify-center gap-x-1 truncate md:gap-x-2">
       <a
         href={isMobile ? linkMobile : link}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative aspect-square w-16 sm:w-24 md:w-20 lg:w-32 xl:w-36"
+        className="relative aspect-square w-16 sm:w-24 md:w-20 lg:w-32"
       >
         <Image src={icon} alt={altText} fill className="object-cover" />
       </a>
 
-      <div className="truncate text-xs sm:text-lg lg:text-base xl:text-xl 2xl:text-2xl">
+      <div className="truncate text-xs sm:text-lg lg:text-base xl:text-xl">
         {children}
       </div>
     </div>
