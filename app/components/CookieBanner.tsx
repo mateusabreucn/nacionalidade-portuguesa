@@ -29,7 +29,7 @@ export default function CookieBanner() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-[100] p-4 sm:p-6 bg-bg-card rounded-2xl img-shadow max-w-4xl mx-auto animate-slide-up">
+    <div className="fixed bottom-4 left-4 right-4 z-100 p-4 sm:p-6 bg-bg-card rounded-2xl img-shadow max-w-4xl mx-auto animate-slide-up">
       <div className="flex flex-col sm:flex-row items-center gap-4">
         {/* Ícone */}
         <div className="shrink-0">
