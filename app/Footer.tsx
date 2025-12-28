@@ -1,4 +1,4 @@
-import InfoFooter from "./components/InfoFooter";
+import InfoFooter from "./components/Footer/InfoFooter";
 
 export default function Footer() {
   return (
