@@ -1,4 +1,4 @@
-import CustomLink from "../CustomLink";
+import CustomLink from "./CustomLink";
 
 export default function HeaderDesktop() {
   return (
