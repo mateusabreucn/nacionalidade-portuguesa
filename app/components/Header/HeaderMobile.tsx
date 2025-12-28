@@ -38,7 +38,7 @@ export default function HeaderMobile() {
           {/* Navigation Links */}
           <nav className="flex flex-col items-center text-center text-xl">
             <a
-              href="#"
+              href="/"
               onClick={() => setIsMenuOpen(false)}
               className="py-9 hover:text-gray-600 transition-colors"
             >
@@ -48,7 +48,7 @@ export default function HeaderMobile() {
             <div className="w-28 border-t border-black" />
 
             <a
-              href="#equipa"
+              href="/#equipa"
               onClick={() => setIsMenuOpen(false)}
               className="py-9 hover:text-gray-600 transition-colors"
             >
@@ -58,7 +58,7 @@ export default function HeaderMobile() {
             <div className="w-28 border-t border-black" />
 
             <a
-              href="#servicos"
+              href="/#servicos"
               onClick={() => setIsMenuOpen(false)}
               className="py-9 hover:text-gray-600 transition-colors"
             >
@@ -68,7 +68,7 @@ export default function HeaderMobile() {
             <div className="w-28 border-t border-black" />
 
             <a
-              href="#contato"
+              href="/#contato"
               onClick={() => setIsMenuOpen(false)}
               className="py-9 hover:text-gray-600 transition-colors"
             >

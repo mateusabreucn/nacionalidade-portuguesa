@@ -3,8 +3,6 @@ import Hero from "./Hero";
 import Equipa from "./Equipa";
 import Footer from "./Footer";
 import Servicos from "./Servicos";
-import CookieBanner from "./components/CookieBanner";
-import PopUpWhatsApp from "./components/PopUpWhatsApp";
 
 export default function Home() {
   return (
@@ -15,6 +13,7 @@ export default function Home() {
         min-h-screen max-w-screen-2xl
         mx-auto
         bg-background
+        relative
       "
     >
       <Header />
@@ -30,9 +29,6 @@ export default function Home() {
       <section id="contato">
         <Footer />
       </section>
-
-      <PopUpWhatsApp />
-      <CookieBanner />
     </div>
   );
 }

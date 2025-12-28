@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CookieIcon } from "./Icons/CookieIcon";
 
 export default function CookieBanner() {
@@ -28,11 +29,11 @@ export default function CookieBanner() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-100 p-4 sm:p-6 bg-card-branco rounded-2xl img-shadow max-w-2xl mx-auto animate-slide-up">
+    <div className="fixed bottom-4 left-4 right-4 z-[100] p-4 sm:p-6 bg-card-branco rounded-2xl img-shadow max-w-4xl mx-auto animate-slide-up">
       <div className="flex flex-col sm:flex-row items-center gap-4">
         {/* Ícone */}
         <div className="shrink-0">
-          <CookieIcon className="w-12 h-12 sm:w-16 sm:h-16 text-font-secondary" />
+          <CookieIcon className="w-12 h-12 sm:w-16 sm:h-16 text-[#4A3B32]" />
         </div>
 
         {/* Texto */}
@@ -46,19 +47,20 @@ export default function CookieBanner() {
 
         {/* Botões */}
         <div className="flex flex-col sm:flex-row gap-3 shrink-0 mt-2 sm:mt-0">
-          <a
-            href="/politica-de-privacidade"
+          <Link
+            href="/politica-privacidade"
             className="
               text-center bg-transparent border border-[#4A3B32] text-[#4A3B32] rounded-lg px-5 py-2
-              text-sm font-medium hover:bg-[#EFEBE9] transition-colors"
+              text-sm font-medium hover:bg-[#EFEBE9] transition-colors w-28"
           >
             Ler mais
-          </a>
+          </Link>
+
           <button
             onClick={handleAccept}
             className="
-              bg-button-dark text-white rounded-lg px-5 py-2
-              text-sm font-medium hover:brightness-110 transition-all"
+              bg-[#4A3B32] text-white rounded-lg px-5 py-2 w-28
+              text-sm font-medium hover:brightness-110 transition-all cursor-pointer"
           >
             Aceitar
           </button>
