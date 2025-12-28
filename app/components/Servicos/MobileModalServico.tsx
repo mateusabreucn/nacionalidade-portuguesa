@@ -83,16 +83,16 @@ export default function MobileModalServico({
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="bg-card-branco rounded-[30px] md:rounded-[56px] h-full w-full flex flex-col py-8 sm:py-10 md:py-12 px-6 md:px-14 relative shadow-sm">
+      <div className="bg-bg-card rounded-[30px] md:rounded-[56px] h-full w-full flex flex-col py-8 sm:py-10 md:py-12 px-6 md:px-14 relative shadow-sm">
         {/* Botão X para fechar */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-[#D7CCC8] hover:bg-[#BCAAA4] transition-colors z-10"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-btn-close hover:bg-btn-close-hover transition-colors z-10"
           aria-label="Fechar modal"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 text-[#4A3B32]"
+            className="w-5 h-5 text-text-accent"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -107,12 +107,12 @@ export default function MobileModalServico({
         </button>
 
         {/* Indicador de swipe */}
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-[#BCAAA4] rounded-full" />
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-swipe-indicator rounded-full" />
 
         {/* Título centralizado */}
         <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">
           <div className="flex items-center gap-4 justify-center">
-            <div className="relative w-12 h-12 md:w-16 md:h-16 shrink-0 bg-icon-badge rounded-full flex items-center justify-center">
+            <div className="relative w-12 h-12 md:w-16 md:h-16 shrink-0 bg-bg-badge rounded-full flex items-center justify-center">
               <div className="relative w-3/4 h-3/4">
                 <Image
                   src={activeServico.icon}
@@ -124,7 +124,7 @@ export default function MobileModalServico({
             </div>
           </div>
 
-          <h2 className="font-josefin text-font-secondary text-xl sm:text-2xl md:text-3xl leading-tight text-center">
+          <h2 className="font-josefin text-text-secondary text-xl sm:text-2xl md:text-3xl leading-tight text-center">
             {activeServico.titulo}
           </h2>
         </div>
@@ -138,7 +138,7 @@ export default function MobileModalServico({
                 {activeServico.topicos.map((topico, index) => (
                   <li
                     key={index}
-                    className="text-xs sm:text-sm md:text-base text-[#4A3B32] leading-relaxed"
+                    className="text-xs sm:text-sm md:text-base text-text-accent leading-relaxed"
                   >
                     {topico}
                   </li>

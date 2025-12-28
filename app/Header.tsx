@@ -27,8 +27,8 @@ export default function Header({ showNavLinks = true }: HeaderProps) {
       <div className="hidden lg:block">
         <button
           className="
-            bg-button-dark text-white rounded-xl p-3 xl:p-4
-            border border-border-button cursor-pointer
+            bg-btn-dark text-white rounded-xl p-3 xl:p-4
+            border border-border-default cursor-pointer
             hover:brightness-80 transition-all
             hover:scale-105 duration-300
             text-xs xl:text-sm 2xl:text-base

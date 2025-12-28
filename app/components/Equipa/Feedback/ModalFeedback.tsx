@@ -73,12 +73,12 @@ export default function ModalFeedback({
         {onClose && (
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-[#D7CCC8] hover:bg-[#BCAAA4] transition-colors z-20"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-btn-close hover:bg-btn-close-hover transition-colors z-20"
             aria-label="Fechar modal"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5 text-[#4A3B32]"
+              className="w-5 h-5 text-text-accent"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -29,7 +29,7 @@ export default function FeedbackItem({
             lg:w-20 lg:h-20
             xl:w-22 xl:h-22
             shrink-0
-            bg-[#D9D9D9]
+            bg-bg-badge
             rounded-full
             flex items-center justify-center"
         >
@@ -62,7 +62,7 @@ export default function FeedbackItem({
             className="
               font-josefin
               text-lg sm:text-2xl lg:text-xl xl:text-2xl
-              text-[#4A3B32]"
+              text-text-accent"
           >
             {name}, {city}
           </h4>
@@ -91,7 +91,7 @@ export default function FeedbackItem({
               key={index}
               className="
                 text-xs sm:text-sm md:text-base xl:text-lg
-              text-[#4A3B32]
+              text-text-accent
                 leading-relaxed"
             >
               {paragraph}

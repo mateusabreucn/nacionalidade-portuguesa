@@ -1,21 +1,43 @@
 @import "tailwindcss";
 
+/* stylelint-disable at-rule-no-unknown */
 @theme {
-  --color-background: #ebeae6;
-  --color-button-dark: #090909;
-  --color-button-white: #fbfbfb;
-  --color-border-button: #979797;
-  --color-font-main: #1b1818;
-  --color-card-branco: #f6f6f6;
-  --color-icon-badge: #d9d9d9;
-  --color-font-secondary: #2b1818;
+  /* ===== CORES DE BACKGROUND ===== */
+  --color-bg-primary: #ebeae6;
+  --color-bg-card: #f6f6f6;
+  --color-bg-modal: #efebe9;
+  --color-bg-badge: #d9d9d9;
 
+  /* ===== CORES DE TEXTO ===== */
+  --color-text-primary: #1b1818;
+  --color-text-secondary: #2b1818;
+  --color-text-accent: #4a3b32;
+  --color-text-muted: #8d776a;
+
+  /* ===== CORES DE BOTÃO ===== */
+  --color-btn-dark: #090909;
+  --color-btn-light: #fbfbfb;
+  --color-btn-close: #d7ccc8;
+  --color-btn-close-hover: #bcaaa4;
+  --color-btn-accent: #4a3b32;
+
+  /* ===== CORES DE BORDA ===== */
+  --color-border-default: #979797;
+  --color-border-accent: #4a3b32;
+
+  /* ===== CORES DE UI/INTERAÇÃO ===== */
+  --color-scrollbar: #a89080;
+  --color-scrollbar-hover: #8b7355;
+  --color-swipe-indicator: #bcaaa4;
+
+  /* ===== FONTES ===== */
   --font-inter: var(--font-inter);
   --font-josefin: var(--font-josefin);
 
   --font-family-sans: var(--font-inter);
   --font-family-josefin: var(--font-josefin);
 }
+/* stylelint-enable at-rule-no-unknown */
 
 html {
   scroll-behavior: smooth;
@@ -31,18 +53,18 @@ html {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #a89080;
+  background-color: var(--color-scrollbar);
   border-radius: 20px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #8b7355;
+  background-color: var(--color-scrollbar-hover);
 }
 
 /* Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #a89080 transparent;
+  scrollbar-color: var(--color-scrollbar) transparent;
 }
 
 .img-shadow {

@@ -13,7 +13,7 @@ export default function ModalBackground({
     <div
       className={`
         relative w-full h-full
-        bg-[#EFEBE9]
+        bg-bg-modal
         rounded-[3rem]
         shadow-xl
         flex items-center justify-center

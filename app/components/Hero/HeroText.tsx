@@ -1,6 +1,6 @@
 export default function HeroText() {
   return (
-    <div className="flex flex-col text-font-main mx-auto text-center lg:text-left">
+    <div className="flex flex-col text-text-primary mx-auto text-center lg:text-left">
       <div className="font-josefin leading-tight">
         <h2 className="font-normal text-xl lg:text-3xl">Solicite sua</h2>
 
@@ -15,8 +15,8 @@ export default function HeroText() {
 
       <button
         className="
-          bg-button-white rounded px-8 lg:px-10 py-1.5 lg:py-4
-          mt-10 w-fit border border-border-button
+          bg-btn-light rounded px-8 lg:px-10 py-1.5 lg:py-4
+          mt-10 w-fit border border-border-default
           cursor-pointer hover:brightness-80 transition-all
           hover:scale-105 duration-300
           text-base lg:text-lg 2xl:text-xl

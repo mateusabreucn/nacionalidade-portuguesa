@@ -21,7 +21,7 @@ export default function BioItem({
     <div className="flex flex-col gap-4 w-full h-full justify-center">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="relative w-16 h-16 sm:w-24 sm:h-24 lg:w-20 lg:h-20 xl:w-22 xl:h-22 shrink-0 bg-[#D9D9D9] rounded-full flex items-center justify-center">
+        <div className="relative w-16 h-16 sm:w-24 sm:h-24 lg:w-20 lg:h-20 xl:w-22 xl:h-22 shrink-0 bg-bg-badge rounded-full flex items-center justify-center">
           <div className="w-full h-full">
             <Image
               src={avatarSrc}
@@ -33,10 +33,10 @@ export default function BioItem({
         </div>
 
         <div className="w-full flex flex-col gap-1">
-          <h4 className="font-josefin text-lg sm:text-2xl lg:text-xl xl:text-2xl text-[#4A3B32] font-bold">
+          <h4 className="font-josefin text-lg sm:text-2xl lg:text-xl xl:text-2xl text-text-accent font-bold">
             {name}
           </h4>
-          <p className="font-josefin text-sm sm:text-lg text-[#8D776A]">
+          <p className="font-josefin text-sm sm:text-lg text-text-muted">
             {role}
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function BioItem({
           {text.split("\n").map((paragraph, index) => (
             <p
               key={index}
-              className="text-xs sm:text-sm md:text-base xl:text-lg text-[#4A3B32] leading-relaxed"
+              className="text-xs sm:text-sm md:text-base xl:text-lg text-text-accent leading-relaxed"
             >
               {paragraph}
             </p>

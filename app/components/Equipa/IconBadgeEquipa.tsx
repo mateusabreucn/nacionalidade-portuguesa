@@ -72,7 +72,7 @@ export default function IconBadgeEquipa({
       <div
         className={`
         relative flex items-center justify-center
-        bg-icon-badge rounded-full shrink-0
+        bg-bg-badge rounded-full shrink-0
         aspect-square z-10 overflow-hidden shadow-lg
         ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-36"}
       `}
@@ -91,7 +91,7 @@ export default function IconBadgeEquipa({
         >
           {/* 0: Texto (Esquerda) */}
           <div className="relative w-full h-full shrink-0 flex items-center justify-center p-2">
-            <span className="font-josefin font-bold text-[#4A3B32] text-center leading-tight uppercase w-1/2 text-[8px] sm:text-sm lg:text-base xl:text-xl">
+            <span className="font-josefin font-bold text-text-accent text-center leading-tight uppercase w-1/2 text-[8px] sm:text-sm lg:text-base xl:text-xl">
               {swapText}
             </span>
           </div>
@@ -105,7 +105,7 @@ export default function IconBadgeEquipa({
 
           {/* 2: Texto (Direita) */}
           <div className="relative w-full h-full shrink-0 flex items-center justify-center p-2">
-            <span className="font-josefin font-bold text-[#4A3B32] text-center leading-tight uppercase w-1/2 text-[8px] sm:text-sm lg:text-base xl:text-xl">
+            <span className="font-josefin font-bold text-text-accent text-center leading-tight uppercase w-1/2 text-[8px] sm:text-sm lg:text-base xl:text-xl">
               {swapText}
             </span>
           </div>

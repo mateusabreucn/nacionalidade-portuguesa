@@ -29,15 +29,15 @@ export default function CookieBanner() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-[100] p-4 sm:p-6 bg-card-branco rounded-2xl img-shadow max-w-4xl mx-auto animate-slide-up">
+    <div className="fixed bottom-4 left-4 right-4 z-[100] p-4 sm:p-6 bg-bg-card rounded-2xl img-shadow max-w-4xl mx-auto animate-slide-up">
       <div className="flex flex-col sm:flex-row items-center gap-4">
         {/* Ícone */}
         <div className="shrink-0">
-          <CookieIcon className="w-12 h-12 sm:w-16 sm:h-16 text-[#4A3B32]" />
+          <CookieIcon className="w-12 h-12 sm:w-16 sm:h-16 text-text-accent" />
         </div>
 
         {/* Texto */}
-        <div className="text-sm sm:text-base text-center sm:text-left text-[#4A3B32]">
+        <div className="text-sm sm:text-base text-center sm:text-left text-text-accent">
           <p>
             O nosso site utiliza cookies para analisar tráfego e apresentar
             anúncios relevantes. Ao clicar em "Aceitar", você concorda com o uso
@@ -50,8 +50,8 @@ export default function CookieBanner() {
           <Link
             href="/politica-privacidade"
             className="
-              text-center bg-transparent border border-[#4A3B32] text-[#4A3B32] rounded-lg px-5 py-2
-              text-sm font-medium hover:bg-[#EFEBE9] transition-colors w-28"
+              text-center bg-transparent border border-border-accent text-text-accent rounded-lg px-5 py-2
+              text-sm font-medium hover:bg-bg-modal transition-colors w-28"
           >
             Ler mais
           </Link>
@@ -59,7 +59,7 @@ export default function CookieBanner() {
           <button
             onClick={handleAccept}
             className="
-              bg-[#4A3B32] text-white rounded-lg px-5 py-2 w-28
+              bg-btn-accent text-white rounded-lg px-5 py-2 w-28
               text-sm font-medium hover:brightness-110 transition-all cursor-pointer"
           >
             Aceitar

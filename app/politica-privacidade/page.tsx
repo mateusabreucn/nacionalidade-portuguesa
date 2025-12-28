@@ -10,7 +10,7 @@ export default function PoliticaPrivacidadePage() {
         p-6 md:p-10
         min-h-screen max-w-screen-2xl
         mx-auto
-        bg-background
+        bg-bg-primary
       "
     >
       <Header showNavLinks={false} />

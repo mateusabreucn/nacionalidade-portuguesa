@@ -49,7 +49,7 @@ export default function ModalServico({
     <div className="flex flex-col gap-4 w-full">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="relative w-12 h-12 md:w-16 md:h-16 shrink-0 bg-icon-badge rounded-full flex items-center justify-center">
+        <div className="relative w-12 h-12 md:w-16 md:h-16 shrink-0 bg-bg-badge rounded-full flex items-center justify-center">
           <div className="relative w-3/4 h-3/4">
             <Image
               src={servico.icon}
@@ -59,7 +59,7 @@ export default function ModalServico({
             />
           </div>
         </div>
-        <h3 className="font-josefin text-xl md:text-2xl lg:text-3xl text-[#4A3B32] font-medium">
+        <h3 className="font-josefin text-xl md:text-2xl lg:text-3xl text-text-accent font-medium">
           {servico.titulo}
         </h3>
       </div>
@@ -70,7 +70,7 @@ export default function ModalServico({
           {servico.topicos.map((topico, index) => (
             <li
               key={index}
-              className="text-sm md:text-base lg:text-lg text-[#4A3B32] leading-relaxed"
+              className="text-sm md:text-base lg:text-lg text-text-accent leading-relaxed"
             >
               {topico}
             </li>

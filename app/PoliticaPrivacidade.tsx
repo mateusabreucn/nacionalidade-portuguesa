@@ -8,7 +8,7 @@ export default function PoliticaPrivacidadeContent() {
 
   return (
     <CardBranco titulo="Política de Privacidade e Cookies">
-      <div className="text-font-secondary text-left mx-auto max-w-4xl">
+      <div className="text-text-secondary text-left mx-auto max-w-4xl">
         <p className="text-sm text-gray-500 mb-6">
           Última atualização: 08/08/2025
         </p>

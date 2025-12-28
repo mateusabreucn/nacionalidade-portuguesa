@@ -37,7 +37,7 @@ export default function IconBadgeServicos({
       <div
         className={`
         relative flex items-center justify-center
-        bg-icon-badge rounded-full shrink-0
+        bg-bg-badge rounded-full shrink-0
         aspect-square
         z-10
         ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-36"}
