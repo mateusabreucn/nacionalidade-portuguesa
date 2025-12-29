@@ -11,38 +11,39 @@ import ServicosBackground from "./components/Servicos/ServicosBackground";
 export default function Servicos() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [lockedId, setLockedId] = useState<string | null>(null);
-  const [ignoreHover, setIgnoreHover] = useState(false);
 
+  // O modal ativo é o travado (clicado) ou o que está com hover
   const activeId = lockedId || hoveredId;
 
   const handleMouseEnter = (id: string) => {
-    if (!ignoreHover) {
+    // Hover só funciona se não houver modal travado
+    if (!lockedId) {
       setHoveredId(id);
     }
   };
 
   const handleMouseLeave = () => {
-    setHoveredId(null);
-    setIgnoreHover(false);
+    // Só fecha se não estiver travado
+    if (!lockedId) {
+      setHoveredId(null);
+    }
   };
 
   const handleIconClick = (id: string) => {
     if (lockedId === id) {
-      // Se clicar no mesmo ícone que está aberto, fecha
+      // Se clicar no mesmo ícone que está travado, destrava
       setLockedId(null);
-      setIgnoreHover(true);
       setHoveredId(null);
     } else {
-      // Abre o modal deste ícone (fecha qualquer outro que esteja aberto)
+      // Trava o modal deste ícone
       setLockedId(id);
-      setIgnoreHover(false);
+      setHoveredId(null);
     }
   };
 
   const handleCloseModal = () => {
     setLockedId(null);
     setHoveredId(null);
-    setIgnoreHover(true);
   };
 
   // Primeira linha: índices 0, 1, 2 (nacionalidade, imigracao, sentenca)
@@ -87,8 +88,11 @@ export default function Servicos() {
                 servico={activeServico}
                 position={getModalPosition(activeIndex)}
                 isActive={!!activeId}
+                isLocked={!!lockedId}
+                onClose={handleCloseModal}
                 onMouseEnter={() => {
-                  if (activeId && !ignoreHover) {
+                  // Se passar o mouse sobre o modal e não estiver travado, mantém aberto
+                  if (!lockedId && activeId) {
                     setHoveredId(activeId);
                   }
                 }}

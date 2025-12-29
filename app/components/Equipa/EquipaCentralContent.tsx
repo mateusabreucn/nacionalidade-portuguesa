@@ -6,27 +6,28 @@ import ModalFeedback from "./Feedback/ModalFeedback";
 
 interface EquipaCentralContentProps {
   activeModal: "feedback" | "bio" | null;
-  setActiveModal: (modal: "feedback" | "bio" | null) => void;
+  onModalClick: () => void;
+  onModalMouseEnter: () => void;
+  onModalMouseLeave: () => void;
   handleClose: () => void;
-  showModal: boolean;
 }
 
 export default function EquipaCentralContent({
   activeModal,
-  setActiveModal,
+  onModalClick,
+  onModalMouseEnter,
+  onModalMouseLeave,
   handleClose,
-  showModal,
 }: EquipaCentralContentProps) {
+  const showModal = !!activeModal;
+
   return (
     <div className="order-3 lg:order-2 w-full max-w-[900px] flex flex-col items-center">
-      {/* Container Relativo para o Modal crescer e cobrir o botão abaixo */}
+      {/* Container Relativo para o Modal */}
       <div className="relative aspect-13/4 sm:aspect-9/4 flex flex-col items-center justify-center w-full">
         {/* Background Decorativo (Ellipse) - Some quando modal abre */}
-        <div
-          className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
-            showModal ? "opacity-0" : "opacity-100"
-          }`}
-        >
+
+        <div className="absolute inset-0 w-[96%] place-self-end h-full transition-opacity duration-500">
           <Image
             src="/Icons/Ellipse.svg"
             fill
@@ -38,8 +39,8 @@ export default function EquipaCentralContent({
 
         {/* Frase Institucional - Some quando modal abre */}
         <div
-          className={`relative px-[11%] pb-[3%] text-start h-full flex items-center justify-center transition-opacity duration-500 ${
-            showModal ? "opacity-0 pointer-events-none" : "opacity-100"
+          className={`relative px-[11%] pb-[3%] w-[96%] place-self-end text-start h-full flex items-center justify-center transition-opacity duration-500 ${
+            showModal ? "pointer-events-none" : ""
           }`}
         >
           <p className="font-josefin text-[0.7rem] sm:text-xl md:text-2xl xl:text-[2rem] 2xl:text-4xl text-center lg:text-left leading-tight md:leading-snug">
@@ -48,20 +49,19 @@ export default function EquipaCentralContent({
           </p>
         </div>
 
-        {/* MODAIS DESKTOP: Posicionado absolutamente para ser maior e cobrir o botão */}
+        {/* MODAIS DESKTOP - Posicionamento: inicia na linha da foto, termina na metade do badge */}
         <div
           className={`
-            absolute
-            -inset-x-8 -top-8 -bottom-32
-            hidden lg:block
-            transition-all duration-500 ease-in-out
-            z-40
+            absolute hidden lg:flex inset-y-4
+            transition-all duration-500 ease-in-out z-60
             ${
               showModal
-                ? "opacity-100 translate-y-0 pointer-events-auto"
-                : "opacity-0 translate-y-4 pointer-events-none"
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }
           `}
+          onMouseEnter={onModalMouseEnter}
+          onMouseLeave={onModalMouseLeave}
         >
           {activeModal === "feedback" && (
             <ModalFeedback isActive onClose={handleClose} />
@@ -70,10 +70,10 @@ export default function EquipaCentralContent({
         </div>
       </div>
 
-      {/* Botão de Depoimentos - Fica visível apenas quando nenhum modal está aberto */}
+      {/* Botão de Depoimentos */}
       <button
-        onClick={() => setActiveModal("feedback")}
-        className="cursor-pointer mt-4 rounded-xl bg-icon-badge md:text-2xl xl:text-3xl font-family-josefin py-2 md:py-3 xl:py-4 px-24 xl:px-32 hover:brightness-90 transition-all z-10"
+        onClick={onModalClick}
+        className="cursor-pointer mt-4 rounded-xl bg-bg-badge text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-family-josefin py-1 sm:py-1.5 md:py-2 lg:py-3 xl:py-4 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 hover:brightness-90 transition-all z-10"
       >
         Depoimentos
       </button>

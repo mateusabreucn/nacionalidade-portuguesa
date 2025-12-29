@@ -91,7 +91,7 @@ export default function IconBadgeEquipa({
         >
           {/* 0: Texto (Esquerda) */}
           <div className="relative w-full h-full shrink-0 flex items-center justify-center p-2">
-            <span className="font-josefin font-bold text-text-accent text-center leading-tight uppercase w-1/2 text-[8px] sm:text-sm lg:text-base xl:text-xl">
+            <span className="font-josefin font-bold text-text-accent text-center whitespace-break-spaces uppercase text-[8px] sm:text-sm lg:text-base xl:text-xl">
               {swapText}
             </span>
           </div>
@@ -105,7 +105,7 @@ export default function IconBadgeEquipa({
 
           {/* 2: Texto (Direita) */}
           <div className="relative w-full h-full shrink-0 flex items-center justify-center p-2">
-            <span className="font-josefin font-bold text-text-accent text-center leading-tight uppercase w-1/2 text-[8px] sm:text-sm lg:text-base xl:text-xl">
+            <span className="font-josefin font-bold text-text-accent text-center whitespace-break-spaces uppercase text-[8px] sm:text-sm lg:text-base xl:text-xl">
               {swapText}
             </span>
           </div>

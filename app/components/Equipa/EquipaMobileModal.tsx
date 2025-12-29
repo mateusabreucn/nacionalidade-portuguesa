@@ -6,27 +6,27 @@ import ModalFeedback from "./Feedback/ModalFeedback";
 interface EquipaMobileModalProps {
   activeModal: "feedback" | "bio" | null;
   handleClose: () => void;
-  showModal: boolean;
   isMobile: boolean;
 }
 
 export default function EquipaMobileModal({
   activeModal,
   handleClose,
-  showModal,
   isMobile,
 }: EquipaMobileModalProps) {
+  const showModal = !!activeModal;
+
   return (
     <div
       className={`
-        absolute inset-0 z-60 lg:hidden
+        absolute z-60 lg:hidden
         transition-all duration-500 ease-in-out
-        img-shadow rounded-[3rem]
-        top-[38%] -left-8 -right-8 -bottom-12
+        sm:top-[38%] left-0 right-0 bottom-0
+        ${activeModal === "feedback" ? "top-0" : "top-[38%]"}
         ${
           showModal
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 translate-y-4 pointer-events-none"
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }
       `}
     >
