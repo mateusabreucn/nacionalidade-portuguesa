@@ -2,6 +2,16 @@
 
 /* stylelint-disable at-rule-no-unknown */
 @theme {
+  /* ===== BREAKPOINTS CUSTOMIZADOS ===== */
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
+  --breakpoint-5xl: 240rem;
+
+  /* ===== MAX-WIDTH PARA NOVOS BREAKPOINTS ===== */
+  --container-3xl: 120rem;
+  --container-4xl: 160rem;
+  --container-5xl: 240rem;
+
   /* ===== CORES DE BACKGROUND ===== */
   --color-bg-primary: #ebeae6;
   --color-bg-card: #f6f6f6;
