@@ -20,7 +20,7 @@ export default function EquipaMainPhoto({
   return (
     <div className="relative w-[90%] lg:w-[50%] order-1">
       <CardFoto
-        src={`/Equipa - ${NomeEquipa.AmandaCDantas}.png`}
+        src={`/Equipa/${NomeEquipa.AmandaCDantas}.png`}
         nome={NomeEquipa.AmandaCDantas}
         bigger
       />
@@ -31,7 +31,7 @@ export default function EquipaMainPhoto({
         onMouseLeave={onMouseLeave}
       >
         <IconBadgeEquipa
-          icon={isLocked ? "/Icons/Close.svg" : "/Icons/Equipa/Trofeu.svg"}
+          icon={isLocked ? "/Icons/Close.svg" : "/Icons/Equipa/Trofeu.png"}
           altText={isLocked ? "Fechar" : "Ícone de Troféu"}
           swapText={"Sobre\nnós"}
           onClick={onModalClick}

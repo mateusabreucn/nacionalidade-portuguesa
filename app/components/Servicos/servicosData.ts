@@ -4,7 +4,7 @@ export const servicosData: ServicoData[] = [
   {
     id: "nacionalidade",
     titulo: "Nacionalidade",
-    icon: "/Icons/Servicos/Nacionalidade.svg",
+    icon: "/Icons/Servicos/Nacionalidade.png",
     altText: "Ícone de Nacionalidade",
     topicos: [
       "Assessoria completa para obtenção de nacionalidade brasileira, portuguesa e europeia.",
@@ -20,7 +20,7 @@ export const servicosData: ServicoData[] = [
   {
     id: "imigracao",
     titulo: "Imigração",
-    icon: "/Icons/Servicos/Imigracao.svg",
+    icon: "/Icons/Servicos/Imigracao.png",
     altText: "Ícone de Imigração",
     topicos: [
       "Assessoria completa em processos de visto e autorização de residência.",
@@ -35,7 +35,7 @@ export const servicosData: ServicoData[] = [
   {
     id: "sentenca",
     titulo: "Sentença Estrangeira",
-    icon: "/Icons/Servicos/Sentenca.svg",
+    icon: "/Icons/Servicos/Sentenca.png",
     altText: "Ícone de Sentença Estrangeira",
     topicos: [
       "Homologação de sentenças estrangeiras para produção de efeitos em Portugal.",
@@ -49,7 +49,7 @@ export const servicosData: ServicoData[] = [
   {
     id: "familia",
     titulo: "Família e Sucessões",
-    icon: "/Icons/Servicos/Familia.svg",
+    icon: "/Icons/Servicos/Familia.png",
     altText: "Ícone de Família e Sucessões",
     topicos: [
       "Assessoria em processos de divórcio, separação e regulação de responsabilidades parentais.",
@@ -63,7 +63,7 @@ export const servicosData: ServicoData[] = [
   {
     id: "imoveis",
     titulo: "Imóveis",
-    icon: "/Icons/Servicos/Imoveis.svg",
+    icon: "/Icons/Servicos/Imoveis.png",
     altText: "Ícone de Imóveis",
     topicos: [
       "Assessoria na compra e venda de imóveis em Portugal.",
@@ -77,7 +77,7 @@ export const servicosData: ServicoData[] = [
   {
     id: "empresas",
     titulo: "Empresas",
-    icon: "/Icons/Servicos/Empresas.svg",
+    icon: "/Icons/Servicos/Empresas.png",
     altText: "Ícone de Empresas",
     topicos: [
       "Constituição e registro de empresas em Portugal.",

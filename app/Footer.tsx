@@ -13,7 +13,7 @@ export default function Footer() {
     "
     >
       <InfoFooter
-        icon="/Icons/Footer/Loc.svg"
+        icon="/Icons/Footer/Loc.png"
         altText="Ícone de Localização"
         link="https://share.google/89NLuQfppCx3EsEH4"
       >
@@ -24,7 +24,7 @@ export default function Footer() {
       </InfoFooter>
 
       <InfoFooter
-        icon="/Icons/Footer/Contato.svg"
+        icon="/Icons/Footer/Contato.png"
         altText="Ícone de Contato"
         linkMobile="tel:+351 927417601"
         link="mailto:7135@solicitador.net"

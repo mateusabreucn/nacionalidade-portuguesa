@@ -14,7 +14,7 @@ export default function HeaderMobile() {
         className="lg:hidden absolute right-0 flex flex-col gap-1.5 w-8 h-8 md:w-12 md:h-12 justify-center items-center z-50"
         aria-label="Menu"
       >
-        <Image src="/Icons/Header/Menu.svg" alt="Menu" fill />
+        <Image src="/Icons/Header/Menu.png" alt="Menu" fill />
       </button>
 
       {/* Mobile Menu Overlay */}
