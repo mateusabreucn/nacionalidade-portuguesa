@@ -14,19 +14,19 @@ export default function EquipaMembersMobile() {
     >
       <div className="w-1/4">
         <CardFoto
-          src={`/Equipa - ${NomeEquipa.ThaysaBBarbosa}.jpg`}
+          src={`/Equipa/${NomeEquipa.ThaysaBBarbosa}.jpg`}
           nome={NomeEquipa.ThaysaBBarbosa}
         />
       </div>
       <div className="w-1/4">
         <CardFoto
-          src={`/Equipa - ${NomeEquipa.LucianaFAlvarino}.jpg`}
+          src={`/Equipa/${NomeEquipa.LucianaFAlvarino}.jpg`}
           nome={NomeEquipa.LucianaFAlvarino}
         />
       </div>
       <div className="w-1/4">
         <CardFoto
-          src={`/Equipa - ${NomeEquipa.MargarethLeith}.jpg`}
+          src={`/Equipa/${NomeEquipa.MargarethLeith}.jpg`}
           nome={NomeEquipa.MargarethLeith}
         />
       </div>
