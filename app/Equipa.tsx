@@ -16,7 +16,6 @@ export default function Equipa() {
   const [isMobile, setIsMobile] = useState(false);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Detecta se é mobile
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
@@ -24,7 +23,6 @@ export default function Equipa() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Limpa timeout ao desmontar
   useEffect(() => {
     return () => {
       if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
@@ -71,7 +69,6 @@ export default function Equipa() {
   return (
     <CardBranco titulo="Quem somos nós">
       <div className="flex flex-col w-full relative">
-        {/* Seção superior */}
         <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8">
           <EquipaMainPhoto
             isLocked={isLocked && activeModal === "bio"}
@@ -91,14 +88,12 @@ export default function Equipa() {
           <EquipaMembersMobile />
         </div>
 
-        {/* Modais Mobile */}
         <EquipaMobileModal
           activeModal={activeModal}
           handleClose={handleClose}
           isMobile={isMobile}
         />
 
-        {/* Três fotos - Versão DESKTOP */}
         <EquipaMembersDesktop />
       </div>
     </CardBranco>

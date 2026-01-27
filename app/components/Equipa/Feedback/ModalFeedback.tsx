@@ -47,9 +47,11 @@ export default function ModalFeedback({
     <div className="w-full flex items-start justify-center">
       <ModalBackground onClose={onClose} className={heightClass}>
         <div
-          className={`w-full h-full transition-opacity duration-300 ${
-            isFading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`
+            w-full h-full
+            transition-opacity duration-300
+            ${isFading ? "opacity-0" : "opacity-100"}
+          `}
         >
           <FeedbackItem
             {...currentFeedback}

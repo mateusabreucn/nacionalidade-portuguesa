@@ -19,14 +19,11 @@ export default function EquipaMobileModal({
   return (
     <div
       className={`
-        absolute z-60 lg:hidden
-        transition-all duration-500 ease-in-out
+        absolute lg:hidden
         bottom-0 left-0 right-0
-        ${
-          showModal
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }
+        z-60
+        transition-all duration-500 ease-in-out
+        ${showModal ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
       `}
     >
       {activeModal === "feedback" && (

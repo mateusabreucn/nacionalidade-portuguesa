@@ -26,14 +26,20 @@ export default function InfoFooter({
     };
 
     checkScreenSize();
-
     window.addEventListener("resize", checkScreenSize);
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   return (
-    <div className="flex w-full items-center justify-center gap-x-4 truncate sm:gap-x-8 lg:gap-x-2">
+    <div
+      className="
+        flex items-center justify-center
+        w-full
+        gap-x-4 sm:gap-x-8 lg:gap-x-2
+        truncate
+      "
+    >
       <a
         href={isMobile ? linkMobile : link}
         target="_blank"

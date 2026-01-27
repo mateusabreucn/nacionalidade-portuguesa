@@ -8,13 +8,11 @@ export default function CustomLink({ name, href }: LinkProps) {
     <a
       href={`#${href}`}
       className="
-        text-black
-        text-sm xl:text-lg 2xl:text-xl 3xl:text-[1.5rem] 4xl:text-3xl
-        font-medium
         px-2 py-1
+        text-black text-sm xl:text-lg 2xl:text-xl 3xl:text-[1.5rem] 4xl:text-3xl font-medium
         rounded-lg
-        hover:scale-110 hover:bg-bg-badge
-        transition-transform duration-300"
+        transition-transform duration-300 hover:scale-110 hover:bg-bg-badge
+      "
     >
       {name}
     </a>

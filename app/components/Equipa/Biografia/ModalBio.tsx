@@ -38,17 +38,17 @@ export default function ModalBio({
   }, [isActive, changeBio]);
 
   const currentBio = biosData[currentIndex];
-
-  // Altura fixa: modal de bio é menor que feedback
   const heightClass = isMobile ? "h-full sm:max-h-[260px]" : "lg:h-[260px]";
 
   return (
     <div className="w-full flex items-start justify-center">
       <ModalBackground onClose={onClose} className={heightClass}>
         <div
-          className={`w-full h-full transition-opacity duration-300 ${
-            isFading ? "opacity-0" : "opacity-100"
-          }`}
+          className={`
+            w-full h-full
+            transition-opacity duration-300
+            ${isFading ? "opacity-0" : "opacity-100"}
+          `}
         >
           <BioItem {...currentBio} onNext={changeBio} isMobile={isMobile} />
         </div>

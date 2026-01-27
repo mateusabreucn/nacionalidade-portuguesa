@@ -12,18 +12,15 @@ export default function Servicos() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [lockedId, setLockedId] = useState<string | null>(null);
 
-  // O modal ativo é o travado (clicado) ou o que está com hover
   const activeId = lockedId || hoveredId;
 
   const handleMouseEnter = (id: string) => {
-    // Hover só funciona se não houver modal travado
     if (!lockedId) {
       setHoveredId(id);
     }
   };
 
   const handleMouseLeave = () => {
-    // Só fecha se não estiver travado
     if (!lockedId) {
       setHoveredId(null);
     }
@@ -31,11 +28,9 @@ export default function Servicos() {
 
   const handleIconClick = (id: string) => {
     if (lockedId === id) {
-      // Se clicar no mesmo ícone que está travado, destrava
       setLockedId(null);
       setHoveredId(null);
     } else {
-      // Trava o modal deste ícone
       setLockedId(id);
       setHoveredId(null);
     }
@@ -46,8 +41,6 @@ export default function Servicos() {
     setHoveredId(null);
   };
 
-  // Primeira linha: índices 0, 1, 2 (nacionalidade, imigracao, sentenca)
-  // Segunda linha: índices 3, 4, 5 (familia, imoveis, empresas)
   const getModalPosition = (index: number): "top" | "bottom" => {
     return index < 3 ? "bottom" : "top";
   };
@@ -61,7 +54,6 @@ export default function Servicos() {
 
   return (
     <div className="relative mt-8">
-      {/* Modal mobile - sobrepõe todo o CardBranco */}
       <MobileModalServico
         activeServico={activeServico ?? null}
         isOpen={!!lockedId}
@@ -73,7 +65,6 @@ export default function Servicos() {
           <ServicosBackground />
 
           <div className="relative z-10">
-            {/* Grid de ícones */}
             <ServicosGrid
               servicos={servicosData}
               lockedId={lockedId}
@@ -82,7 +73,6 @@ export default function Servicos() {
               onMouseLeave={handleMouseLeave}
             />
 
-            {/* Modal centralizado - aparece entre as linhas */}
             {activeServico && (
               <ModalServico
                 servico={activeServico}
@@ -91,7 +81,6 @@ export default function Servicos() {
                 isLocked={!!lockedId}
                 onClose={handleCloseModal}
                 onMouseEnter={() => {
-                  // Se passar o mouse sobre o modal e não estiver travado, mantém aberto
                   if (!lockedId && activeId) {
                     setHoveredId(activeId);
                   }

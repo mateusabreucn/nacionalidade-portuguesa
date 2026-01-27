@@ -19,16 +19,27 @@ export default function BioItem({
 }: BioItemProps) {
   return (
     <div className="flex flex-col gap-2 lg:gap-3 w-full h-full">
-      {/* Header com Avatar e Info */}
       <div className="flex items-center gap-3 lg:gap-4">
-        {/* Avatar - maior e sem cortar */}
-        <div className="relative w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 shrink-0 bg-bg-badge rounded-full overflow-hidden">
+        <div
+          className="
+            relative shrink-0
+            w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20
+            bg-bg-badge rounded-full
+            overflow-hidden
+          "
+        >
           <Image src={avatarSrc} alt={name} fill className="object-cover" />
         </div>
 
         <div className="flex-1 flex flex-col gap-0.5">
           <div className="flex items-center gap-2">
-            <h4 className="font-josefin text-sm sm:text-lg lg:text-xl xl:text-2xl text-text-accent font-bold">
+            <h4
+              className="
+                font-josefin font-bold
+                text-sm sm:text-lg lg:text-xl xl:text-2xl
+                text-text-accent
+              "
+            >
               {name}
             </h4>
           </div>
@@ -38,7 +49,6 @@ export default function BioItem({
         </div>
       </div>
 
-      {/* Corpo: Texto + Seta */}
       <div className="flex items-center gap-3 flex-1 min-h-0">
         <div className="flex-1 overflow-y-auto scrollbar-auto pr-2 max-h-full">
           {text.split("\n").map((paragraph, index) => (
@@ -54,7 +64,7 @@ export default function BioItem({
         {!isMobile && (
           <button
             onClick={onNext}
-            className="shrink-0 hover:scale-110 transition-transform duration-300 cursor-pointer"
+            className="shrink-0 cursor-pointer hover:scale-110 transition-transform duration-300"
             aria-label="Próxima bio"
           >
             <Image
@@ -71,7 +81,7 @@ export default function BioItem({
       {isMobile && (
         <button
           onClick={onNext}
-          className="shrink-0 hover:scale-110 transition-transform duration-300 cursor-pointer ml-auto mt-2"
+          className="shrink-0 ml-auto mt-2 cursor-pointer hover:scale-110 transition-transform duration-300"
           aria-label="Próxima bio"
         >
           <Image

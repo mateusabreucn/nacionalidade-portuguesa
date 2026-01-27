@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { CookieIcon } from "./Icons/CookieIcon";
 
@@ -29,14 +28,20 @@ export default function CookieBanner() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-100 p-4 sm:p-6 bg-bg-card rounded-2xl img-shadow max-w-4xl mx-auto animate-slide-up">
+    <div
+      className="
+        fixed bottom-4 left-4 right-4 z-100
+        max-w-4xl mx-auto
+        p-4 sm:p-6
+        bg-bg-card rounded-2xl img-shadow
+        animate-slide-up
+      "
+    >
       <div className="flex flex-col sm:flex-row items-center gap-4">
-        {/* Ícone */}
         <div className="shrink-0">
           <CookieIcon className="w-12 h-12 sm:w-16 sm:h-16 text-text-accent" />
         </div>
 
-        {/* Texto */}
         <div className="text-sm sm:text-base text-center sm:text-left text-text-accent">
           <p>
             O nosso site utiliza cookies para analisar tráfego e apresentar
@@ -45,13 +50,15 @@ export default function CookieBanner() {
           </p>
         </div>
 
-        {/* Botões */}
         <div className="flex flex-col sm:flex-row gap-3 shrink-0 mt-2 sm:mt-0">
           <Link
             href="/politica-privacidade"
             className="
-              text-center bg-transparent border border-border-accent text-text-accent rounded-lg px-5 py-2
-              text-sm font-medium hover:bg-bg-modal transition-colors w-28"
+              w-28 px-5 py-2
+              text-center text-sm font-medium text-text-accent
+              bg-transparent border border-border-accent rounded-lg
+              hover:bg-bg-modal transition-colors
+            "
           >
             Ler mais
           </Link>
@@ -59,8 +66,12 @@ export default function CookieBanner() {
           <button
             onClick={handleAccept}
             className="
-              bg-btn-accent text-white rounded-lg px-5 py-2 w-28
-              text-sm font-medium hover:brightness-110 transition-all cursor-pointer"
+              w-28 px-5 py-2
+              text-sm font-medium text-white
+              bg-btn-accent rounded-lg
+              cursor-pointer
+              hover:brightness-110 transition-all
+            "
           >
             Aceitar
           </button>

@@ -4,13 +4,12 @@ export default function Footer() {
   return (
     <footer
       className="
-      w-full mx-auto
-      flex justify-center items-center
-      flex-col lg:flex-row
-      mt-8 sm:mt-12 md:mt-18 lg:mt-20 xl:mt-24
-      mb-10 xl:mb-12
-      gap-y-10 sm:gap-y-12 md:gap-y-16 lg:gap-x-20 xl:gap-x-48
-    "
+        w-full mx-auto
+        flex flex-col lg:flex-row justify-center items-center
+        mt-8 sm:mt-12 md:mt-18 lg:mt-20 xl:mt-24
+        mb-10 xl:mb-12
+        gap-y-10 sm:gap-y-12 md:gap-y-16 lg:gap-x-20 xl:gap-x-48
+      "
     >
       <InfoFooter
         icon="/Icons/Footer/Loc.png"

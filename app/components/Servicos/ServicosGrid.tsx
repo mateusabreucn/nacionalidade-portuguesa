@@ -19,18 +19,16 @@ export default function ServicosGrid({
   return (
     <div
       className="
-          grid grid-cols-3
-          xl:max-w-[1800px]
-          xl:mx-auto
-          gap-x-4 xl:gap-x-2 2xl:gap-x-0
-          gap-y-8 sm:gap-y-14 lg:gap-y-16
-          xl:gap-y-24 2xl:gap-y-36
-          3xl:gap-y-44 4xl:gap-y-52
-          justify-items-center"
+        grid grid-cols-3
+        xl:max-w-[1800px] xl:mx-auto
+        gap-x-4 xl:gap-x-2 2xl:gap-x-0
+        gap-y-8 sm:gap-y-14 lg:gap-y-16
+        xl:gap-y-24 2xl:gap-y-36 3xl:gap-y-44 4xl:gap-y-52
+        justify-items-center
+      "
     >
       {servicos.map((servico) => (
         <div key={servico.id} className="relative z-20">
-          {/* Versão para telas grandes (lg+) - com troca de ícone para X */}
           <div className="hidden lg:block">
             <IconBadgeServicos
               icon={lockedId === servico.id ? "/Icons/Close.svg" : servico.icon}
@@ -44,7 +42,7 @@ export default function ServicosGrid({
               onMouseLeave={onMouseLeave}
             />
           </div>
-          {/* Versão para telas menores (até md) - sem troca de ícone */}
+
           <div className="lg:hidden">
             <IconBadgeServicos
               icon={servico.icon}
