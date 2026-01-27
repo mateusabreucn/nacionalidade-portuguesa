@@ -31,18 +31,18 @@ export default function CookieBanner() {
     <div
       className="
         fixed bottom-4 left-4 right-4 z-100
-        max-w-4xl mx-auto
+        max-w-3/4 mx-auto
         p-4 sm:p-6
         bg-bg-card rounded-2xl img-shadow
         animate-slide-up
       "
     >
-      <div className="flex flex-col sm:flex-row items-center gap-4">
+      <div className="flex flex-col md:flex-row items-center gap-4">
         <div className="shrink-0">
           <CookieIcon className="w-12 h-12 sm:w-16 sm:h-16 text-text-accent" />
         </div>
 
-        <div className="text-sm sm:text-base text-center sm:text-left text-text-accent">
+        <div className="text-xs sm:text-base text-center md:text-left text-text-accent">
           <p>
             O nosso site utiliza cookies para analisar tráfego e apresentar
             anúncios relevantes. Ao clicar em "Aceitar", você concorda com o uso
@@ -50,7 +50,7 @@ export default function CookieBanner() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 shrink-0 mt-2 sm:mt-0">
+        <div className="flex flex-col md:flex-row gap-3 shrink-0 mt-2 md:mt-0 md:ml-auto">
           <Link
             href="/politica-privacidade"
             className="
