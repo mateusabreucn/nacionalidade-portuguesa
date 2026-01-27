@@ -60,7 +60,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt" className={`${inter.variable} ${josefin.variable}`}>
+    <html
+      lang="pt"
+      className={`${inter.variable} ${josefin.variable} bg-bg-primary`}
+    >
       <body className={inter.className}>
         {children}
         <PopUpWhatsApp />

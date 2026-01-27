@@ -6,10 +6,10 @@ export default function Footer() {
       className="
       w-full mx-auto
       flex justify-center items-center
-      flex-col md:flex-row
-      mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24
-      mb-4 lg:mb-8 xl:mb-12
-      gap-8 lg:gap-x-36 xl:gap-x-48
+      flex-col lg:flex-row
+      mt-8 sm:mt-12 md:mt-18 lg:mt-20 xl:mt-24
+      mb-10 xl:mb-12
+      gap-y-10 sm:gap-y-12 md:gap-y-16 lg:gap-x-20 xl:gap-x-48
     "
     >
       <InfoFooter

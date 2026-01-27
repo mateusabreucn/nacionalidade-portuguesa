@@ -40,7 +40,7 @@ export default function IconBadgeServicos({
         bg-bg-badge rounded-full shrink-0
         aspect-square
         z-10
-        ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-36"}
+        ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-32 2xl:w-40 3xl:w-44 4xl:w-48"}
       `}
       >
         <div className="relative aspect-square w-3/4 z-30">

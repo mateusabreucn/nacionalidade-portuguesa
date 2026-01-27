@@ -22,7 +22,7 @@ export default function EquipaCentralContent({
   const showModal = !!activeModal;
 
   return (
-    <div className="order-3 lg:order-2 w-full max-w-[900px] flex flex-col items-center">
+    <div className="order-3 lg:order-2 w-full max-w-[900px] 2xl:max-w-[1100px] 3xl:max-w-[2000px] flex flex-col items-center">
       {/* Container Relativo para o Modal */}
       <div className="relative aspect-13/4 sm:aspect-9/4 flex flex-col items-center justify-center w-full">
         {/* Background Decorativo (Ellipse) - Some quando modal abre */}
@@ -43,7 +43,7 @@ export default function EquipaCentralContent({
             showModal ? "pointer-events-none" : ""
           }`}
         >
-          <p className="font-josefin text-[0.7rem] sm:text-xl md:text-2xl xl:text-[2rem] 2xl:text-4xl text-center lg:text-left leading-tight md:leading-snug">
+          <p className="font-josefin text-[0.7rem] sm:text-xl md:text-2xl xl:text-[2rem] 2xl:text-4xl 3xl:text-5xl text-center lg:text-left leading-tight md:leading-snug">
             Há mais de sete anos, ajudamos brasileiros a transformarem o sonho
             da cidadania portuguesa em realidade.
           </p>
@@ -73,7 +73,16 @@ export default function EquipaCentralContent({
       {/* Botão de Depoimentos */}
       <button
         onClick={onModalClick}
-        className="cursor-pointer mt-4 rounded-xl bg-bg-badge text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-family-josefin py-1 sm:py-1.5 md:py-2 lg:py-3 xl:py-4 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 hover:brightness-90 transition-all z-10"
+        className="
+          cursor-pointer
+          mt-4 rounded-xl
+          bg-bg-badge
+          text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
+          font-family-josefin
+          py-1 sm:py-1.5 md:py-2 lg:py-3 xl:py-4 2xl:py-6
+          px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32
+          hover:brightness-90 transition-all
+          z-10"
       >
         Depoimentos
       </button>

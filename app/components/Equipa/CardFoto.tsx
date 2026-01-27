@@ -42,8 +42,8 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
           whitespace-nowrap
           ${
             bigger
-              ? "text-sm sm:text-xl md:text-2xl xl:text-3xl lg:absolute lg:-bottom-12 xl:-bottom-16"
-              : "text-[0.5rem] sm:text-base md:text-xl"
+              ? "text-sm sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-[2.5rem] 4xl:text-5xl lg:absolute lg:-bottom-12 xl:-bottom-16"
+              : "text-[0.5rem] sm:text-base md:text-xl 2xl:text-3xl 3xl:text-4xl"
           }`}
       >
         {nome}

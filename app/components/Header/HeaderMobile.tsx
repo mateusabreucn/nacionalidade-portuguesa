@@ -27,7 +27,7 @@ export default function HeaderMobile() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-[65%] max-w-[300px] bg-bg-card text-text-secondary shadow-2xl z-50 transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-[65%] max-w-[300px] bg-bg-card text-text-secondary shadow-2xl z-90 transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -10,7 +10,7 @@ export default function Home() {
       className="
         flex flex-col
         p-6 md:p-10
-        min-h-screen max-w-screen-2xl
+        min-h-screen max-w-screen-4xl
         mx-auto
         bg-bg-primary
         relative

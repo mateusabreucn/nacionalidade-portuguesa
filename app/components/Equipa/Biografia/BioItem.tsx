@@ -71,7 +71,7 @@ export default function BioItem({
       {isMobile && (
         <button
           onClick={onNext}
-          className="shrink-0 hover:scale-110 transition-transform duration-300 cursor-pointer ml-auto"
+          className="shrink-0 hover:scale-110 transition-transform duration-300 cursor-pointer ml-auto mt-2"
           aria-label="Próxima bio"
         >
           <Image

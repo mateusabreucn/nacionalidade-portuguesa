@@ -40,7 +40,7 @@ export default function ModalBio({
   const currentBio = biosData[currentIndex];
 
   // Altura fixa: modal de bio é menor que feedback
-  const heightClass = isMobile ? "h-full sm:max-h-64" : "lg:h-[260px]";
+  const heightClass = isMobile ? "h-full sm:max-h-[260px]" : "lg:h-[260px]";
 
   return (
     <div className="w-full flex items-start justify-center">

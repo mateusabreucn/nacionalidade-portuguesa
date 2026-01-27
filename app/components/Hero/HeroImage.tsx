@@ -9,7 +9,7 @@ export default function HeroImage() {
         overflow-hidden
         rounded-[2.8rem] lg:rounded-4xl
         img-shadow
-        max-w-[98%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[45%]"
+        max-w-[98%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[40%]"
     >
       <Image
         src="/Intro - Amanda.png"

@@ -33,7 +33,7 @@ export default function MobileModalServico({
     >
       <ModalBackground
         onClose={onClose}
-        className="rounded-[30px]! md:rounded-[56px]! py-8! sm:py-10! md:py-12! px-6! md:px-14!"
+        className="rounded-[30px]! md:rounded-[56px]! py-12! sm:py-10! md:py-12! px-6! md:px-14!"
       >
         {/* Título centralizado */}
         <div className="flex flex-col w-full h-full">

@@ -24,17 +24,17 @@ export default function ModalBackground({
         rounded-[3rem]
         shadow-xl
         flex items-center justify-center
-        p-6 md:p-8 xl:p-8
+        pt-12 p-6 md:p-8 xl:p-8
         ${className}
       `}
     >
       {showCloseButton && onClose && (
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center rounded-full bg-btn-close hover:bg-btn-close-hover transition-colors z-20 cursor-pointer"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 2xl:top-8 2xl:right-8 4xl:top-12 4xl:right-12 w-8 h-8 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4xl:w-14 4xl:h-14 flex items-center justify-center rounded-full bg-btn-close hover:bg-btn-close-hover transition-colors z-20 cursor-pointer"
           aria-label="Fechar modal"
         >
-          <CloseIcon className="w-5 h-5 text-text-primary" />
+          <CloseIcon className="w-5 h-5 2xl:w-6 2xl:h-6 3xl:w-8 3xl:h-8 4xl:w-10 4xl:h-10 text-text-primary" />
         </button>
       )}
       {children}

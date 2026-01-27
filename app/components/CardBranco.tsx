@@ -11,7 +11,7 @@ export default function CardBranco({ titulo, children }: CardBrancoProps) {
       rounded-[30px] md:rounded-[56px]
       mx-auto max-w-[11/12]
       py-8 sm:py-10 md:py-12 lg:py-20 xl:py-16
-      px-6 md:px-14
+      px-4 sm:px-6 md:px-14
       mt-8 shadow-sm
     "
     >

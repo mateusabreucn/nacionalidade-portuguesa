@@ -21,8 +21,7 @@ export default function EquipaMobileModal({
       className={`
         absolute z-60 lg:hidden
         transition-all duration-500 ease-in-out
-        sm:top-[38%] left-0 right-0 bottom-0
-        ${activeModal === "feedback" ? "top-0" : "top-[38%]"}
+        bottom-0 left-0 right-0
         ${
           showModal
             ? "opacity-100 pointer-events-auto"

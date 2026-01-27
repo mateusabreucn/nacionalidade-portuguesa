@@ -40,11 +40,11 @@ export default function ModalFeedback({
   const currentFeedback = feedbacksData[currentIndex];
 
   const heightClass = isMobile
-    ? "h-[840px] sm:h-full"
-    : "h-14 sm:h-90 xl:h-108 2xl:h-109";
+    ? "max-h-[430px] sm:max-h-full"
+    : "lg:h-92 xl:h-114 2xl:h-120 3xl:h-136 4xl:h-148";
 
   return (
-    <div className="w-full h-full flex items-start justify-center">
+    <div className="w-full flex items-start justify-center">
       <ModalBackground onClose={onClose} className={heightClass}>
         <div
           className={`w-full h-full transition-opacity duration-300 ${

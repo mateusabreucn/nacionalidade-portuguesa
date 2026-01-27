@@ -74,7 +74,7 @@ export default function IconBadgeEquipa({
         relative flex items-center justify-center
         bg-bg-badge rounded-full shrink-0
         aspect-square z-10 overflow-hidden shadow-lg
-        ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-36"}
+        ${size ? size : "w-14 sm:w-24 lg:w-24 xl:w-36 2xl:w-40 3xl:w-44 4xl:w-48"}
       `}
       >
         {/* Container que desliza Horizontalmente */}
@@ -91,7 +91,7 @@ export default function IconBadgeEquipa({
         >
           {/* 0: Texto (Esquerda) */}
           <div className="relative w-full h-full shrink-0 flex items-center justify-center p-2">
-            <span className="font-josefin font-bold text-text-accent text-center whitespace-break-spaces uppercase text-[8px] sm:text-sm lg:text-base xl:text-xl">
+            <span className="font-josefin font-bold text-text-accent text-center whitespace-break-spaces uppercase text-[8px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl">
               {swapText}
             </span>
           </div>
@@ -105,7 +105,7 @@ export default function IconBadgeEquipa({
 
           {/* 2: Texto (Direita) */}
           <div className="relative w-full h-full shrink-0 flex items-center justify-center p-2">
-            <span className="font-josefin font-bold text-text-accent text-center whitespace-break-spaces uppercase text-[8px] sm:text-sm lg:text-base xl:text-xl">
+            <span className="font-josefin font-bold text-text-accent text-center whitespace-break-spaces uppercase text-[8px] sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl">
               {swapText}
             </span>
           </div>
