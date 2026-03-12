@@ -1,6 +1,5 @@
 "use client";
 
-import { NomeEquipa } from "../../enums/NomeEquipa";
 import CardFoto from "./CardFoto";
 import IconBadgeEquipa from "./IconBadgeEquipa";
 
@@ -20,8 +19,8 @@ export default function EquipaMainPhoto({
   return (
     <div className="relative w-[90%] lg:w-[50%] order-1">
       <CardFoto
-        src={`/Equipa/${NomeEquipa.AmandaCDantas}.png`}
-        nome={NomeEquipa.AmandaCDantas}
+        src={`/Equipa/AmandaCDantas.jpeg`}
+        nome="Amanda C. Dantas"
         bigger
       />
 

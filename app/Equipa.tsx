@@ -4,9 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import CardBranco from "./components/CardBranco";
 import EquipaMainPhoto from "./components/Equipa/EquipaMainPhoto";
 import EquipaCentralContent from "./components/Equipa/EquipaCentralContent";
-import EquipaMembersMobile from "./components/Equipa/EquipaMembersMobile";
 import EquipaMobileModal from "./components/Equipa/EquipaMobileModal";
-import EquipaMembersDesktop from "./components/Equipa/EquipaMembersDesktop";
 
 type ModalType = "feedback" | "bio" | null;
 
@@ -84,8 +82,6 @@ export default function Equipa() {
             onModalMouseLeave={handleBioLeave}
             handleClose={handleClose}
           />
-
-          <EquipaMembersMobile />
         </div>
 
         <EquipaMobileModal
@@ -93,8 +89,6 @@ export default function Equipa() {
           handleClose={handleClose}
           isMobile={isMobile}
         />
-
-        <EquipaMembersDesktop />
       </div>
     </CardBranco>
   );
