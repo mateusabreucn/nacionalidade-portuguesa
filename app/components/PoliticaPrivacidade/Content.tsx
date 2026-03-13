@@ -7,7 +7,7 @@ export default function PoliticaPrivacidadeContent() {
   const listClass = "list-disc pl-6 space-y-2";
 
   return (
-    <CardBranco titulo="Política de Privacidade e Cookies">
+    <CardBranco titulo="Política de Privacidade e Cookies" showBackButton>
       <div className="text-font-secondary text-left mx-auto max-w-4xl">
         <p className={paragraphClass}>
           O <strong>nacionalidade-portuguesa</strong> valoriza a privacidade e a
