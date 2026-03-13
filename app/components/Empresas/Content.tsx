@@ -10,7 +10,6 @@ export default function EmpresasContent() {
         <p className={paragraphClass}>
           Prestamos também todos os serviços relacionados, a saber:
         </p>
-        <div></div>
 
         <ul className={listClass}>
           <li className={paragraphClass}>
