@@ -36,7 +36,7 @@ export default function EquipaMainPhoto({
         <IconBadgeEquipa
           icon={isLocked ? "/Icons/Close.svg" : "/Icons/Equipa/Trofeu.png"}
           altText={isLocked ? "Fechar" : "Ícone de Troféu"}
-          swapText={"Sobre\nnós"}
+          swapText={"Conheça\nAmanda"}
           onClick={onModalClick}
           isActive={isLocked}
         />

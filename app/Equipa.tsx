@@ -41,14 +41,14 @@ export default function Equipa() {
 
   const handleModalClick = useCallback((modal: ModalType) => {
     setActiveModal((prev) => {
-      if (prev === modal) {
+      if (prev === modal && isLocked) {
         setIsLocked(false);
         return null;
       }
       setIsLocked(true);
       return modal;
     });
-  }, []);
+  }, [isLocked]);
 
   const handleBioHover = useCallback(() => {
     if (isMobile) return;
@@ -66,7 +66,7 @@ export default function Equipa() {
 
   return (
     <CardBranco titulo="Quem somos nós">
-      <div className="flex flex-col w-full relative">
+      <div className="flex flex-col items-center w-full relative gap-6 sm:gap-8 lg:gap-10">
         <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8">
           <EquipaMainPhoto
             isLocked={isLocked && activeModal === "bio"}
@@ -77,12 +77,28 @@ export default function Equipa() {
 
           <EquipaCentralContent
             activeModal={activeModal}
-            onModalClick={() => handleModalClick("feedback")}
             onModalMouseEnter={clearHoverTimeout}
             onModalMouseLeave={handleBioLeave}
             handleClose={handleClose}
           />
         </div>
+
+        <button
+          onClick={() => handleModalClick("feedback")}
+          className="
+            z-10
+            mt-24
+            py-2 sm:py-2.5 md:py-3 lg:py-4 xl:py-5 2xl:py-6
+            px-10 sm:px-14 md:px-20 lg:px-28 xl:px-36
+            bg-bg-badge rounded-xl
+            font-family-josefin
+            text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
+            cursor-pointer
+            hover:brightness-90 transition-all
+          "
+        >
+          Depoimentos
+        </button>
 
         <EquipaMobileModal
           activeModal={activeModal}

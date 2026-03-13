@@ -33,12 +33,12 @@ export default function IconBadgeEquipa({
       timeout = setTimeout(() => {
         setIsTransitioning(true);
         setSlideIndex(2);
-      }, 2000);
+      }, 3000);
     } else if (slideIndex === 2) {
       timeout = setTimeout(() => {
         setIsTransitioning(false);
         setSlideIndex(0);
-      }, 2000);
+      }, 3000);
     } else if (slideIndex === 0) {
       timeout = setTimeout(() => {
         setIsTransitioning(true);
@@ -53,8 +53,8 @@ export default function IconBadgeEquipa({
     font-josefin font-bold
     text-text-accent text-center
     whitespace-break-spaces uppercase
-    text-[8px] sm:text-sm lg:text-base
-    xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl
+    text-[6px] sm:text-[10px] lg:text-xs
+    xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl
   `;
 
   return (
@@ -73,7 +73,7 @@ export default function IconBadgeEquipa({
         className="
           relative
           flex items-center justify-center
-          w-14 sm:w-24 xl:w-32 2xl:w-40 3xl:w-48 4xl:w-56
+          w-10 sm:w-16 xl:w-22 2xl:w-28 3xl:w-34 4xl:w-40
           aspect-square
           bg-bg-badge rounded-full
           shrink-0 overflow-hidden

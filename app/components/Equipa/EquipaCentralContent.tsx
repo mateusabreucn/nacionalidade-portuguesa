@@ -6,7 +6,6 @@ import ModalFeedback from "./Feedback/ModalFeedback";
 
 interface EquipaCentralContentProps {
   activeModal: "feedback" | "bio" | null;
-  onModalClick: () => void;
   onModalMouseEnter: () => void;
   onModalMouseLeave: () => void;
   handleClose: () => void;
@@ -14,7 +13,6 @@ interface EquipaCentralContentProps {
 
 export default function EquipaCentralContent({
   activeModal,
-  onModalClick,
   onModalMouseEnter,
   onModalMouseLeave,
   handleClose,
@@ -26,7 +24,7 @@ export default function EquipaCentralContent({
       className="
         order-3 lg:order-2
         flex flex-col items-center
-        w-full max-w-[900px] 2xl:max-w-[1100px] 3xl:max-w-[2000px]
+        w-full max-w-[900px] 2xl:max-w-[1200px] 3xl:max-w-[2000px]
       "
     >
       <div className="relative flex flex-col items-center justify-center w-full aspect-13/4 sm:aspect-9/4">
@@ -46,7 +44,7 @@ export default function EquipaCentralContent({
             flex items-center justify-center
             w-[96%] h-full
             place-self-end
-            px-[11%] pb-[3%]
+            px-[12%] pb-[3%]
             text-start
             transition-opacity duration-500
             ${showModal ? "pointer-events-none" : ""}
@@ -81,22 +79,6 @@ export default function EquipaCentralContent({
           {activeModal === "bio" && <ModalBio isActive onClose={handleClose} />}
         </div>
       </div>
-
-      <button
-        onClick={onModalClick}
-        className="
-          mt-4 z-10
-          py-1 sm:py-1.5 md:py-2 lg:py-3 xl:py-4 2xl:py-6
-          px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32
-          bg-bg-badge rounded-xl
-          font-family-josefin
-          text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
-          cursor-pointer
-          hover:brightness-90 transition-all
-        "
-      >
-        Depoimentos
-      </button>
     </div>
   );
 }
