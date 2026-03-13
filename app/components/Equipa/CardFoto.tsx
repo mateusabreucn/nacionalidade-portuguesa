@@ -12,8 +12,8 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
     : "aspect-square rounded-full lg:aspect-square lg:rounded-4xl";
 
   const imageClasses = bigger
-    ? "object-cover object-[50%_23%] lg:origin-[50%_35%] lg:scale-150"
-    : "object-cover";
+    ? "object-cover object-center"
+    : "object-cover object-center";
 
   const nameClasses = bigger
     ? "text-sm sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-[2.5rem] 4xl:text-5xl lg:absolute lg:-bottom-12 xl:-bottom-16"

@@ -16,8 +16,7 @@ export default function HeroImage() {
         src="/Hero - Amanda.jpeg"
         alt="Imagem de Amanda Dantas"
         fill
-        className="object-cover scale-108 lg:scale-100"
-        style={{ objectPosition: "50% 60%" }}
+        className="object-cover object-center"
         priority
       />
     </div>
