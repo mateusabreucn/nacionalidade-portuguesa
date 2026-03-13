@@ -9,13 +9,10 @@ export default function PoliticaPrivacidadeContent() {
   return (
     <CardBranco titulo="Política de Privacidade e Cookies">
       <div className="text-font-secondary text-left mx-auto max-w-4xl">
-        <p className="text-sm text-gray-500 mb-6">
-          Última atualização: 08/08/2025
-        </p>
         <p className={paragraphClass}>
           O <strong>nacionalidade-portuguesa</strong> valoriza a privacidade e a
           proteção dos dados pessoais dos seus utilizadores. Cumprimos o
-          Regulamento Geral de Proteção de Dados (RGPD) e a Lei n.º 58/2019,
+          Regulamento Geral sobre a Proteção de Dados e a Lei n.º 58/2019,
           garantindo que o tratamento de dados é lícito, leal e transparente.
         </p>
 
@@ -31,83 +28,195 @@ export default function PoliticaPrivacidadeContent() {
           </li>
           <li>
             <strong>Morada:</strong> Avenida Mouzinho de Albuquerque 102, 1º
-            andar, sala 3 4490-409, Póvoa de Varzim
+            andar, sala 3, 4490-409, Póvoa de Varzim
           </li>
           <li>
             <strong>E-mail:</strong> amandadantas7135@gmail.com
           </li>
         </ul>
 
+        <hr className="my-8 border-border-accent" />
+
         <h3 className={sectionTitleClass}>2. Dados que Recolhemos</h3>
-        <p className={paragraphClass}>Podemos recolher:</p>
+        <p className={paragraphClass}>
+          Podemos recolher os seguintes dados pessoais:
+        </p>
+        <h4 className={subSectionTitleClass}>
+          Dados fornecidos diretamente pelo utilizador
+        </h4>
         <ul className={listClass}>
+          <li>Nome completo</li>
+          <li>Endereço de email</li>
+          <li>Número de telefone</li>
+          <li>Nacionalidade</li>
           <li>
-            Informações fornecidas diretamente por si (nome, e-mail, telefone,
-            etc.)
+            Outras informações fornecidas voluntariamente através de formulários
+            no website
+          </li>
+        </ul>
+        <h4 className={subSectionTitleClass}>Dados de navegação</h4>
+        <ul className={listClass}>
+          <li>Endereço IP</li>
+          <li>Tipo de navegador</li>
+          <li>Dispositivo utilizado</li>
+          <li>Páginas visitadas e tempo de navegação</li>
+        </ul>
+        <h4 className={subSectionTitleClass}>
+          Dados e documentos enviados pelo utilizador
+        </h4>
+        <p className={paragraphClass}>
+          No âmbito da prestação de serviços relacionados com processos
+          administrativos e jurídicos, poderão ser solicitados documentos
+          pessoais, tais como:
+        </p>
+        <ul className={listClass}>
+          <li>Certidões de nascimento</li>
+          <li>Documentos de identificação</li>
+          <li>Registos civis</li>
+          <li>
+            Outros documentos necessários à análise ou instrução de processos
+          </li>
+        </ul>
+        <p className={paragraphClass}>
+          Estes documentos poderão conter dados pessoais e dados sensíveis,
+          sendo tratados exclusivamente para as finalidades relacionadas com o
+          serviço solicitado.
+        </p>
+
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>3. Finalidade do Tratamento</h3>
+        <p className={paragraphClass}>
+          Os dados pessoais recolhidos são utilizados para:
+        </p>
+        <ul className={listClass}>
+          <li>Fornecer e gerir os serviços solicitados pelo utilizador</li>
+          <li>
+            Analisar pedidos relacionados com processos de nacionalidade ou
+            serviços administrativos
           </li>
           <li>
-            Dados de navegação (endereço IP, tipo de navegador, páginas
-            visitadas)
+            Comunicar com o utilizador sobre o estado do serviço ou pedido
           </li>
+          <li>Cumprir obrigações legais</li>
+          <li>Melhorar o funcionamento e desempenho do website</li>
           <li>
-            Cookies e tecnologias similares (para melhorar a experiência de
-            utilização)
+            Realizar campanhas de marketing digital e análise de desempenho
+            publicitário
           </li>
         </ul>
 
-        <h3 className={sectionTitleClass}>3. Finalidade do Tratamento</h3>
-        <p className={paragraphClass}>Os seus dados são recolhidos para:</p>
-        <ul className={listClass}>
-          <li>Fornecer e melhorar os nossos serviços</li>
-          <li>Comunicar consigo</li>
-          <li>Cumprir obrigações legais</li>
-          <li>Personalizar a sua experiência no site</li>
-        </ul>
+        <hr className="my-8 border-border-accent" />
 
         <h3 className={sectionTitleClass}>4. Base Legal</h3>
         <p className={paragraphClass}>
-          O tratamento dos seus dados pessoais é baseado em:
+          O tratamento dos dados pessoais baseia-se em:
         </p>
         <ul className={listClass}>
-          <li>O seu consentimento</li>
-          <li>Execução de contrato ou diligências pré-contratuais</li>
+          <li>Consentimento do titular dos dados</li>
+          <li>
+            Execução de contrato ou diligências pré-contratuais solicitadas pelo
+            titular
+          </li>
           <li>Cumprimento de obrigações legais</li>
-          <li>Interesses legítimos do responsável pelo tratamento</li>
+          <li>
+            Interesse legítimo do responsável pelo tratamento, nomeadamente para
+            melhoria dos serviços e análise de desempenho do website
+          </li>
         </ul>
+
+        <hr className="my-8 border-border-accent" />
 
         <h3 className={sectionTitleClass}>5. Partilha de Dados</h3>
         <p className={paragraphClass}>
-          Não vendemos nem partilhamos os seus dados com terceiros, exceto
-          quando necessário para:
+          Os dados pessoais poderão ser partilhados com:
         </p>
         <ul className={listClass}>
-          <li>Cumprimento de obrigações legais</li>
           <li>
-            Prestadores de serviços que atuam em nosso nome (com garantias de
-            proteção de dados)
+            Prestadores de serviços tecnológicos e plataformas digitais
+            utilizadas para a gestão do website
+          </li>
+          <li>
+            Prestadores de serviços de marketing e publicidade online
+          </li>
+          <li>
+            Entidades públicas ou autoridades competentes, quando exigido por
+            lei
           </li>
         </ul>
-
-        <h3 className={sectionTitleClass}>6. Conservação dos Dados</h3>
         <p className={paragraphClass}>
-          Os dados serão conservados apenas pelo período necessário para cumprir
-          as finalidades acima ou conforme exigido por lei. Após esse período,
-          são eliminados ou mantidos no anonimato.
+          Alguns destes prestadores podem incluir plataformas de publicidade
+          digital como:
+        </p>
+        <ul className={listClass}>
+          <li>Meta Platforms (Facebook e Instagram Ads)</li>
+          <li>Google (Google Ads e Google Analytics)</li>
+        </ul>
+        <p className={paragraphClass}>
+          Estas plataformas podem recolher dados de navegação através de cookies
+          ou tecnologias semelhantes para fins de análise de tráfego, medição de
+          campanhas publicitárias e personalização de anúncios.
         </p>
 
-        <h3 className={sectionTitleClass}>7. Direitos do Titular dos Dados</h3>
-        <p className={paragraphClass}>De acordo com o RGPD, tem direito a:</p>
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>
+          6. Transferência Internacional de Dados
+        </h3>
+        <p className={paragraphClass}>
+          Alguns dos prestadores de serviços utilizados pelo website podem estar
+          localizados fora do Espaço Económico Europeu. Nesses casos, garantimos
+          que a transferência de dados pessoais é realizada em conformidade com o
+          Regulamento Geral sobre a Proteção de Dados, através de mecanismos
+          adequados de proteção, como:
+        </p>
         <ul className={listClass}>
-          <li>Aceder, retificar ou apagar os seus dados</li>
-          <li>Limitar ou opor-se ao tratamento</li>
-          <li>Portabilidade dos dados</li>
-          <li>Retirar o consentimento a qualquer momento</li>
           <li>
-            Apresentar reclamação à Comissão Nacional de Proteção de Dados
-            (CNPD)
+            Cláusulas contratuais padrão aprovadas pela Comissão Europeia
           </li>
+          <li>Decisões de adequação da Comissão Europeia</li>
+          <li>Outras garantias legais aplicáveis</li>
         </ul>
-        <p className={paragraphClass + " mt-4"}>
+
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>7. Conservação dos Dados</h3>
+        <p className={paragraphClass}>
+          Os dados pessoais serão conservados apenas durante o período necessário
+          para cumprir as finalidades para as quais foram recolhidos,
+          nomeadamente:
+        </p>
+        <ul className={listClass}>
+          <li>Durante a prestação do serviço solicitado</li>
+          <li>Durante o período exigido por obrigações legais</li>
+          <li>Pelo tempo necessário para defesa de direitos legais</li>
+        </ul>
+        <p className={paragraphClass}>
+          Após esse período, os dados serão eliminados ou anonimizados.
+        </p>
+
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>8. Direitos do Titular dos Dados</h3>
+        <p className={paragraphClass}>
+          Nos termos do RGPD, o titular dos dados tem direito a:
+        </p>
+        <ul className={listClass}>
+          <li>Aceder aos seus dados pessoais</li>
+          <li>Solicitar a retificação de dados incorretos ou incompletos</li>
+          <li>
+            Solicitar a eliminação dos dados (&ldquo;direito ao
+            esquecimento&rdquo;)
+          </li>
+          <li>Limitar ou opor-se ao tratamento</li>
+          <li>Solicitar a portabilidade dos dados</li>
+          <li>Retirar o consentimento a qualquer momento</li>
+        </ul>
+        <p className={paragraphClass}>
+          O titular pode ainda apresentar reclamação junto da Comissão Nacional
+          de Proteção de Dados.
+        </p>
+        <p className={paragraphClass}>
           Para exercer os seus direitos, contacte:{" "}
           <a
             href="mailto:amandadantas7135@gmail.com"
@@ -115,57 +224,123 @@ export default function PoliticaPrivacidadeContent() {
           >
             amandadantas7135@gmail.com
           </a>
-          .
         </p>
 
-        <h3 className={sectionTitleClass}>8. Cookies</h3>
-        <h4 className={subSectionTitleClass}>8.1 O que são cookies?</h4>
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>9. Cookies</h3>
+        <h4 className={subSectionTitleClass}>9.1 O que são cookies</h4>
         <p className={paragraphClass}>
-          Pequenos ficheiros armazenados no seu dispositivo que guardam
-          informações sobre a sua navegação.
+          Cookies são pequenos ficheiros armazenados no dispositivo do utilizador
+          que permitem reconhecer o navegador e guardar determinadas informações
+          sobre a navegação.
         </p>
-        <h4 className={subSectionTitleClass}>8.2 Tipos utilizados</h4>
+
+        <h4 className={subSectionTitleClass}>
+          9.2 Tipos de cookies utilizados
+        </h4>
+        <p className={paragraphClass}>
+          <strong>Cookies essenciais</strong>
+          <br />
+          Necessários para o funcionamento básico do website.
+        </p>
+        <p className={paragraphClass}>
+          <strong>Cookies de desempenho e análise</strong>
+          <br />
+          Permitem analisar a forma como os visitantes utilizam o website, por
+          exemplo através de ferramentas como o Google Analytics.
+        </p>
+        <p className={paragraphClass}>
+          <strong>Cookies de funcionalidade</strong>
+          <br />
+          Permitem guardar preferências do utilizador.
+        </p>
+        <p className={paragraphClass}>
+          <strong>Cookies de marketing e publicidade</strong>
+          <br />
+          Utilizados para apresentar anúncios relevantes aos utilizadores e
+          medir a eficácia das campanhas publicitárias.
+        </p>
+
+        <h4 className={subSectionTitleClass}>9.3 Cookies de terceiros</h4>
+        <p className={paragraphClass}>
+          O website pode utilizar cookies de terceiros, nomeadamente das
+          seguintes plataformas:
+        </p>
         <ul className={listClass}>
-          <li>
-            <strong>Essenciais:</strong> necessários ao funcionamento do site
-          </li>
-          <li>
-            <strong>Desempenho/análise:</strong> como Google Analytics
-          </li>
-          <li>
-            <strong>Funcionalidade:</strong> guardar preferências
-          </li>
-          <li>
-            <strong>Marketing/publicidade:</strong> anúncios personalizados
-          </li>
+          <li>Google (Google Ads, Google Analytics)</li>
+          <li>Meta Platforms (Facebook Pixel e Instagram Ads)</li>
         </ul>
-        <h4 className={subSectionTitleClass}>8.3 Cookies de terceiros</h4>
         <p className={paragraphClass}>
-          Poderão ser utilizados serviços como Google, Facebook ou outros que
-          instalam cookies próprios.
-        </p>
-        <h4 className={subSectionTitleClass}>8.4 Consentimento</h4>
-        <p className={paragraphClass}>
-          Ao visitar o site, poderá aceitar todos os cookies ou configurar
-          preferências no banner de consentimento.
-        </p>
-        <h4 className={subSectionTitleClass}>8.5 Gestão de cookies</h4>
-        <p className={paragraphClass}>
-          Pode desativar cookies nas definições do seu navegador.
+          Estes cookies permitem analisar o comportamento de navegação dos
+          utilizadores, medir conversões publicitárias e apresentar anúncios
+          personalizados.
         </p>
 
-        <h3 className={sectionTitleClass}>9. Segurança</h3>
+        <h4 className={subSectionTitleClass}>9.4 Consentimento</h4>
         <p className={paragraphClass}>
-          Implementamos medidas técnicas e organizacionais para proteger os
-          dados contra perda, uso indevido ou acesso não autorizado.
+          Ao visitar o website pela primeira vez, será apresentado um banner de
+          consentimento de cookies, onde poderá aceitar, recusar ou configurar as
+          suas preferências.
         </p>
 
-        <h3 className={sectionTitleClass}>10. Alterações</h3>
+        <h4 className={subSectionTitleClass}>9.5 Gestão de Cookies</h4>
         <p className={paragraphClass}>
-          Podemos atualizar esta política a qualquer momento. A versão mais
-          recente estará sempre disponível no site.
+          O utilizador pode, a qualquer momento, alterar as definições de cookies
+          através do seu navegador ou do gestor de preferências disponível no
+          website.
+        </p>
+
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>10. Segurança</h3>
+        <p className={paragraphClass}>
+          São implementadas medidas técnicas e organizacionais adequadas para
+          proteger os dados pessoais contra perda, acesso não autorizado,
+          divulgação ou alteração.
+        </p>
+
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>
+          11. Contacto através do WhatsApp
+        </h3>
+        <p className={paragraphClass}>
+          O website poderá disponibilizar um botão ou link de contacto direto
+          através da aplicação WhatsApp para facilitar a comunicação entre o
+          utilizador e o responsável pelo serviço.
+        </p>
+        <p className={paragraphClass}>
+          Ao optar por iniciar uma conversa através desta plataforma, o
+          utilizador está a comunicar voluntariamente os seus dados pessoais,
+          incluindo número de telefone, nome de perfil e o conteúdo das
+          mensagens enviadas. Estes dados poderão ser tratados exclusivamente
+          para responder a pedidos de informação, prestar esclarecimentos ou dar
+          seguimento aos serviços solicitados.
+        </p>
+        <p className={paragraphClass}>
+          A comunicação realizada através do WhatsApp é efetuada por meio de uma
+          plataforma externa operada pela Meta Platforms, podendo os dados estar
+          sujeitos às políticas de privacidade e aos termos de utilização dessa
+          empresa.
+        </p>
+        <p className={paragraphClass}>
+          Recomenda-se que os utilizadores evitem o envio de documentos sensíveis
+          ou informações pessoais confidenciais através desta plataforma, salvo
+          quando expressamente solicitado e quando existam garantias adequadas de
+          segurança.
+        </p>
+
+        <hr className="my-8 border-border-accent" />
+
+        <h3 className={sectionTitleClass}>12. Alterações a esta Política</h3>
+        <p className={paragraphClass}>
+          Esta Política de Privacidade e Cookies poderá ser atualizada
+          periodicamente. A versão mais recente estará sempre disponível neste
+          website.
         </p>
       </div>
     </CardBranco>
   );
 }
+

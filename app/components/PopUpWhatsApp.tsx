@@ -38,9 +38,15 @@ export default function PopUpWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        fixed bottom-4 right-4 z-80
+        fixed bottom-6 right-6 z-80
         flex items-center justify-center
-        h-14 w-14 sm:h-16 sm:w-16 lg:h-20 lg:w-20 xl:h-22 xl:w-22 2xl:w-24 2xl:h-24 3xl:h-32 3xl:w-32 4xl:h-40 4xl:w-40
+        h-12 w-12
+        sm:h-14 sm:w-14
+        lg:h-16 lg:w-16
+        xl:h-20 xl:w-20
+        2xl:w-22 2xl:h-22
+        3xl:h-30 3xl:w-30
+        4xl:h-36 4xl:w-36
         p-3
         rounded-full bg-bg-card img-shadow
         cursor-pointer
@@ -48,7 +54,13 @@ export default function PopUpWhatsApp() {
         ${visibilityClasses}
       `}
     >
-      <WhatsAppIcon className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 xl:w-16 xl:h-16 3xl:h-22 3xl:w-22 4xl:h-26 4xl:w-26" />
+      <WhatsAppIcon className="
+      h-6 w-6
+      sm:h-8 sm:w-8
+      lg:h-120lg:w-10
+      xl:w-14 xl:h-14
+      3xl:h-20 3xl:w-20
+      4xl:h-24 4xl:w-24" />
     </a>
   );
 }
