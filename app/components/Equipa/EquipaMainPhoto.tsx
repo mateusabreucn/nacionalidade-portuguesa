@@ -19,7 +19,7 @@ export default function EquipaMainPhoto({
   return (
     <div className="relative w-[90%] lg:w-[50%] order-1">
       <CardFoto
-        src={`/Equipa/AmandaCDantas.jpeg`}
+        src={`/Equipa - Amanda.jpeg`}
         nome="Amanda C. Dantas"
         bigger
       />

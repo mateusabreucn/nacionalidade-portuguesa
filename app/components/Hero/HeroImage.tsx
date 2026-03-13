@@ -13,7 +13,7 @@ export default function HeroImage() {
       "
     >
       <Image
-        src="/Intro - Amanda.jpeg"
+        src="/Hero - Amanda.jpeg"
         alt="Imagem de Amanda Dantas"
         fill
         className="object-cover scale-108 lg:scale-100"
