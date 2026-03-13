@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import ModalBackground from "../ModalBackground";
 
 export interface ServicoData {
@@ -8,7 +9,12 @@ export interface ServicoData {
   titulo: string;
   icon: string;
   altText: string;
+  descricao?: string;
   topicos: string[];
+  link?: {
+    href: string;
+    label: string;
+  };
 }
 
 interface ModalServicoProps {
@@ -79,6 +85,11 @@ export default function ModalServico({
           </div>
 
           <div className="flex flex-col gap-2 pl-2">
+            {servico.descricao && (
+              <p className="text-sm md:text-base lg:text-lg 2xl:text-xl 4xl:text-2xl text-text-accent leading-relaxed mb-1 whitespace-pre-line">
+                {servico.descricao}
+              </p>
+            )}
             <ul className="list-disc list-inside space-y-1 md:space-y-2">
               {servico.topicos.map((topico, index) => (
                 <li
@@ -89,6 +100,26 @@ export default function ModalServico({
                 </li>
               ))}
             </ul>
+
+            {servico.link && (
+              <div className="flex justify-center mt-4">
+                <Link
+                  href={servico.link.href}
+                  className="
+                    inline-block
+                    py-2 px-6
+                    bg-btn-accent rounded-lg
+                    font-family-josefin font-medium
+                    text-xs md:text-sm lg:text-base 2xl:text-lg
+                    text-white text-center
+                    hover:brightness-110 hover:scale-105
+                    transition-all duration-300
+                  "
+                >
+                  {servico.link.label}
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </ModalBackground>

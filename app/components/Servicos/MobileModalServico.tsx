@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ServicoData } from "./ModalServico";
 import ModalBackground from "../ModalBackground";
 
@@ -68,6 +69,11 @@ export default function MobileModalServico({
           <div className="flex-1 overflow-y-auto custom-scrollbar pr-3">
             <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-col gap-2 pl-2">
+                {activeServico.descricao && (
+                  <p className="text-xs sm:text-sm md:text-base text-text-accent leading-relaxed mb-1 whitespace-pre-line">
+                    {activeServico.descricao}
+                  </p>
+                )}
                 <ul className="list-disc list-inside space-y-1 md:space-y-2">
                   {activeServico.topicos.map((topico, index) => (
                     <li
@@ -78,6 +84,26 @@ export default function MobileModalServico({
                     </li>
                   ))}
                 </ul>
+
+                {activeServico.link && (
+                  <div className="flex justify-center mt-4">
+                    <Link
+                      href={activeServico.link.href}
+                      className="
+                        inline-block
+                        py-2 px-6
+                        bg-btn-accent rounded-lg
+                        font-family-josefin font-medium
+                        text-xs sm:text-sm md:text-base
+                        text-white text-center
+                        hover:brightness-110 hover:scale-105
+                        transition-all duration-300
+                      "
+                    >
+                      {activeServico.link.label}
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>
