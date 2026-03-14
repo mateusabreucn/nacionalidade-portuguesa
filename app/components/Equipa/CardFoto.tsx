@@ -27,7 +27,6 @@ export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
         w-full
       "
     >
-      <div></div>
       <div
         className={`
           relative w-full
