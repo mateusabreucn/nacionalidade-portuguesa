@@ -28,7 +28,12 @@ export default function BioItem({
             overflow-hidden
           "
         >
-          <Image src={avatarSrc} alt={name} fill className="object-cover" />
+          <Image
+            src={avatarSrc}
+            alt={name}
+            fill
+            className="object-cover scale-150 object-center translate-x-1"
+          />
         </div>
 
         <div className="flex-1 flex flex-col gap-0.5">

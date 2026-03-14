@@ -18,17 +18,16 @@ export default function EquipaMainPhoto({
 }: EquipaMainPhotoProps) {
   return (
     <div className="relative w-[90%] lg:w-[50%] order-1">
-      <CardFoto
-        src={`/Equipa - Amanda.jpeg`}
-        nome="Amanda C. Dantas"
-        bigger
-      />
+      <CardFoto src={`/Equipa - Amanda.jpeg`} nome="Amanda C. Dantas" bigger />
 
       <div
         className="
           absolute z-50
-          bottom-4 md:bottom-8 lg:-bottom-6 xl:-bottom-10
-          -right-4 sm:-right-6 md:-right-8 lg:-right-10 xl:-right-10 2xl:-right-14
+          bottom-4 md:bottom-8
+          lg:-bottom-6 xl:-bottom-8
+          -right-4 sm:-right-6
+          md:-right-8 lg:-right-10
+          xl:-right-10 2xl:-right-12
         "
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
