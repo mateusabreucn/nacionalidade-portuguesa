@@ -22,6 +22,7 @@ export default function EquipaCentralContent({
   return (
     <div
       className="
+        relative
         order-3 lg:order-2
         flex flex-col items-center
         w-full max-w-[900px] 2xl:max-w-[1200px] 3xl:max-w-[2000px]
@@ -62,22 +63,22 @@ export default function EquipaCentralContent({
             da cidadania portuguesa em realidade.
           </p>
         </div>
+      </div>
 
-        <div
-          className={`
-            absolute hidden lg:flex inset-y-4
-            transition-all duration-500 ease-in-out
-            z-60
-            ${showModal ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
-          `}
-          onMouseEnter={onModalMouseEnter}
-          onMouseLeave={onModalMouseLeave}
-        >
-          {activeModal === "feedback" && (
-            <ModalFeedback isActive onClose={handleClose} />
-          )}
-          {activeModal === "bio" && <ModalBio isActive onClose={handleClose} />}
-        </div>
+      <div
+        className={`
+          absolute hidden lg:flex inset-x-0 top-0
+          transition-all duration-500 ease-in-out
+          z-60
+          ${showModal ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+        `}
+        onMouseEnter={onModalMouseEnter}
+        onMouseLeave={onModalMouseLeave}
+      >
+        {activeModal === "feedback" && (
+          <ModalFeedback isActive onClose={handleClose} />
+        )}
+        {activeModal === "bio" && <ModalBio isActive onClose={handleClose} />}
       </div>
     </div>
   );

@@ -67,7 +67,7 @@ export default function Equipa() {
   return (
     <CardBranco titulo="Quem somos nós">
       <div className="flex flex-col items-center w-full relative gap-6 sm:gap-8 lg:gap-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between w-full gap-8">
           <EquipaMainPhoto
             isLocked={isLocked && activeModal === "bio"}
             onModalClick={() => handleModalClick("bio")}

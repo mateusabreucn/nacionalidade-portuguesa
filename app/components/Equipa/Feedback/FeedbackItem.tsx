@@ -19,7 +19,7 @@ export default function FeedbackItem({
   onNext,
 }: FeedbackItemProps) {
   return (
-    <div className="flex flex-col gap-1.5 sm:gap-2 lg:gap-3 w-full h-full">
+    <div className="flex flex-col gap-1.5 sm:gap-2 lg:gap-3 w-full">
       <div className="flex items-center gap-3 lg:gap-4 2xl:gap-8 3xl:gap-10 4xl:gap-12">
         <div
           className="
@@ -53,8 +53,8 @@ export default function FeedbackItem({
         </div>
       </div>
 
-      <div className="flex items-center gap-3 flex-1 min-h-0 pt-4 sm:pt-8">
-        <div className="flex-1 overflow-y-auto scrollbar-auto pr-2 max-h-60 sm:max-h-full">
+      <div className="flex items-center gap-3 pt-4 sm:pt-8">
+        <div className="flex-1 pr-2">
           {text.split("\n").map((paragraph, index) => (
             <p
               key={index}

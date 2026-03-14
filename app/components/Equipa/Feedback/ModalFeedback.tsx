@@ -39,9 +39,7 @@ export default function ModalFeedback({
 
   const currentFeedback = feedbacksData[currentIndex];
 
-  const heightClass = isMobile
-    ? "max-h-[430px] sm:max-h-full"
-    : "lg:h-92 xl:h-114 2xl:h-120 3xl:h-136 4xl:h-148";
+  const heightClass = isMobile ? "max-h-[430px] sm:max-h-full" : "";
 
   return (
     <div className="w-full flex items-start justify-center">
