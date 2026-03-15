@@ -151,3 +151,20 @@ img {
     }
   }
 }
+
+/* ===== UTILITÁRIOS FLUIDOS (responsividade sem breakpoints explícitos) ===== */
+/* Margem horizontal do Hero: 0rem → 4rem (xl/1280px) → ~6.4rem (2xl/1536px) → 10rem (3xl/1920px) */
+@utility mx-hero {
+  margin-left: clamp(0rem, calc(-8rem + 15vw), 10rem);
+  margin-right: clamp(0rem, calc(-8rem + 15vw), 10rem);
+}
+
+/* Gap horizontal do Hero: 1.5rem → 2rem (xl/1280px) → 2.5rem (2xl/1536px) */
+@utility gap-x-hero {
+  column-gap: clamp(1.5rem, calc(-0.5rem + 3.125vw), 2.5rem);
+}
+
+/* Gap vertical do Hero: 2rem → 4rem (xl/1280px) */
+@utility gap-y-hero {
+  row-gap: clamp(2rem, 5vw, 4rem);
+}

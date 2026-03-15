@@ -7,9 +7,9 @@ export default function Hero() {
       className="
         flex flex-col-reverse lg:flex-row
         justify-between items-center
-        my-6 mx-0 xl:mx-16 2xl:mx-28 3xl:mx-40
-        gap-x-6 xl:gap-x-8 2xl:gap-x-10
-        gap-y-8 xl:gap-y-16
+        my-6 mx-hero
+        gap-x-hero
+        gap-y-hero
       "
     >
       <HeroText />
