@@ -3,6 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
+const NAV_LINKS = [
+  { name: "Home", href: "/" },
+  { name: "Equipa", href: "/#equipa" },
+  { name: "Serviços", href: "/#servicos" },
+  { name: "Contacto", href: "/#contato" },
+];
+
 export default function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -44,44 +51,21 @@ export default function HeaderMobile() {
         <div className="flex flex-col h-full py-8 px-6">
           <h2 className="font-josefin text-5xl text-center mt-4 mb-8">Menu</h2>
 
-          <nav className="flex flex-col items-center text-center text-xl">
-            <a
-              href="/"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-9 hover:text-gray-600 transition-colors"
-            >
-              Home
-            </a>
-
-            <div className="w-28 border-t border-black" />
-
-            <a
-              href="/#equipa"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-9 hover:text-gray-600 transition-colors"
-            >
-              Equipa
-            </a>
-
-            <div className="w-28 border-t border-black" />
-
-            <a
-              href="/#servicos"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-9 hover:text-gray-600 transition-colors"
-            >
-              Serviços
-            </a>
-
-            <div className="w-28 border-t border-black" />
-
-            <a
-              href="/#contato"
-              onClick={() => setIsMenuOpen(false)}
-              className="py-9 hover:text-gray-600 transition-colors"
-            >
-              Contacto
-            </a>
+          <nav className="flex flex-col items-center text-center text-[clamp(1rem,4vw,1.25rem)]">
+            {NAV_LINKS.map((link, index) => (
+              <div key={link.name} className="flex flex-col items-center w-full">
+                <a
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="py-9 hover:text-gray-600 transition-colors"
+                >
+                  {link.name}
+                </a>
+                {index < NAV_LINKS.length - 1 && (
+                  <div className="w-28 border-t border-black" />
+                )}
+              </div>
+            ))}
           </nav>
         </div>
       </div>
