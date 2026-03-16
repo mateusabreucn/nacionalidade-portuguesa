@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import CardBranco from "./components/CardBranco";
-import ModalServico from "./components/Servicos/ModalServico";
-import { servicosData } from "./components/Servicos/servicosData";
-import MobileModalServico from "./components/Servicos/MobileModalServico";
-import ServicosGrid from "./components/Servicos/ServicosGrid";
-import ServicosBackground from "./components/Servicos/ServicosBackground";
+import CardBranco from "@components/CardBranco";
+import ModalServico from "@components/Servicos/ModalServico";
+import { servicosData } from "@components/Servicos/servicosData";
+import MobileModalServico from "@components/Servicos/MobileModalServico";
+import ServicosGrid from "@components/Servicos/ServicosGrid";
+import ServicosBackground from "@components/Servicos/ServicosBackground";
 
 export default function Servicos() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);

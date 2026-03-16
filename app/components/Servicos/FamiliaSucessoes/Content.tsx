@@ -1,4 +1,4 @@
-import CardBranco from "../CardBranco";
+import CardBranco from "@components/CardBranco";
 
 export default function FamiliaSucessoesContent() {
   const sectionTitleClass = "font-josefin text-xl md:text-2xl mt-8 mb-4";

@@ -1,6 +1,6 @@
 import Header from "../Header";
 import Footer from "../Footer";
-import EmpresasContent from "../components/Empresas/Content";
+import EmpresasContent from "@components/Servicos/Empresas/Content";
 
 export default function EmpresasPage() {
   return (

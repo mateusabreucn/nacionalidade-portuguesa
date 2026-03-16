@@ -1,6 +1,6 @@
 import Header from "../Header";
 import Footer from "../Footer";
-import FamiliaSucessoesContent from "../components/FamiliaSucessoes/Content";
+import FamiliaSucessoesContent from "@components/Servicos/FamiliaSucessoes/Content";
 
 export default function FamiliaSucessoesPage() {
   return (

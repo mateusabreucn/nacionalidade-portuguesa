@@ -1,6 +1,6 @@
 import Header from "../Header";
 import Footer from "../Footer";
-import NacionalidadeContent from "../components/Nacionalidade/Content";
+import NacionalidadeContent from "@components/Servicos/Nacionalidade/Content";
 
 export default function NacionalidadePage() {
   return (

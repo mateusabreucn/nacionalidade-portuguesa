@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Josefin_Sans } from "next/font/google";
 import "./globals.css";
-import PopUpWhatsApp from "./components/PopUpWhatsApp";
-import CookieBanner from "./components/CookieBanner";
+import PopUpWhatsApp from "@components/PopUpWhatsApp";
+import CookieBanner from "@components/CookieBanner";
 
 const inter = Inter({
   variable: "--font-inter",

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeaderDesktop from "./components/Header/HeaderDesktop";
-import HeaderMobile from "./components/Header/HeaderMobile";
+import HeaderDesktop from "@components/Header/HeaderDesktop";
+import HeaderMobile from "@components/Header/HeaderMobile";
 
 interface HeaderProps {
   showNavLinks?: boolean;

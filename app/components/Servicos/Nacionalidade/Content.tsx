@@ -1,5 +1,4 @@
-import CardBranco from "../CardBranco";
-import Link from "next/link";
+import CardBranco from "@components/CardBranco";
 
 export default function NacionalidadeContent() {
   const sectionTitleClass = "font-josefin text-xl md:text-2xl mt-8 mb-4";
@@ -15,9 +14,7 @@ export default function NacionalidadeContent() {
           Quem tem direito à Cidadania Portuguesa?
         </h3>
         <ul className={listClass}>
-          <li className={paragraphClass}>
-            Filhos e Netos de português;
-          </li>
+          <li className={paragraphClass}>Filhos e Netos de português;</li>
           <li className={paragraphClass}>
             Bisnetos de português (se possui membro intermediário vivo);
           </li>
@@ -52,9 +49,7 @@ export default function NacionalidadeContent() {
             Não necessitará de visto para visitar países como Canadá, EUA,
             Emirados Árabes e Japão;
           </li>
-          <li className={paragraphClass}>
-            Agilidade na imigração;
-          </li>
+          <li className={paragraphClass}>Agilidade na imigração;</li>
           <li className={paragraphClass}>
             Acesso a serviços públicos: educação gratuita, sistema de saúde de
             qualidade e outros benefícios sociais;
@@ -141,8 +136,14 @@ export default function NacionalidadeContent() {
 
         <hr className={separatorClass} />
 
+        <iframe
+          src="https://tally.so/embed/b5Oey0?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          className="w-full h-[1600px]"
+          title="Formulário de Solicitação de Nacionalidade"
+        />
+
         {/* Botão Preencher Formulário */}
-        <div className="flex justify-center mt-8 mb-4">
+        {/* <div className="flex justify-center mt-8 mb-4">
           <Link
             href="#"
             className="
@@ -161,7 +162,7 @@ export default function NacionalidadeContent() {
           >
             Preencher Formulário
           </Link>
-        </div>
+        </div> */}
       </div>
     </CardBranco>
   );

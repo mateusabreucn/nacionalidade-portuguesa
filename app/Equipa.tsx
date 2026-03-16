@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import CardBranco from "./components/CardBranco";
-import EquipaMainPhoto from "./components/Equipa/EquipaMainPhoto";
-import EquipaCentralContent from "./components/Equipa/EquipaCentralContent";
-import EquipaMobileModal from "./components/Equipa/EquipaMobileModal";
+import CardBranco from "@components/CardBranco";
+import EquipaMainPhoto from "@components/Equipa/EquipaMainPhoto";
+import EquipaCentralContent from "@components/Equipa/EquipaCentralContent";
+import EquipaMobileModal from "@components/Equipa/EquipaMobileModal";
 
 type ModalType = "feedback" | "bio" | null;
 

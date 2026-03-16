@@ -1,6 +1,6 @@
 import Header from "../Header";
 import Footer from "../Footer";
-import PoliticaPrivacidadeContent from "../components/PoliticaPrivacidade/Content";
+import PoliticaPrivacidadeContent from "@components/PoliticaPrivacidade/Content";
 
 export default function PoliticaPrivacidadePage() {
   return (

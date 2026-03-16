@@ -1,4 +1,4 @@
-import CardBranco from "../CardBranco";
+import CardBranco from "@components/CardBranco";
 
 export default function EmpresasContent() {
   const paragraphClass = "text-base leading-relaxed mb-4";
