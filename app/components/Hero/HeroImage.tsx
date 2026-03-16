@@ -5,10 +5,10 @@ export default function HeroImage() {
     <div
       className="
         relative shrink-0
-        w-full max-w-[98%] lg:max-w-[42%] xl:max-w-[44%] 2xl:max-w-[40%]
+        w-full max-w-[98%] lg:max-w-[clamp(40%,42vw,44%)]
         aspect-5/3 lg:aspect-21/20
         overflow-hidden
-        rounded-[2.8rem] lg:rounded-4xl
+        rounded-[clamp(2.8rem,4vw,3.5rem)]
         img-shadow
       "
     >
