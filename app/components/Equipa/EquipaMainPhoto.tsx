@@ -18,7 +18,7 @@ export default function EquipaMainPhoto({
 }: EquipaMainPhotoProps) {
   return (
     <div className="relative w-[90%] lg:w-[50%] order-1">
-      <CardFoto src={`/Equipa - Amanda.jpeg`} nome="Amanda C. Dantas" bigger />
+      <CardFoto src={`/Equipa - Amanda.png`} nome="Amanda C. Dantas" bigger />
 
       <div
         className="
