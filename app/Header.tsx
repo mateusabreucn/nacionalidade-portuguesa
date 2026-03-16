@@ -23,7 +23,6 @@ export default function Header({ showNavLinks = true }: HeaderProps) {
         className="
           w-[55%] md:w-[50%] lg:w-[22%]
           h-auto mx-auto lg:mx-0
-          hover:scale-105 duration-300
         "
       >
         <Image src="/logo.png" alt="Logo" width={600} height={120} />
@@ -39,11 +38,11 @@ export default function Header({ showNavLinks = true }: HeaderProps) {
       <div className="hidden lg:block">
         <button
           className="
-            p-3 xl:p-4 3xl:p-5 4xl:p-6
-            bg-btn-dark rounded-xl
+            p-[clamp(0.75rem,0.75vw,1.2rem)]
+            bg-btn-dark rounded-lg
             border border-border-default
             text-white
-            text-xs xl:text-sm 2xl:text-lg 3xl:text-xl 4xl:text-3xl
+            text-[clamp(0.8rem,1vw,1.5rem)]
             cursor-pointer
             hover:brightness-80 hover:scale-105
             transition-all duration-300
