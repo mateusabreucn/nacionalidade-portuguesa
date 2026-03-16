@@ -1,4 +1,5 @@
 import CardBranco from "@components/CardBranco";
+import TallyEmbed from "@components/Servicos/Nacionalidade/TallyEmbed";
 
 export default function NacionalidadeContent() {
   const sectionTitleClass = "font-josefin text-xl md:text-2xl mt-8 mb-4";
@@ -136,33 +137,7 @@ export default function NacionalidadeContent() {
 
         <hr className={separatorClass} />
 
-        <iframe
-          src="https://tally.so/embed/b5Oey0?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          className="w-full h-[1600px]"
-          title="Formulário de Solicitação de Nacionalidade"
-        />
-
-        {/* Botão Preencher Formulário */}
-        {/* <div className="flex justify-center mt-8 mb-4">
-          <Link
-            href="#"
-            className="
-              inline-block
-              py-3 sm:py-4 md:py-5
-              px-8 sm:px-12 md:px-16
-              bg-btn-accent rounded-xl
-              font-family-josefin font-medium
-              text-sm sm:text-base md:text-xl lg:text-2xl
-              text-white
-              cursor-pointer
-              hover:brightness-110 hover:scale-105
-              transition-all duration-300
-              text-center
-            "
-          >
-            Preencher Formulário
-          </Link>
-        </div> */}
+        <TallyEmbed />
       </div>
     </CardBranco>
   );
