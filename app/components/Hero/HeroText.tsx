@@ -17,19 +17,19 @@ export default function HeroText() {
         </h1>
       </div>
 
-      <p className="mt-[clamp(0.5rem,2cqw,1rem)] text-[clamp(0.75rem,3.2cqw,2rem)]">
+      <p className="mt-[clamp(0.5rem,2cqw,1rem)] text-[clamp(0.6rem,3.2cqw,2rem)]">
         Apoio jurídico em processos de nacionalidade e imigração.
       </p>
 
       <button
         className="
           mt-[clamp(0.5rem,2.5vh,1.5rem)]
-          py-[clamp(0.5rem,1vh,1rem)]
-          px-[clamp(3rem,2.5vw,6rem)]
+          py-[clamp(0.25rem,1vh,1rem)]
+          px-[clamp(2rem,2.5vw,6rem)]
           w-fit mx-auto lg:mx-0
           bg-btn-light rounded-lg
           border border-border-default
-          text-[clamp(1.25rem,3cqw,2.25rem)]
+          text-[clamp(0.875rem,3cqw,2.25rem)]
           cursor-pointer
           hover:brightness-80 hover:scale-105
           transition-all duration-300
