@@ -27,8 +27,8 @@ export default function EquipaCentralContent({
         w-full max-w-[900px] 2xl:max-w-[1200px] 3xl:max-w-[2000px]
       "
     >
-      <div className="relative flex flex-col items-center justify-center w-full aspect-13/4 sm:aspect-9/4">
-        <div className="absolute inset-0 w-[96%] place-self-end h-full transition-opacity duration-500">
+      <div className="relative @container flex flex-col items-center justify-center w-[96%] aspect-1114/359">
+        <div className="absolute inset-0 w-full h-full transition-opacity duration-500">
           <Image
             src="/Icons/Ellipse.svg"
             fill
@@ -42,10 +42,8 @@ export default function EquipaCentralContent({
           className={`
             relative
             flex items-center justify-center
-            w-[96%] h-full
-            place-self-end
-            px-[12%] pb-[3%]
-            text-start
+            w-[88%] h-full
+            px-[4%] pb-[2%]
             transition-opacity duration-500
             ${showModal ? "pointer-events-none" : ""}
           `}
@@ -53,9 +51,10 @@ export default function EquipaCentralContent({
           <p
             className="
               font-josefin
-              text-[0.7rem] sm:text-xl md:text-2xl xl:text-[2rem] 2xl:text-4xl 3xl:text-5xl
+              text-[clamp(0.65rem,4cqw,4rem)]
               text-center lg:text-left
-              leading-tight md:leading-snug
+              leading-tight sm:leading-snug
+              text-text-secondary
             "
           >
             Há mais de sete anos, ajudamos brasileiros a transformarem o sonho

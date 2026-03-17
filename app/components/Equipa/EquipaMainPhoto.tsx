@@ -23,11 +23,10 @@ export default function EquipaMainPhoto({
       <div
         className="
           absolute z-50
-          bottom-4 md:bottom-8
-          lg:-bottom-6 xl:-bottom-8
-          -right-4 sm:-right-6
-          md:-right-8 lg:-right-10
-          xl:-right-10 2xl:-right-12
+          bottom-[clamp(1rem,4vw,2rem)]
+          lg:bottom-[clamp(-3rem,-2.5vw,-1.5rem)]
+          right-[clamp(-2.5rem,-4vw,-1rem)]
+          lg:right-[clamp(-4.5rem,-3.5vw,-2.5rem)]
         "
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
