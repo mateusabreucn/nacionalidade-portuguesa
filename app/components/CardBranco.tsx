@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import ArrowLeftIcon from "@components/Icons/ArrowLeftIcon";
 
 interface CardBrancoProps {
   titulo: string;
@@ -20,54 +21,51 @@ export default function CardBranco({
       className="
         relative
         mx-auto max-w-[11/12]
-        py-8 sm:py-10 md:py-12 lg:py-20 xl:py-16
-        px-4 sm:px-6 md:px-14
+        py-[clamp(2rem,5vw,4rem)]
+        px-[clamp(1rem,4vw,3.5rem)]
         mt-8
-        bg-bg-card rounded-[30px] md:rounded-[56px] shadow-sm
+        bg-bg-card rounded-[clamp(1.875rem,4vw,3.5rem)] shadow-sm
       "
     >
-      {showBackButton && (
-        <button
-          onClick={() => router.back()}
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center w-full mb-[clamp(1rem,4vw,4rem)] gap-2 md:gap-4">
+        <div className="flex justify-start">
+          {showBackButton && (
+            <button
+              onClick={() => router.back()}
+              className="
+                relative
+                flex items-center justify-center gap-1.5
+                w-[clamp(1.5rem,8vw,2.5rem)] h-[clamp(1.5rem,8vw,2.5rem)] md:w-auto md:h-auto
+                p-0 md:px-[clamp(1rem,2vw,1.25rem)] md:py-[clamp(0.375rem,1vw,0.5rem)]
+                rounded-full md:rounded-lg
+                border md:border-0 border-btn-accent
+                bg-transparent md:bg-btn-accent
+                text-btn-accent md:text-white
+                text-[clamp(0.75rem,1.5vw,0.875rem)] font-medium
+                cursor-pointer
+                hover:brightness-110 hover:scale-105
+                transition-all duration-300
+                z-10
+              "
+            >
+              <ArrowLeftIcon className="w-[clamp(1rem,5vw,1.25rem)] h-[clamp(1rem,5vw,1.25rem)] md:w-[clamp(1rem,2vw,1.25rem)] md:h-[clamp(1rem,2vw,1.25rem)]" />
+              <span className="hidden md:inline">Voltar</span>
+            </button>
+          )}
+        </div>
+
+        <h2
           className="
-            absolute top-6 left-6 sm:top-8 sm:left-8 md:top-10 md:left-14
-            flex items-center gap-1.5
-            px-4 py-1.5 sm:px-5 sm:py-2
-            bg-btn-accent rounded-lg
-            text-white text-xs sm:text-sm font-medium
-            cursor-pointer
-            hover:brightness-110 hover:scale-105
-            transition-all duration-300
-            z-10
+            font-josefin
+            text-[clamp(1.25rem,5vw,3rem)]
+            lg:text-[clamp(2rem,3vw,4rem)]
+            leading-tight
+            text-text-secondary text-center
           "
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2.5}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-4 h-4 sm:w-5 sm:h-5"
-          >
-            <path d="M19 12H5" />
-            <path d="m12 19-7-7 7-7" />
-          </svg>
-          Voltar
-        </button>
-      )}
-
-      <h2
-        className="
-          font-josefin
-          text-xl sm:text-2xl md:text-3xl lg:text-[2rem] xl:text-[2.8rem] 2xl:text-5xl leading-tight
-          text-text-secondary text-center
-          mb-4 sm:mb-8
-        "
-      >
-        {titulo}
-      </h2>
+          {titulo}
+        </h2>
+      </div>
       {children}
     </section>
   );
