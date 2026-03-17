@@ -66,7 +66,7 @@ export default function Equipa() {
 
   return (
     <CardBranco titulo="Quem somos nós">
-      <div className="flex flex-col items-center w-full relative gap-6 sm:gap-8 lg:gap-10">
+      <div className="flex flex-col items-center w-full relative gap-[clamp(1rem,2vw,2.5rem)]">
         <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8">
           <EquipaMainPhoto
             isLocked={isLocked && activeModal === "bio"}
@@ -87,12 +87,13 @@ export default function Equipa() {
           onClick={() => handleModalClick("feedback")}
           className="
             z-10
-            mt-24
-            py-2 sm:py-2.5 md:py-3 lg:py-4 xl:py-5 2xl:py-6
-            px-10 sm:px-14 md:px-20 lg:px-28 xl:px-36
-            bg-bg-badge rounded-xl
-            font-family-josefin
-            text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
+            mt-[clamp(0.5rem,2vw,3rem)]
+            lg:mt-[clamp(4rem,7vw,6rem)]
+            py-[clamp(0.25rem,1vw,1.5rem)]
+            px-[clamp(2rem,5.5vw,6rem)]
+            bg-bg-badge rounded-lg
+            font-josefin
+            text-[clamp(0.75rem,2vw,2.5rem)] font-medium
             cursor-pointer
             hover:brightness-90 transition-all
           "

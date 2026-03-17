@@ -1,54 +1,41 @@
 import Image from "next/image";
 
-interface CardFotoProps {
-  src: string;
-  nome: string;
-  bigger?: boolean;
-}
 
-export default function CardFoto({ src, nome, bigger }: CardFotoProps) {
-  const containerClasses = bigger
-    ? "aspect-2/1 lg:aspect-square rounded-[2.5rem] lg:rounded-4xl"
-    : "aspect-square rounded-full lg:aspect-square lg:rounded-4xl";
-
-  const imageClasses = bigger
-    ? "object-cover object-center"
-    : "object-cover object-center";
-
-  const nameClasses = bigger
-    ? "text-sm sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-[2.5rem] 4xl:text-5xl lg:absolute lg:-bottom-12 xl:-bottom-16"
-    : "text-[0.5rem] sm:text-base md:text-xl 2xl:text-3xl 3xl:text-4xl";
-
+export default function CardFotoEquipa() {
   return (
     <div
       className="
         flex flex-col items-center
-        gap-y-2 md:gap-y-4 xl:gap-y-8
-        w-full
+        gap-y-[clamp(0.5rem,1.5vw,2rem)]
+        w-full relative
       "
     >
       <div
-        className={`
+        className="
           relative w-full
-          ${containerClasses}
+          aspect-[1.25] lg:aspect-square
+          rounded-[clamp(1.5rem,3vw,2rem)]
           img-shadow overflow-hidden
-        `}
+        "
       >
         <Image
-          src={src}
-          alt={`Foto de ${nome}`}
+          src={'/Equipa - Amanda.png'}
+          alt={`Foto de Amanda C. Dantas`}
           fill
-          className={imageClasses}
+          className="object-cover object-[center_40%] lg:object-center"
         />
       </div>
 
       <h3
-        className={`
+        className="
           text-center whitespace-nowrap
-          ${nameClasses}
-        `}
+          text-[clamp(0.875rem,3cqw,2rem)]
+          lg:text-[clamp(1rem,2cqw,3rem)]
+          lg:absolute
+          lg:bottom-[clamp(-5.5rem,-4vw,-2rem)]
+        "
       >
-        {nome}
+        Amanda C. Dantas
       </h3>
     </div>
   );

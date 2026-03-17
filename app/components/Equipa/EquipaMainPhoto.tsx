@@ -1,6 +1,6 @@
 "use client";
 
-import CardFoto from "./CardFoto";
+import CardFotoEquipa from "./CardFoto";
 import IconBadgeEquipa from "./IconBadgeEquipa";
 
 interface EquipaMainPhotoProps {
@@ -17,8 +17,8 @@ export default function EquipaMainPhoto({
   onMouseLeave,
 }: EquipaMainPhotoProps) {
   return (
-    <div className="relative w-[90%] lg:w-[50%] order-1">
-      <CardFoto src={`/Equipa - Amanda.png`} nome="Amanda C. Dantas" bigger />
+    <div className="relative w-[80%] lg:w-[50%] order-1">
+      <CardFotoEquipa />
 
       <div
         className="
