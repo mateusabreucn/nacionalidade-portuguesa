@@ -54,6 +54,7 @@ export default function IconBadgeEquipa({
     text-text-accent text-center
     whitespace-break-spaces uppercase
     text-[clamp(0.4rem,14cqw,1.5rem)]
+    mb-1
   `;
 
   return (
@@ -89,8 +90,13 @@ export default function IconBadgeEquipa({
           `}
           style={{ transform: `translateX(-${slideIndex * 100}%)` }}
         >
-          <div className="relative flex items-center justify-center w-full h-full shrink-0 p-2">
+          <div className="relative flex flex-col items-center justify-center w-full h-full shrink-0 p-2">
             <span className={textClasses}>{swapText}</span>
+            {swapText && !isActive && (
+              <span className="absolute bottom-[clamp(0.3rem,7cqw,2rem)] text-[clamp(0.5rem,15cqw,3rem)] text-text-accent animate-bounce">
+                👆
+              </span>
+            )}
           </div>
 
           <div className="relative flex items-center justify-center w-full h-full shrink-0">
@@ -99,8 +105,13 @@ export default function IconBadgeEquipa({
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center w-full h-full shrink-0 p-2">
+          <div className="relative flex flex-col items-center justify-center w-full h-full shrink-0 p-2">
             <span className={textClasses}>{swapText}</span>
+            {swapText && !isActive && (
+              <span className="absolute bottom-[clamp(0.3rem,7cqw,2rem)] text-[clamp(0.5rem,15cqw,3rem)] text-text-accent animate-bounce">
+                👆
+              </span>
+            )}
           </div>
         </div>
       </div>
