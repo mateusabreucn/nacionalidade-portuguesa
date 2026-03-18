@@ -3,7 +3,6 @@
 /* stylelint-disable at-rule-no-unknown */
 @theme {
   /* ===== BREAKPOINTS CUSTOMIZADOS ===== */
-  --breakpoint-xs: 25rem;
   --breakpoint-3xl: 120rem;
   --breakpoint-4xl: 160rem;
 
