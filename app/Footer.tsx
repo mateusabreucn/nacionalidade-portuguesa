@@ -6,10 +6,11 @@ export default function Footer() {
     <footer
       className="
         w-full mx-auto
-        flex flex-col lg:flex-row justify-center items-center
-        mt-8 sm:mt-12 md:mt-18 lg:mt-20 xl:mt-24
-        mb-10 xl:mb-12
-        gap-y-10 sm:gap-y-12 md:gap-y-16 lg:gap-x-20 xl:gap-x-48
+        flex flex-col lg:flex-row
+        justify-start items-start lg:justify-center lg:items-center
+        mt-[clamp(2rem,6vw,6rem)]
+        mb-[clamp(2.5rem,3vw,3rem)]
+        gap-y-[clamp(2.5rem,5vw,4rem)] lg:gap-x-[clamp(5rem,10vw,12rem)]
       "
     >
       <InfoFooter

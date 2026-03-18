@@ -34,9 +34,10 @@ export default function InfoFooter({
   return (
     <div
       className="
-        flex items-center justify-center
+        @container
+        flex items-center justify-start lg:justify-center
         w-full
-        gap-x-4 sm:gap-x-8 lg:gap-x-2
+        gap-[clamp(0.25rem,2cqw,2rem)]
         truncate
       "
     >
@@ -44,14 +45,12 @@ export default function InfoFooter({
         href={isMobile ? linkMobile : link}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative aspect-square w-16 sm:w-28 lg:w-32 2xl:w-44 3xl:w-52"
+        className="relative shrink-0 aspect-square w-[clamp(4rem,20cqw,14rem)]"
       >
         <Image src={icon} alt={altText} fill className="object-cover" />
       </a>
 
-      <div className="truncate text-[0.6rem] sm:text-lg lg:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl">
-        {children}
-      </div>
+      <div className="truncate text-[clamp(0.5rem,4cqw,2rem)]">{children}</div>
     </div>
   );
 }
