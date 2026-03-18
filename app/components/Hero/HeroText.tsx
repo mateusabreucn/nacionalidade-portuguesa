@@ -1,3 +1,5 @@
+import WhatsAppLink from "../WhatsAppLink";
+
 export default function HeroText() {
   return (
     <div className="flex flex-col w-full flex-1 min-w-0 @container mx-auto text-text-primary text-center lg:text-left">
@@ -9,7 +11,7 @@ export default function HeroText() {
         <h1
           className="
             font-medium
-            text-[clamp(1.5rem,8.2cqw,5.5rem)]
+            text-[clamp(1.4rem,8.2cqw,5.5rem)]
             whitespace-nowrap
           "
         >
@@ -21,8 +23,9 @@ export default function HeroText() {
         Apoio jurídico em processos de nacionalidade e imigração.
       </p>
 
-      <button
+      <WhatsAppLink
         className="
+          inline-block text-center
           mt-[clamp(0.5rem,2.5vh,1.5rem)]
           py-[clamp(0.25rem,1vh,1rem)]
           px-[clamp(2rem,2.5vw,6rem)]
@@ -36,7 +39,7 @@ export default function HeroText() {
         "
       >
         Faça um Orçamento
-      </button>
+      </WhatsAppLink>
     </div>
   );
 }

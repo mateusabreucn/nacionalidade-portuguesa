@@ -1,4 +1,5 @@
 import InfoFooter from "@components/Footer/InfoFooter";
+import WhatsAppLink, { getWhatsAppUrl } from "@components/WhatsAppLink";
 
 export default function Footer() {
   return (
@@ -25,13 +26,10 @@ export default function Footer() {
       <InfoFooter
         icon="/Icons/Footer/Contato.png"
         altText="Ícone de Contato"
-        linkMobile="tel:+351 927417601"
         link="mailto:7135@solicitador.net"
       >
         <p>Contatos</p>
-        <a href="tel:+351 927417601" target="_blank" rel="noopener noreferrer">
-          +351 927417601
-        </a>
+        <WhatsAppLink>+351 927417601</WhatsAppLink>
         <p>(Chamada para a rede móvel nacional)</p>
         <a
           href="mailto:7135@solicitador.net"

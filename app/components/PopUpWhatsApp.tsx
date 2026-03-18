@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { WhatsAppIcon } from "./Icons/WhatsAppIcons";
+import WhatsAppLink from "./WhatsAppLink";
 
 export default function PopUpWhatsApp() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,10 +34,7 @@ export default function PopUpWhatsApp() {
     : "translate-y-10 opacity-0 pointer-events-none";
 
   return (
-    <a
-      href="https://wa.me/SEU_NUMERO_AQUI"
-      target="_blank"
-      rel="noopener noreferrer"
+    <WhatsAppLink
       className={`
         fixed bottom-6 right-6 z-80
         flex items-center justify-center
@@ -61,6 +59,6 @@ export default function PopUpWhatsApp() {
       xl:w-14 xl:h-14
       3xl:h-20 3xl:w-20
       4xl:h-24 4xl:w-24" />
-    </a>
+    </WhatsAppLink>
   );
 }

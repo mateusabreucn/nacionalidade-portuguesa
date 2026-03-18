@@ -1,4 +1,5 @@
 import React from "react";
+import WhatsAppLink from "./WhatsAppLink";
 
 interface ButtonEspecialistaProps {
   className?: string;
@@ -10,9 +11,10 @@ export default function ButtonEspecialista({
   onClick,
 }: ButtonEspecialistaProps) {
   return (
-    <button
+    <WhatsAppLink
       onClick={onClick}
       className={`
+        inline-block text-center
         p-[clamp(0.5rem,0.75vw,1rem)]
         lg:p-[clamp(0.75rem,0.75vw,1.2rem)]
         text-[clamp(0.75rem,1vw,1.2rem)]
@@ -27,6 +29,6 @@ export default function ButtonEspecialista({
       `}
     >
       Fale com um Especialista
-    </button>
+    </WhatsAppLink>
   );
 }
