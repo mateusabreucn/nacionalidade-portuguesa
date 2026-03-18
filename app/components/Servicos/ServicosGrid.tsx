@@ -20,10 +20,9 @@ export default function ServicosGrid({
     <div
       className="
         grid grid-cols-3
-        xl:max-w-[1800px] xl:mx-auto
-        gap-x-4 xl:gap-x-2 2xl:gap-x-0
-        gap-y-8 sm:gap-y-14 lg:gap-y-16
-        xl:gap-y-24 2xl:gap-y-36 3xl:gap-y-44 4xl:gap-y-52
+        w-full max-w-[1800px] mx-auto
+        gap-x-[clamp(0rem,0.5vw,1rem)]
+        gap-y-[clamp(2rem,10vw,13rem)]
         justify-items-center
       "
     >

@@ -54,7 +54,7 @@ export default function Servicos() {
     : -1;
 
   return (
-    <div className="relative mt-8">
+    <div className="relative">
       <MobileModalServico
         activeServico={activeServico ?? null}
         isOpen={!!lockedId}
@@ -92,7 +92,7 @@ export default function Servicos() {
           </div>
         </div>
 
-        <div className="relative flex justify-center w-full mt-8 md:mt-14">
+        <div className="relative flex justify-center w-full mt-[clamp(2rem,6vw,4rem)]">
           <ButtonEspecialista className="px-8 shadow-lg shadow-black/20" />
         </div>
       </CardBranco>
