@@ -70,6 +70,11 @@ export default function Equipa() {
 
   return (
     <CardBranco titulo="Quem somos nós">
+      <EquipaMobileModal
+        activeModal={activeModal}
+        handleClose={handleClose}
+        isMobile={isMobile}
+      />
       <div className="flex flex-col items-center w-full relative gap-[clamp(1rem,2vw,2.5rem)]">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:items-stretch w-full gap-8">
           <EquipaMainPhoto
@@ -105,11 +110,6 @@ export default function Equipa() {
           Depoimentos
         </button>
 
-        <EquipaMobileModal
-          activeModal={activeModal}
-          handleClose={handleClose}
-          isMobile={isMobile}
-        />
       </div>
     </CardBranco>
   );

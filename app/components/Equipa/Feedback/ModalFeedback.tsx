@@ -35,16 +35,18 @@ export default function ModalFeedback({
     if (!isActive) return;
     const interval = setInterval(changeFeedback, 7000);
     return () => clearInterval(interval);
-  }, [isActive, changeFeedback]);
+  }, [isActive, changeFeedback, currentIndex]);
 
   const currentFeedback = feedbacksData[currentIndex];
 
   const heightClass = isMobile
-    ? "max-h-[430px] sm:max-h-full"
-    : "lg:h-92 xl:h-114 2xl:h-120 3xl:h-136 4xl:h-148";
+    ? "h-auto max-h-full flex-col justify-start overflow-hidden rounded-[clamp(1.875rem,4vw,3.5rem)]! py-[clamp(1.5rem,3vh,2rem)]! px-[clamp(1.25rem,5vw,3.5rem)]!"
+    : "h-auto";
 
   return (
-    <div className="w-full flex items-start justify-center">
+    <div
+      className={`w-full flex items-start justify-center ${isMobile ? "h-auto max-h-full min-h-0" : ""}`}
+    >
       <ModalBackground onClose={onClose} className={heightClass}>
         <div
           className={`

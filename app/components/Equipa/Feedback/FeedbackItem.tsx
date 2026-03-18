@@ -19,12 +19,12 @@ export default function FeedbackItem({
   onNext,
 }: FeedbackItemProps) {
   return (
-    <div className="flex flex-col gap-1.5 sm:gap-2 lg:gap-3 w-full h-full">
-      <div className="flex items-center gap-3 lg:gap-4 2xl:gap-8 3xl:gap-10 4xl:gap-12">
+    <div className="@container flex flex-col w-full h-full">
+      <div className="flex items-center gap-[clamp(0.75rem,3cqw,2rem)]">
         <div
           className="
             relative shrink-0
-            w-12 h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 3xl:w-28 3xl:h-28 4xl:w-32 4xl:h-32
+            w-[clamp(3.5rem,9cqw,6rem)] h-[clamp(3.5rem,9cqw,6rem)]
             bg-bg-badge rounded-full
           "
         >
@@ -32,19 +32,20 @@ export default function FeedbackItem({
             src={avatarSrc}
             alt={name}
             fill
-            className="object-contain scale-[1.35] translate-y-1"
+            className="object-contain scale-[1.2] translate-y-1"
           />
         </div>
 
-        <div className="flex-1 flex flex-col gap-2 2xl:gap-4">
-          <StarsIcon className="w-12 sm:w-16 md:w-18 lg:w-20 xl:w-24 2xl:w-28 3xl:w-32 4xl:w-36" />
+        <div className="flex-1 flex flex-col gap-2 2xl:gap-3">
+          <StarsIcon className="w-[clamp(4.5rem,8cqw,7rem)]" />
 
           <div className="flex items-center gap-2">
             <h4
               className="
                 font-josefin font-medium
-                text-xs sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl
+                text-[clamp(0.875rem,3cqw,1.75rem)]
                 text-text-accent
+                leading-tight
               "
             >
               {name}, {city}
@@ -53,13 +54,13 @@ export default function FeedbackItem({
         </div>
       </div>
 
-      <div className="flex items-center gap-3 flex-1 min-h-0 pt-4 sm:pt-8">
-        <div className="flex-1 overflow-y-auto scrollbar-auto pr-2 max-h-60 sm:max-h-full">
+      <div className="flex items-center gap-3 flex-1 min-h-0 pt-[clamp(1rem,3.5cqw,2rem)] relative">
+        <div className="flex-1 overflow-y-auto scrollbar-auto pr-2 pb-10 max-h-60 sm:max-h-full">
           {text.split("\n").map((paragraph, index) => (
             <p
               key={index}
               className="
-                text-xs sm:text-sm lg:text-sm xl:text-base 2xl:text-xl 3xl:text-2xl
+                text-[clamp(0.875rem,2cqw,1.5rem)]
                 text-text-accent leading-relaxed
                 mb-2 last:mb-0
               "
@@ -72,7 +73,7 @@ export default function FeedbackItem({
         {!isMobile && (
           <button
             onClick={onNext}
-            className="shrink-0 cursor-pointer hover:scale-110 transition-transform duration-300"
+            className="shrink-0 cursor-pointer"
             aria-label="Próximo feedback"
           >
             <Image
@@ -80,7 +81,7 @@ export default function FeedbackItem({
               alt="Próximo"
               width={60}
               height={60}
-              className="w-14 h-14 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              className="w-[clamp(3.5rem,6cqw,4.5rem)] h-[clamp(3.5rem,6cqw,4.5rem)]"
             />
           </button>
         )}
@@ -89,15 +90,14 @@ export default function FeedbackItem({
       {isMobile && (
         <button
           onClick={onNext}
-          className="shrink-0 ml-auto mt-2 cursor-pointer hover:scale-110 transition-transform duration-300"
-          aria-label="Próxima bio"
+          className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-bg-primary rounded-full shadow-lg cursor-pointer"
         >
           <Image
             src="/Icons/Feedback/ArrowRight.svg"
             alt="Próximo"
-            width={32}
-            height={32}
-            className="w-10 h-10 sm:w-16 sm:h-16"
+            width={48}
+            height={48}
+            className="w-12 h-12"
           />
         </button>
       )}
