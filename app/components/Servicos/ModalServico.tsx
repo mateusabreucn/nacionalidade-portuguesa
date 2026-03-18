@@ -45,7 +45,7 @@ export default function ModalServico({
         hidden lg:block
         absolute left-1/2 -translate-x-1/2
         ${positionClasses}
-        w-full max-w-[900px] 2xl:max-w-[1000px] 4xl:max-w-[1400px]
+        w-full max-w-[clamp(900px,60vw,1400px)]
         z-30
         transition-all duration-500 ease-in-out
         ${isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
@@ -60,11 +60,11 @@ export default function ModalServico({
               className="
                 relative shrink-0
                 flex items-center justify-center
-                w-12 h-12 md:w-16 md:h-16 2xl:w-18 2xl:h-18 3xl:w-20 3xl:h-20 4xl:w-24 4xl:h-24
+                w-[clamp(3rem,4vw,6rem)] h-[clamp(3rem,4vw,6rem)]
                 bg-bg-badge rounded-full
               "
             >
-              <div className="relative w-3/4 h-3/4">
+              <div className="relative w-3/5 h-3/5">
                 <Image
                   src={servico.icon}
                   alt={servico.altText}
@@ -76,7 +76,7 @@ export default function ModalServico({
             <h3
               className="
                 font-josefin font-medium
-                text-xl md:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-[2.5rem] 4xl:text-5xl
+                text-[clamp(1.25rem,2.5vw,3rem)]
                 text-text-accent
               "
             >
@@ -86,7 +86,7 @@ export default function ModalServico({
 
           <div className="flex flex-col gap-2 pl-2">
             {servico.descricao && (
-              <p className="text-sm md:text-base lg:text-lg 2xl:text-xl 4xl:text-2xl text-text-accent leading-relaxed mb-1 whitespace-pre-line">
+              <p className="text-[clamp(0.875rem,1.2vw,1.5rem)] text-text-accent leading-relaxed mb-1 whitespace-pre-line">
                 {servico.descricao}
               </p>
             )}
@@ -94,7 +94,7 @@ export default function ModalServico({
               {servico.topicos.map((topico, index) => (
                 <li
                   key={index}
-                  className="text-sm md:text-base lg:text-lg 2xl:text-xl 4xl:text-2xl text-text-accent leading-relaxed"
+                  className="text-[clamp(0.875rem,1.2vw,1.5rem)] text-text-accent leading-relaxed"
                 >
                   {topico}
                 </li>
@@ -109,8 +109,8 @@ export default function ModalServico({
                     inline-block
                     py-2 px-6
                     bg-btn-accent rounded-lg
-                    font-family-josefin font-medium
-                    text-xs md:text-sm lg:text-base 2xl:text-lg
+                    font-medium
+                    text-[clamp(0.75rem,1vw,1.125rem)]
                     text-white text-center
                     hover:brightness-110 hover:scale-105
                     transition-all duration-300

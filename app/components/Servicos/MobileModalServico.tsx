@@ -30,20 +30,20 @@ export default function MobileModalServico({
     >
       <ModalBackground
         onClose={onClose}
-        className="rounded-[30px]! md:rounded-[56px]! py-12! sm:py-10! md:py-12! px-6! md:px-14!"
+        className="rounded-[clamp(1.875rem,4vw,3.5rem)] py-[clamp(1.5rem,3vh,2rem)]! px-[clamp(1.25rem,5vw,3.5rem)]!"
       >
         <div className="flex flex-col w-full h-full">
-          <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">
+          <div className="flex items-center justify-start sm:justify-center gap-3 mb-4 sm:mb-6">
             <div className="flex items-center gap-4 justify-center">
               <div
                 className="
                   relative shrink-0
                   flex items-center justify-center
-                  w-12 h-12 md:w-16 md:h-16
+                  w-[clamp(2.5rem,7vw,4rem)] h-[clamp(2.5rem,7vw,4rem)]
                   bg-bg-badge rounded-full
                 "
               >
-                <div className="relative w-3/4 h-3/4">
+                <div className="relative w-3/5 h-3/5">
                   <Image
                     src={activeServico.icon}
                     alt={activeServico.altText}
@@ -57,8 +57,8 @@ export default function MobileModalServico({
             <h2
               className="
                 font-josefin
-                text-xl sm:text-2xl md:text-3xl
-                text-text-secondary text-center
+                text-[clamp(1.25rem,4vw,1.875rem)]
+                text-text-secondary text-left
                 leading-tight
               "
             >
@@ -70,7 +70,7 @@ export default function MobileModalServico({
             <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-col gap-2 pl-2">
                 {activeServico.descricao && (
-                  <p className="text-xs sm:text-sm md:text-base text-text-accent leading-relaxed mb-1 whitespace-pre-line">
+                  <p className="text-[clamp(0.75rem,2.5vw,1rem)] text-text-accent leading-relaxed mb-1 whitespace-pre-line">
                     {activeServico.descricao}
                   </p>
                 )}
@@ -78,35 +78,35 @@ export default function MobileModalServico({
                   {activeServico.topicos.map((topico, index) => (
                     <li
                       key={index}
-                      className="text-xs sm:text-sm md:text-base text-text-accent leading-relaxed"
+                      className="text-[clamp(0.75rem,2.5vw,1rem)] text-text-accent leading-relaxed"
                     >
                       {topico}
                     </li>
                   ))}
                 </ul>
-
-                {activeServico.link && (
-                  <div className="flex justify-center mt-4">
-                    <Link
-                      href={activeServico.link.href}
-                      className="
-                        inline-block
-                        py-2 px-6
-                        bg-btn-accent rounded-lg
-                        font-family-josefin font-medium
-                        text-xs sm:text-sm md:text-base
-                        text-white text-center
-                        hover:brightness-110 hover:scale-105
-                        transition-all duration-300
-                      "
-                    >
-                      {activeServico.link.label}
-                    </Link>
-                  </div>
-                )}
               </div>
             </div>
           </div>
+
+          {activeServico.link && (
+            <div className="flex justify-center mt-[clamp(0.75rem,1vh,1.5rem)] shrink-0">
+              <Link
+                href={activeServico.link.href}
+                className="
+                  inline-block
+                  py-[clamp(0.25rem,1vh,0.75rem)] px-[clamp(1.5rem,4vw,2rem)]
+                  bg-btn-accent rounded-lg
+                  font-medium
+                  text-[clamp(0.7rem,2vw,1rem)]
+                  text-white text-center
+                  hover:brightness-110 hover:scale-105
+                  transition-all duration-300
+                "
+              >
+                {activeServico.link.label}
+              </Link>
+            </div>
+          )}
         </div>
       </ModalBackground>
     </div>
