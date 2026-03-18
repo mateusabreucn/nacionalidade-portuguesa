@@ -17,7 +17,7 @@ export default function ModalBio({
 }: ModalBioProps) {
   if (!isActive) return null;
 
-  const heightClass = isMobile ? "h-full sm:max-h-[260px]" : "lg:h-[260px]";
+  const heightClass = isMobile ? "h-auto sm:max-h-[260px]" : "h-auto";
 
   return (
     <div className="w-full flex items-start justify-center">
