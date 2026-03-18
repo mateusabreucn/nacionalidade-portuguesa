@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeaderDesktop from "@components/Header/HeaderDesktop";
 import HeaderMobile from "@components/Header/HeaderMobile";
+import ButtonEspecialista from "@components/ButtonEspecialista";
 
 interface HeaderProps {
   showNavLinks?: boolean;
@@ -36,20 +37,7 @@ export default function Header({ showNavLinks = true }: HeaderProps) {
       )}
 
       <div className="hidden lg:block">
-        <button
-          className="
-            p-[clamp(0.75rem,0.75vw,1.2rem)]
-            bg-btn-dark rounded-lg
-            border border-border-default
-            text-white
-            text-[clamp(0.8rem,1vw,1.5rem)]
-            cursor-pointer
-            hover:brightness-80 hover:scale-105
-            transition-all duration-300
-          "
-        >
-          Fale com um Especialista
-        </button>
+        <ButtonEspecialista />
       </div>
     </header>
   );

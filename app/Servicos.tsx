@@ -7,6 +7,7 @@ import { servicosData } from "@components/Servicos/servicosData";
 import MobileModalServico from "@components/Servicos/MobileModalServico";
 import ServicosGrid from "@components/Servicos/ServicosGrid";
 import ServicosBackground from "@components/Servicos/ServicosBackground";
+import ButtonEspecialista from "@components/ButtonEspecialista";
 
 export default function Servicos() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -89,6 +90,10 @@ export default function Servicos() {
               />
             )}
           </div>
+        </div>
+
+        <div className="relative flex justify-center w-full mt-8 md:mt-14">
+          <ButtonEspecialista className="px-8 shadow-lg shadow-black/20" />
         </div>
       </CardBranco>
     </div>
