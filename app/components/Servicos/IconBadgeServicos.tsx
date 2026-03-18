@@ -27,7 +27,7 @@ export default function IconBadgeServicos({
       className={`
         flex flex-col items-center
         w-full max-w-[200px]
-        gap-2 sm:gap-4
+        gap-[clamp(0.25rem,1.5vw,1rem)]
         cursor-pointer
         transition-all duration-500
         ${isActive ? "rotate-180" : "hover:scale-110"}
@@ -37,13 +37,13 @@ export default function IconBadgeServicos({
         className="
           relative
           flex items-center justify-center
-          w-14 sm:w-24 lg:w-24 xl:w-32 2xl:w-40 3xl:w-44 4xl:w-48
+          w-[clamp(2.5rem,10vw,12rem)]
           aspect-square
           bg-bg-badge rounded-full
           shrink-0 z-10
         "
       >
-        <div className="relative aspect-square w-3/4 z-30">
+        <div className="relative aspect-square w-3/5 sm:w-3/4 z-30">
           <Image src={icon} alt={altText} fill className="object-contain" />
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function IconBadgeServicos({
         <h3
           className={`
             text-center font-medium
-            text-xs sm:text-lg lg:text-xl xl:text-2xl
+            text-[clamp(0.6rem,2vw,1.5rem)]
             ${isActive ? "rotate-180" : ""}
           `}
         >
