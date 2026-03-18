@@ -26,6 +26,7 @@ export default function Footer() {
       <InfoFooter
         icon="/Icons/Footer/Contato.png"
         altText="Ícone de Contato"
+        linkMobile={getWhatsAppUrl()}
         link="mailto:7135@solicitador.net"
       >
         <p>Contatos</p>

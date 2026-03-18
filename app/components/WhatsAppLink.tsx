@@ -9,15 +9,18 @@ interface WhatsAppLinkProps {
   onClick?: () => void;
 }
 
-export function getWhatsAppUrl(phone: string, message: string) {
+export function getWhatsAppUrl(
+  phone = "351927417601",
+  message = "Olá Amanda, vim pelo seu site e gostaria de entender mais sobre seus serviços!"
+) {
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
 export default function WhatsAppLink({
   children,
   className = "",
-  phoneNumber = "351927417601",
-  message = "Olá Amanda, vim pelo seu site e gostaria de entender mais sobre seus serviços! 👋",
+  phoneNumber,
+  message,
   onClick,
 }: WhatsAppLinkProps) {
   const waLink = getWhatsAppUrl(phoneNumber, message);
