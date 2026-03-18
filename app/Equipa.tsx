@@ -5,6 +5,7 @@ import CardBranco from "@components/CardBranco";
 import EquipaMainPhoto from "@components/Equipa/EquipaMainPhoto";
 import EquipaCentralContent from "@components/Equipa/EquipaCentralContent";
 import EquipaMobileModal from "@components/Equipa/EquipaMobileModal";
+import EquipaDesktopModal from "@components/Equipa/EquipaDesktopModal";
 
 type ModalType = "feedback" | "bio" | null;
 
@@ -39,16 +40,19 @@ export default function Equipa() {
     setIsLocked(false);
   }, []);
 
-  const handleModalClick = useCallback((modal: ModalType) => {
-    setActiveModal((prev) => {
-      if (prev === modal && isLocked) {
-        setIsLocked(false);
-        return null;
-      }
-      setIsLocked(true);
-      return modal;
-    });
-  }, [isLocked]);
+  const handleModalClick = useCallback(
+    (modal: ModalType) => {
+      setActiveModal((prev) => {
+        if (prev === modal && isLocked) {
+          setIsLocked(false);
+          return null;
+        }
+        setIsLocked(true);
+        return modal;
+      });
+    },
+    [isLocked]
+  );
 
   const handleBioHover = useCallback(() => {
     if (isMobile) return;
@@ -67,7 +71,7 @@ export default function Equipa() {
   return (
     <CardBranco titulo="Quem somos nós">
       <div className="flex flex-col items-center w-full relative gap-[clamp(1rem,2vw,2.5rem)]">
-        <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between lg:items-stretch w-full gap-8">
           <EquipaMainPhoto
             isLocked={isLocked && activeModal === "bio"}
             onModalClick={() => handleModalClick("bio")}
@@ -89,8 +93,8 @@ export default function Equipa() {
             z-10
             mt-[clamp(0.5rem,2vw,3rem)]
             lg:mt-[clamp(4rem,7vw,6rem)]
-            py-[clamp(0.25rem,1vw,1.5rem)]
-            px-[clamp(2rem,5.5vw,6rem)]
+            py-[clamp(0.25rem,0.75vw,1.2rem)]
+            px-[clamp(1.8rem,5vw,5.5rem)]
             bg-bg-badge rounded-lg
             font-josefin
             text-[clamp(0.75rem,2vw,2.5rem)] font-medium
