@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Equipa from "./Equipa";
 import Footer from "./Footer";
 import Servicos from "./Servicos";
+import ScrollDownArrow from "./components/ScrollDownArrow";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       "
     >
       <Header />
+      <ScrollDownArrow />
       <section id="home">
         <Hero />
       </section>
