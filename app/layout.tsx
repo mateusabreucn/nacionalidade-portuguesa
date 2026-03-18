@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Josefin_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import PopUpWhatsApp from "@components/PopUpWhatsApp";
+import PopUpMenu from "@components/PopUpMenu";
 import CookieBanner from "@components/CookieBanner";
 
 const inter = Inter({
@@ -66,8 +67,9 @@ export default function RootLayout({
     >
       <body className={inter.className}>
         {children}
-        <PopUpWhatsApp />
+        <PopUpMenu />
         <CookieBanner />
+        <Script async src="https://tally.so/widgets/embed.js" />
       </body>
     </html>
   );
