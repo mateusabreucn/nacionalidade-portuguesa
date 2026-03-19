@@ -32,6 +32,7 @@ export default function BioItem({
             src={avatarSrc}
             alt={name}
             fill
+            sizes="6.5rem"
             className="object-cover scale-150 object-center translate-x-1"
           />
         </div>

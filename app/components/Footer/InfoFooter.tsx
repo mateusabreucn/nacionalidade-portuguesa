@@ -47,7 +47,7 @@ export default function InfoFooter({
         rel="noopener noreferrer"
         className="relative shrink-0 aspect-square w-[clamp(4rem,20cqw,14rem)]"
       >
-        <Image src={icon} alt={altText} fill className="object-cover" />
+        <Image src={icon} alt={altText} fill sizes="14rem" className="object-cover" />
       </a>
 
       <div className="truncate text-[clamp(0.5rem,4cqw,2rem)]">{children}</div>

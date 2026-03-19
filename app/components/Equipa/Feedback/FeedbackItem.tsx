@@ -32,6 +32,7 @@ export default function FeedbackItem({
             src={avatarSrc}
             alt={name}
             fill
+            sizes="6rem"
             className="object-contain scale-[1.2] translate-y-1"
           />
         </div>

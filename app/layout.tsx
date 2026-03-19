@@ -62,6 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt"
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${josefin.variable} bg-bg-primary`}
     >
       <body className={inter.className}>

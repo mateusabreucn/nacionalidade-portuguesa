@@ -25,7 +25,7 @@ export default function HeaderMobile() {
         "
         aria-label="Menu"
       >
-        <Image src="/Icons/Header/Menu.png" alt="Menu" fill />
+        <Image src="/Icons/Header/Menu.png" alt="Menu" fill sizes="3rem" />
       </button>
 
       <div

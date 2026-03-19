@@ -48,6 +48,7 @@ export default function MobileModalServico({
                     src={activeServico.icon}
                     alt={activeServico.altText}
                     fill
+                    sizes="4rem"
                     className="object-contain"
                   />
                 </div>

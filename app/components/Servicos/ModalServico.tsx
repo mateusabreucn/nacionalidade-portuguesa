@@ -69,6 +69,7 @@ export default function ModalServico({
                   src={servico.icon}
                   alt={servico.altText}
                   fill
+                  sizes="6rem"
                   className="object-contain"
                 />
               </div>
