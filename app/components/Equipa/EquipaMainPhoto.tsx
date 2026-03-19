@@ -1,5 +1,3 @@
-"use client";
-
 import CardFotoEquipa from "./CardFoto";
 import IconBadgeEquipa from "./IconBadgeEquipa";
 

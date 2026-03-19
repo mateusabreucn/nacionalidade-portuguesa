@@ -1,5 +1,3 @@
-"use client";
-
 import ModalBio from "./Biografia/ModalBio";
 import ModalFeedback from "./Feedback/ModalFeedback";
 

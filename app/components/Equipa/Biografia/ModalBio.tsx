@@ -1,5 +1,3 @@
-"use client";
-
 import ModalBackground from "../../ModalBackground";
 import BioItem from "./BioItem";
 import { bioData } from "./biosData";
