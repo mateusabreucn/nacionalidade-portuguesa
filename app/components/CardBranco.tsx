@@ -31,7 +31,7 @@ export default function CardBranco({
         <div className="flex justify-start">
           {showBackButton && (
             <button
-              onClick={() => router.back()}
+              onClick={() => router.push("/")}
               className="
                 relative
                 flex items-center justify-center gap-1.5
@@ -70,4 +70,3 @@ export default function CardBranco({
     </section>
   );
 }
-
