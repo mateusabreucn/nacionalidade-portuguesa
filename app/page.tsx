@@ -1,9 +1,9 @@
-import Header from "./Header";
-import Hero from "./Hero";
-import Equipa from "./Equipa";
-import Footer from "./Footer";
-import Servicos from "./Servicos";
-import ScrollDownArrow from "./components/ScrollDownArrow";
+import Header from "@components/Header/Header";
+import Hero from "@components/Hero/Hero";
+import Equipa from "@components/Equipa/Equipa";
+import Footer from "@components/Footer/Footer";
+import Servicos from "@components/Servicos/Servicos";
+import ScrollDownArrow from "@components/ScrollDownArrow";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       className="
         flex flex-col
         p-6 md:p-10
-        min-h-screen max-w-screen-4xl
+        min-h-screen max-w-4xl
         mx-auto
         bg-bg-primary
         relative
