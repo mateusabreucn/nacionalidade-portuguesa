@@ -3,19 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import ModalBackground from "../ModalBackground";
+import type { ServicoData } from "./tipos";
 
-export interface ServicoData {
-  id: string;
-  titulo: string;
-  icon: string;
-  altText: string;
-  descricao?: string;
-  topicos: string[];
-  link?: {
-    href: string;
-    label: string;
-  };
-}
+export type { ServicoData };
 
 interface ModalServicoProps {
   servico: ServicoData;

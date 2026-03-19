@@ -1,4 +1,6 @@
-import { ServicoData } from "./ModalServico";
+// ✅ É possível editar esse arquivo — Consulte o GUIA_EDICAO.md na raiz do projeto.
+
+import { ServicoData } from "./tipos";
 
 export const servicosData: ServicoData[] = [
   {
