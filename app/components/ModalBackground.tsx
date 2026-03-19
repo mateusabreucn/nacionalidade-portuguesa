@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import CloseIcon from "./Icons/CloseIcon";
 
 interface ModalBackgroundProps {

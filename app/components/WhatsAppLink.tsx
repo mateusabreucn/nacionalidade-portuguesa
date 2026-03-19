@@ -1,8 +1,7 @@
-import React, { ReactNode } from "react";
 import Link from "next/link";
 
 interface WhatsAppLinkProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
   phoneNumber?: string;
   message?: string;

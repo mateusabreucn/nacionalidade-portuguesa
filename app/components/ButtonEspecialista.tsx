@@ -1,4 +1,3 @@
-import React from "react";
 import WhatsAppLink from "./WhatsAppLink";
 
 interface ButtonEspecialistaProps {
