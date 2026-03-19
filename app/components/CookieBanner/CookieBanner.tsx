@@ -80,7 +80,7 @@ export default function CookieBanner() {
             className="
             pointer-events-auto
             w-full max-w-[95%] sm:max-w-[80%]
-            max-h-[80vh]
+            max-h-[85vh]
             bg-bg-card rounded-2xl img-shadow
             animate-slide-up
             overflow-hidden
