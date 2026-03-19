@@ -34,18 +34,23 @@ export default function PopUpWhatsApp() {
     : "translate-y-10 opacity-0 pointer-events-none";
 
   return (
-    <WhatsAppLink
-      className={`
-        fixed bottom-[clamp(1rem,1.5vw,3rem)] right-[clamp(1rem,2vw,3rem)] z-80
-        flex items-center justify-center
-        w-[clamp(3rem,5.5vw,9rem)] h-[clamp(3rem,5.5vw,9rem)]
-        rounded-full bg-bg-card img-shadow
-        cursor-pointer
-        transition-all duration-300 ease-in-out hover:scale-110
-        ${visibilityClasses}
-      `}
-    >
-      <WhatsAppIcon className="w-3/5" />
-    </WhatsAppLink>
+    <div className="fixed inset-0 pointer-events-none z-80 flex justify-center">
+      <div className="relative w-full max-w-4xl">
+        <WhatsAppLink
+          className={`
+            absolute bottom-[clamp(1rem,1.5vw,3rem)] right-[clamp(1rem,2vw,3rem)]
+            pointer-events-auto
+            flex items-center justify-center
+            w-[clamp(3rem,5.5vw,9rem)] h-[clamp(3rem,5.5vw,9rem)]
+            rounded-full bg-bg-card img-shadow
+            cursor-pointer
+            transition-all duration-300 ease-in-out hover:scale-110
+            ${visibilityClasses}
+          `}
+        >
+          <WhatsAppIcon className="w-3/5" />
+        </WhatsAppLink>
+      </div>
+    </div>
   );
 }
