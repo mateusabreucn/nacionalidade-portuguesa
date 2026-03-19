@@ -6,7 +6,6 @@ interface BioItemProps {
   role: string;
   areas: string[];
   text: string;
-  isMobile: boolean;
 }
 
 export default function BioItem({
@@ -15,7 +14,6 @@ export default function BioItem({
   role,
   areas,
   text,
-  isMobile,
 }: BioItemProps) {
   return (
     <div className="@container flex flex-col gap-[clamp(0.5rem,1.5cqw,2rem)] w-full h-full">

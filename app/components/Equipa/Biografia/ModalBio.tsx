@@ -22,7 +22,7 @@ export default function ModalBio({
   return (
     <div className={`w-full flex items-start justify-center ${isMobile ? "h-auto max-h-full min-h-0" : ""}`}>
       <ModalBackground onClose={onClose} className={heightClass}>
-        <BioItem {...bioData} isMobile={isMobile} />
+        <BioItem {...bioData} />
       </ModalBackground>
     </div>
   );
