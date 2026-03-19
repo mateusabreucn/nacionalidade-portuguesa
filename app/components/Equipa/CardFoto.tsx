@@ -22,6 +22,7 @@ export default function CardFotoEquipa() {
           src={'/Equipa - Amanda.png'}
           alt={`Foto de Amanda C. Dantas`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover object-[center_40%] lg:object-center"
         />
       </div>

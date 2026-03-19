@@ -16,6 +16,7 @@ export default function HeroImage() {
         src="/Hero - Amanda.png"
         alt="Imagem de Amanda Dantas"
         fill
+        sizes="(max-width: 1024px) 98vw, 44vw"
         className="object-cover object-[center_48%] lg:object-[center_75%]"
         priority
       />

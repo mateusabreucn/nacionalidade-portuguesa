@@ -101,7 +101,7 @@ export default function IconBadgeEquipa({
 
           <div className="relative flex items-center justify-center w-full h-full shrink-0">
             <div className="relative w-3/4 h-3/4">
-              <Image src={icon} alt={altText} fill className="object-contain" />
+              <Image src={icon} alt={altText} fill sizes="(max-width: 1024px) 8rem, 12rem" className="object-contain" />
             </div>
           </div>
 

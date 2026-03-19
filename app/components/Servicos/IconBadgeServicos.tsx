@@ -44,7 +44,7 @@ export default function IconBadgeServicos({
         "
       >
         <div className="relative aspect-square w-3/5 sm:w-3/4 z-30">
-          <Image src={icon} alt={altText} fill className="object-contain" />
+          <Image src={icon} alt={altText} fill sizes="12rem" className="object-contain" />
         </div>
       </div>
 
