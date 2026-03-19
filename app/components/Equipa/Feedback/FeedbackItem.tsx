@@ -1,5 +1,5 @@
 import Image from "next/image";
-import StarsIcon from "../../Icons/Feedback/StarsIcon";
+import StarsIcon from "@components/Icons/StarsIcon";
 
 interface FeedbackItemProps {
   avatarSrc: string;
