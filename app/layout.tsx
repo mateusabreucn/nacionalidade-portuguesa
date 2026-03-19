@@ -64,8 +64,9 @@ export default function RootLayout({
       lang="pt"
       data-scroll-behavior="smooth"
       className={`${inter.variable} ${josefin.variable} bg-bg-primary`}
+      suppressHydrationWarning
     >
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         {children}
         <PopUpWhatsApp />
         <CookieBanner />
