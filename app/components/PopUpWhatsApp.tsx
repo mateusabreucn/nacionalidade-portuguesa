@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { WhatsAppIcon } from "./Icons/WhatsAppIcons";
 import WhatsAppLink from "./WhatsAppLink";
+import Image from "next/image";
 
 export default function PopUpWhatsApp() {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +48,14 @@ export default function PopUpWhatsApp() {
             ${visibilityClasses}
           `}
         >
-          <WhatsAppIcon className="w-3/5" />
+          <div className="w-3/5">
+            <Image
+              src="/Icons/WhatsApp.png"
+              alt="WhatsApp"
+              width={103}
+              height={103}
+            />
+          </div>
         </WhatsAppLink>
       </div>
     </div>
