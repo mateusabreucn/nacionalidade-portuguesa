@@ -1,3 +1,5 @@
+// ✅ É possível editar esse arquivo — Consulte o GUIA_EDICAO.md na raiz do projeto.
+
 import { DadosDaPagina } from "@components/ConteudoPagina/tipos";
 
 export const dadosPoliticaPrivacidade: DadosDaPagina = {

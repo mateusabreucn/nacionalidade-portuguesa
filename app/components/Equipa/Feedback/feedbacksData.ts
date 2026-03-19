@@ -1,3 +1,5 @@
+// ✅ É possível editar esse arquivo — Consulte o GUIA_EDICAO.md na raiz do projeto.
+
 export interface FeedbackData {
   name: string;
   city: string;
