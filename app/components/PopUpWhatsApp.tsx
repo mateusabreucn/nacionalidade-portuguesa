@@ -36,29 +36,16 @@ export default function PopUpWhatsApp() {
   return (
     <WhatsAppLink
       className={`
-        fixed bottom-6 right-6 z-80
+        fixed bottom-[clamp(1rem,1.5vw,3rem)] right-[clamp(1rem,2vw,3rem)] z-80
         flex items-center justify-center
-        h-12 w-12
-        sm:h-14 sm:w-14
-        lg:h-16 lg:w-16
-        xl:h-20 xl:w-20
-        2xl:w-22 2xl:h-22
-        3xl:h-30 3xl:w-30
-        4xl:h-36 4xl:w-36
-        p-3
+        w-[clamp(3rem,5.5vw,9rem)] h-[clamp(3rem,5.5vw,9rem)]
         rounded-full bg-bg-card img-shadow
         cursor-pointer
         transition-all duration-300 ease-in-out hover:scale-110
         ${visibilityClasses}
       `}
     >
-      <WhatsAppIcon className="
-      h-6 w-6
-      sm:h-8 sm:w-8
-      lg:h-120lg:w-10
-      xl:w-14 xl:h-14
-      3xl:h-20 3xl:w-20
-      4xl:h-24 4xl:w-24" />
+      <WhatsAppIcon className="w-3/5" />
     </WhatsAppLink>
   );
 }
