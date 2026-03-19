@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { CookieIcon } from "./Icons/CookieIcon";
+import { CookieIcon } from "../Icons/CookieIcon";
 import { dadosDosCookies } from "./cookiesData";
 
 interface CookiePreferences {

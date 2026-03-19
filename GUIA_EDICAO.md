@@ -36,7 +36,7 @@ Todos os arquivos editáveis possuem o comentário no topo:
 
 | O que deseja alterar | Arquivo para editar |
 |---|---|
-| Banner de Cookies | `app/components/cookiesData.ts` |
+| Banner de Cookies | `app/components/CookieBanner/cookiesData.ts` |
 | Biografia da equipa | `app/components/Equipa/Biografia/biosData.ts` |
 | Feedbacks de clientes | `app/components/Equipa/Feedback/feedbacksData.ts` |
 | Página de Política de Privacidade | `app/components/PoliticaPrivacidade/dadosPoliticaPrivacidade.ts` |
@@ -50,7 +50,7 @@ Todos os arquivos editáveis possuem o comentário no topo:
 
 ---
 
-### 1. Banner de Cookies — `cookiesData.ts`
+### 1. Banner de Cookies — `CookieBanner/cookiesData.ts`
 
 Este arquivo controla todos os textos do banner de cookies que aparece na parte de baixo do site.
 
