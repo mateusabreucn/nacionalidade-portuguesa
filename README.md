@@ -30,7 +30,7 @@ nacionalidade-portuguesa/
 │   ├── components/            # Componentes React (Isolados e Modulares)
 │   │   ├── ConteudoPagina/    # Renderizador dinâmico p/ páginas de texto (Política, Serviços)
 │   │   ├── CookieBanner/      # Banner de consentimento (UI + arquivo de dados configuráveis)
-│   │   ├── Equipa/            # Container e lógicas da seção Quem Somos, Bios e Feedbacks
+│   │   ├── Perfil/            # Container e lógicas da seção Quem Somos, Bios e Feedbacks
 │   │   ├── Footer/            # Rodapé global e cards de contato (e-mail, local, número)
 │   │   ├── Header/            # Cabeçalho resposivo (Menu mobile e Desktop)
 │   │   ├── Hero/              # Banner Hero inicial da Landing Page

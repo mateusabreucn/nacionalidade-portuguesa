@@ -1,17 +1,17 @@
 import ModalBio from "./Biografia/ModalBio";
 import ModalFeedback from "./Feedback/ModalFeedback";
 
-interface EquipaMobileModalProps {
+interface PerfilMobileModalProps {
   activeModal: "feedback" | "bio" | null;
   handleClose: () => void;
   isMobile: boolean;
 }
 
-export default function EquipaMobileModal({
+export default function PerfilMobileModal({
   activeModal,
   handleClose,
   isMobile,
-}: EquipaMobileModalProps) {
+}: PerfilMobileModalProps) {
   const showModal = !!activeModal;
 
   return (

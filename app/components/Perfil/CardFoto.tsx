@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-
-export default function CardFotoEquipa() {
+export default function CardFotoPerfil() {
   return (
     <div
       className="
@@ -19,7 +18,7 @@ export default function CardFotoEquipa() {
         "
       >
         <Image
-          src={'/Equipa - Amanda.png'}
+          src={"/Perfil - Amanda.png"}
           alt={`Foto de Amanda C. Dantas`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

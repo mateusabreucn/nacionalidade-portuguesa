@@ -1,21 +1,21 @@
 import Image from "next/image";
 import ModalBio from "./Biografia/ModalBio";
 import ModalFeedback from "./Feedback/ModalFeedback";
-import EquipaDesktopModal from "./EquipaDesktopModal";
+import PerfilDesktopModal from "./PerfilDesktopModal";
 
-interface EquipaCentralContentProps {
+interface PerfilCentralContentProps {
   activeModal: "feedback" | "bio" | null;
   onModalMouseEnter: () => void;
   onModalMouseLeave: () => void;
   handleClose: () => void;
 }
 
-export default function EquipaCentralContent({
+export default function PerfilCentralContent({
   activeModal,
   onModalMouseEnter,
   onModalMouseLeave,
   handleClose,
-}: EquipaCentralContentProps) {
+}: PerfilCentralContentProps) {
   const showModal = !!activeModal;
 
   return (
@@ -67,7 +67,7 @@ export default function EquipaCentralContent({
         </div>
       </div>
 
-      <EquipaDesktopModal
+      <PerfilDesktopModal
         activeModal={activeModal}
         handleClose={handleClose}
         onMouseEnter={onModalMouseEnter}

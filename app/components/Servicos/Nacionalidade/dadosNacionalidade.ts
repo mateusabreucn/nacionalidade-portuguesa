@@ -39,7 +39,7 @@ export const dadosNacionalidade: DadosDaPagina = {
     // ── Naturalização ──
     {
       tipo: "titulo",
-      texto: "Quem pode solicitar a nacionalidade por naturalização:",
+      texto: "Naturalização:",
     },
     { tipo: "paragrafo", texto: "Qualquer pessoa que possua RNM e:" },
     {

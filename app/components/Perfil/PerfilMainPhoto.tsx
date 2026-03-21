@@ -1,22 +1,22 @@
-import CardFotoEquipa from "./CardFoto";
-import IconBadgeEquipa from "./IconBadgeEquipa";
+import CardFotoPerfil from "./CardFoto";
+import IconBadgePerfil from "./IconBadgePerfil";
 
-interface EquipaMainPhotoProps {
+interface PerfilMainPhotoProps {
   isLocked: boolean;
   onModalClick: () => void;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
 
-export default function EquipaMainPhoto({
+export default function PerfilMainPhoto({
   isLocked,
   onModalClick,
   onMouseEnter,
   onMouseLeave,
-}: EquipaMainPhotoProps) {
+}: PerfilMainPhotoProps) {
   return (
     <div className="relative w-[80%] lg:w-[50%] order-1">
-      <CardFotoEquipa />
+      <CardFotoPerfil />
 
       <div
         className="
@@ -29,8 +29,8 @@ export default function EquipaMainPhoto({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <IconBadgeEquipa
-          icon={isLocked ? "/Icons/Close.svg" : "/Icons/Equipa/Trofeu.png"}
+        <IconBadgePerfil
+          icon={isLocked ? "/Icons/Close.svg" : "/Icons/Perfil/Trofeu.png"}
           altText={isLocked ? "Fechar" : "Ícone de Troféu"}
           swapText={"Conheça\nAmanda"}
           onClick={onModalClick}

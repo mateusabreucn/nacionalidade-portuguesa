@@ -27,22 +27,23 @@ Este guia explica como alterar os textos do site de forma segura.
 
 ## 📁 Arquivos Editáveis
 
-Todos os arquivos editáveis possuem o comentário no topo:  
+Todos os arquivos editáveis possuem o comentário no topo:
+
 ```
 // ✅ É possível editar esse arquivo
 ```
 
 ### Tabela Resumo
 
-| O que deseja alterar | Arquivo para editar |
-|---|---|
-| Banner de Cookies | `app/components/CookieBanner/cookiesData.ts` |
-| Biografia da equipa | `app/components/Equipa/Biografia/biosData.ts` |
-| Feedbacks de clientes | `app/components/Equipa/Feedback/feedbacksData.ts` |
-| Página de Política de Privacidade | `app/components/PoliticaPrivacidade/dadosPoliticaPrivacidade.ts` |
-| Página de Nacionalidade | `app/components/Servicos/Nacionalidade/dadosNacionalidade.ts` |
-| Página de Empresas | `app/components/Servicos/Empresas/dadosEmpresas.ts` |
-| Página de Família e Sucessões | `app/components/Servicos/FamiliaSucessoes/dadosFamiliaSucessoes.ts` |
+| O que deseja alterar              | Arquivo para editar                                                 |
+| --------------------------------- | ------------------------------------------------------------------- |
+| Banner de Cookies                 | `app/components/CookieBanner/cookiesData.ts`                        |
+| Biografia da perfil               | `app/components/Perfil/Biografia/biosData.ts`                       |
+| Feedbacks de clientes             | `app/components/Perfil/Feedback/feedbacksData.ts`                   |
+| Página de Política de Privacidade | `app/components/PoliticaPrivacidade/dadosPoliticaPrivacidade.ts`    |
+| Página de Nacionalidade           | `app/components/Servicos/Nacionalidade/dadosNacionalidade.ts`       |
+| Página de Empresas                | `app/components/Servicos/Empresas/dadosEmpresas.ts`                 |
+| Página de Família e Sucessões     | `app/components/Servicos/FamiliaSucessoes/dadosFamiliaSucessoes.ts` |
 
 ---
 
@@ -76,24 +77,24 @@ aceitarTodos: "Aceitar Cookies",
 
 **O que cada campo significa:**
 
-| Campo | Onde aparece |
-|---|---|
-| `textoPrincipalDoBanner` | Texto grande ao lado do ícone do cookie |
-| `textoDoLinkDaPolitica` | Link para a política de privacidade |
-| `textosDosBotoes.gerirCookies` | Botão "Gerir Cookies" |
-| `textosDosBotoes.fecharGerenciamento` | Botão quando o gerenciamento está aberto |
-| `textosDosBotoes.aceitarTodos` | Botão verde "Aceitar Todos" |
-| `textosDosBotoes.salvarPreferencias` | Botão "Salvar Preferências" |
-| `textosDosBotoes.recusarTodos` | Botão "Recusar Todos" |
-| `tituloDoGerenciamento` | Título da seção de gerenciamento |
-| `opcoesDeCookies[...].tituloDaOpcao` | Nome de cada opção de cookie |
-| `opcoesDeCookies[...].textoDescritivo` | Descrição de cada opção |
+| Campo                                  | Onde aparece                             |
+| -------------------------------------- | ---------------------------------------- |
+| `textoPrincipalDoBanner`               | Texto grande ao lado do ícone do cookie  |
+| `textoDoLinkDaPolitica`                | Link para a política de privacidade      |
+| `textosDosBotoes.gerirCookies`         | Botão "Gerir Cookies"                    |
+| `textosDosBotoes.fecharGerenciamento`  | Botão quando o gerenciamento está aberto |
+| `textosDosBotoes.aceitarTodos`         | Botão verde "Aceitar Todos"              |
+| `textosDosBotoes.salvarPreferencias`   | Botão "Salvar Preferências"              |
+| `textosDosBotoes.recusarTodos`         | Botão "Recusar Todos"                    |
+| `tituloDoGerenciamento`                | Título da seção de gerenciamento         |
+| `opcoesDeCookies[...].tituloDaOpcao`   | Nome de cada opção de cookie             |
+| `opcoesDeCookies[...].textoDescritivo` | Descrição de cada opção                  |
 
 ---
 
-### 2. Biografia da Equipa — `biosData.ts`
+### 2. Biografia da Perfil — `biosData.ts`
 
-Este arquivo contém os dados da profissional exibidos na seção "Equipa".
+Este arquivo contém os dados da profissional exibidos na seção "Perfil".
 
 **Exemplo — Alterar o nome ou cargo:**
 
@@ -109,13 +110,13 @@ role: "Solicitadora e Consultora",
 
 **O que cada campo significa:**
 
-| Campo | Onde aparece |
-|---|---|
-| `name` | Nome exibido no card |
-| `role` | Cargo exibido abaixo do nome |
-| `areas` | Lista de áreas de atuação |
-| `text` | Texto da biografia (use `\n` para quebrar linhas) |
-| `avatarSrc` | Caminho da foto (não alterar sem necessidade) |
+| Campo       | Onde aparece                                      |
+| ----------- | ------------------------------------------------- |
+| `name`      | Nome exibido no card                              |
+| `role`      | Cargo exibido abaixo do nome                      |
+| `areas`     | Lista de áreas de atuação                         |
+| `text`      | Texto da biografia (use `\n` para quebrar linhas) |
+| `avatarSrc` | Caminho da foto (não alterar sem necessidade)     |
 
 ---
 
@@ -150,12 +151,12 @@ text: "A doutora Amanda me ajudou muito com..."
 
 **O que cada campo significa:**
 
-| Campo | Onde aparece |
-|---|---|
-| `name` | Nome do cliente |
-| `city` | Cidade do cliente |
-| `text` | Depoimento (use `\n\n` para parágrafo novo) |
-| `avatarSrc` | Foto do perfil |
+| Campo       | Onde aparece                                |
+| ----------- | ------------------------------------------- |
+| `name`      | Nome do cliente                             |
+| `city`      | Cidade do cliente                           |
+| `text`      | Depoimento (use `\n\n` para parágrafo novo) |
+| `avatarSrc` | Foto do perfil                              |
 
 ---
 
@@ -163,14 +164,14 @@ text: "A doutora Amanda me ajudou muito com..."
 
 Estas páginas usam um sistema de **blocos**. Cada bloco tem um `tipo` que determina como ele aparece no site. Abaixo está o que cada tipo faz:
 
-| Tipo | O que faz | Exemplo |
-|---|---|---|
-| `"titulo"` | Cria um título grande | `{ tipo: "titulo", texto: "Meu Título" }` |
-| `"subtitulo"` | Cria um subtítulo menor | `{ tipo: "subtitulo", texto: "Subtítulo" }` |
-| `"paragrafo"` | Cria um parágrafo de texto | `{ tipo: "paragrafo", texto: "Texto aqui..." }` |
-| `"lista"` | Cria lista de itens com bolinhas | `{ tipo: "lista", itens: ["Item 1", "Item 2"] }` |
-| `"listaComIntro"` | Parágrafo seguido de lista | `{ tipo: "listaComIntro", intro: "Introdução:", itens: ["A", "B"] }` |
-| `"separador"` | Cria uma linha divisória | `{ tipo: "separador" }` |
+| Tipo              | O que faz                        | Exemplo                                                              |
+| ----------------- | -------------------------------- | -------------------------------------------------------------------- |
+| `"titulo"`        | Cria um título grande            | `{ tipo: "titulo", texto: "Meu Título" }`                            |
+| `"subtitulo"`     | Cria um subtítulo menor          | `{ tipo: "subtitulo", texto: "Subtítulo" }`                          |
+| `"paragrafo"`     | Cria um parágrafo de texto       | `{ tipo: "paragrafo", texto: "Texto aqui..." }`                      |
+| `"lista"`         | Cria lista de itens com bolinhas | `{ tipo: "lista", itens: ["Item 1", "Item 2"] }`                     |
+| `"listaComIntro"` | Parágrafo seguido de lista       | `{ tipo: "listaComIntro", intro: "Introdução:", itens: ["A", "B"] }` |
+| `"separador"`     | Cria uma linha divisória         | `{ tipo: "separador" }`                                              |
 
 **Exemplo — Alterar o texto de um parágrafo:**
 
@@ -234,6 +235,7 @@ itens: [
 ## 🆘 Em Caso de Dúvida
 
 Se algo der errado após uma edição:
+
 1. **Desfaça a alteração** (Ctrl+Z)
 2. **Verifique se falta vírgula, aspas ou chave**
 3. Se o site apresentar erro, consulte o desenvolvedor

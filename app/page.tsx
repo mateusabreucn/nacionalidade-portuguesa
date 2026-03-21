@@ -1,6 +1,6 @@
 import Header from "@components/Header/Header";
 import Hero from "@components/Hero/Hero";
-import Equipa from "@components/Equipa/Equipa";
+import Perfil from "@/app/components/Perfil/Perfil";
 import Footer from "@components/Footer/Footer";
 import Servicos from "@components/Servicos/Servicos";
 import ScrollDownArrow from "@components/ScrollDownArrow";
@@ -22,8 +22,8 @@ export default function Home() {
       <section id="home">
         <Hero />
       </section>
-      <section id="equipa">
-        <Equipa />
+      <section id="perfil">
+        <Perfil />
       </section>
       <section id="servicos">
         <Servicos />

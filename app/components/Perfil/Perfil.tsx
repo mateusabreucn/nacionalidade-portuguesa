@@ -2,14 +2,13 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import CardBranco from "@components/CardBranco";
-import EquipaMainPhoto from "@components/Equipa/EquipaMainPhoto";
-import EquipaCentralContent from "@components/Equipa/EquipaCentralContent";
-import EquipaMobileModal from "@components/Equipa/EquipaMobileModal";
-import EquipaDesktopModal from "@components/Equipa/EquipaDesktopModal";
+import PerfilMainPhoto from "@/app/components/Perfil/PerfilMainPhoto";
+import PerfilCentralContent from "@/app/components/Perfil/PerfilCentralContent";
+import PerfilMobileModal from "@/app/components/Perfil/PerfilMobileModal";
 
 type ModalType = "feedback" | "bio" | null;
 
-export default function Equipa() {
+export default function Perfil() {
   const [activeModal, setActiveModal] = useState<ModalType>(null);
   const [isLocked, setIsLocked] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -69,22 +68,22 @@ export default function Equipa() {
   }, [isMobile, isLocked, clearHoverTimeout]);
 
   return (
-    <CardBranco titulo="Quem somos nós">
-      <EquipaMobileModal
+    <CardBranco titulo="Perfil">
+      <PerfilMobileModal
         activeModal={activeModal}
         handleClose={handleClose}
         isMobile={isMobile}
       />
       <div className="flex flex-col items-center w-full relative gap-[clamp(1rem,2vw,2.5rem)]">
         <div className="flex flex-col lg:flex-row items-center justify-between lg:items-stretch w-full gap-8">
-          <EquipaMainPhoto
+          <PerfilMainPhoto
             isLocked={isLocked && activeModal === "bio"}
             onModalClick={() => handleModalClick("bio")}
             onMouseEnter={handleBioHover}
             onMouseLeave={handleBioLeave}
           />
 
-          <EquipaCentralContent
+          <PerfilCentralContent
             activeModal={activeModal}
             onModalMouseEnter={clearHoverTimeout}
             onModalMouseLeave={handleBioLeave}
@@ -109,7 +108,6 @@ export default function Equipa() {
         >
           Depoimentos
         </button>
-
       </div>
     </CardBranco>
   );

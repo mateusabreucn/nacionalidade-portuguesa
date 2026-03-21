@@ -20,9 +20,9 @@ export default function ScrollDownArrow() {
   }, []);
 
   const handleScrollDown = () => {
-    const equipaSection = document.getElementById("equipa");
-    if (equipaSection) {
-      equipaSection.scrollIntoView({ behavior: "smooth" });
+    const perfilSection = document.getElementById("perfil");
+    if (perfilSection) {
+      perfilSection.scrollIntoView({ behavior: "smooth" });
     } else {
       window.scrollBy({ top: window.innerHeight * 0.8, behavior: "smooth" });
     }

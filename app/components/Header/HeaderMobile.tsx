@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
-  { name: "Equipa", href: "/#equipa" },
+  { name: "Perfil", href: "/#perfil" },
   { name: "Serviços", href: "/#servicos" },
   { name: "Contacto", href: "/#contato" },
 ];
@@ -53,7 +53,10 @@ export default function HeaderMobile() {
 
           <nav className="flex flex-col items-center text-center text-[clamp(1rem,4vw,1.25rem)]">
             {NAV_LINKS.map((link, index) => (
-              <div key={link.name} className="flex flex-col items-center w-full">
+              <div
+                key={link.name}
+                className="flex flex-col items-center w-full"
+              >
                 <a
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}

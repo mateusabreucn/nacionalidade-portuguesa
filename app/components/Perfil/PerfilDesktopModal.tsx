@@ -1,19 +1,19 @@
 import ModalBio from "./Biografia/ModalBio";
 import ModalFeedback from "./Feedback/ModalFeedback";
 
-interface EquipaDesktopModalProps {
+interface PerfilDesktopModalProps {
   activeModal: "feedback" | "bio" | null;
   handleClose: () => void;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
 
-export default function EquipaDesktopModal({
+export default function PerfilDesktopModal({
   activeModal,
   handleClose,
   onMouseEnter,
   onMouseLeave,
-}: EquipaDesktopModalProps) {
+}: PerfilDesktopModalProps) {
   const showModal = !!activeModal;
 
   return (
