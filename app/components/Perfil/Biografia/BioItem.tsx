@@ -6,6 +6,7 @@ interface BioItemProps {
   role: string;
   areas: string[];
   text: string;
+  footnote?: string;
 }
 
 export default function BioItem({
@@ -14,6 +15,7 @@ export default function BioItem({
   role,
   areas,
   text,
+  footnote,
 }: BioItemProps) {
   return (
     <div className="@container flex flex-col gap-[clamp(0.5rem,1.5cqw,2rem)] w-full h-full">
@@ -74,6 +76,14 @@ export default function BioItem({
             {paragraph}
           </p>
         ))}
+
+        {footnote && (
+          <div className="mt-6 pt-4 border-t border-text-accent/20">
+            <div className="text-[clamp(0.75rem,1.6cqw,1.25rem)] text-text-muted whitespace-pre-wrap leading-tight">
+              {footnote}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

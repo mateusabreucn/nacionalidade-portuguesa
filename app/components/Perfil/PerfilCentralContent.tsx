@@ -61,8 +61,8 @@ export default function PerfilCentralContent({
               text-text-secondary
             "
           >
-            Há mais de sete anos, ajudamos brasileiros a transformarem o sonho
-            da cidadania portuguesa em realidade.
+            Há mais de dez anos, ajudamos brasileiros a transformarem o sonho da
+            cidadania portuguesa em realidade.
           </p>
         </div>
       </div>

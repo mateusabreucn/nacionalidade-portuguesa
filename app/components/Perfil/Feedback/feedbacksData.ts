@@ -17,7 +17,7 @@ export const feedbacksData: FeedbackData[] = [
   {
     name: "Ivanete Oliveira",
     city: "Nova York",
-    text: "Dra. Amanda, é uma querida. Uma pessoa que não só fez a minha aplicação para o meu cartão de residência, devo dizer, ela é extremamente competente em várias áreas. Residência e de todos os trâmites para a abertura da minha sociedade de vinhos na Ilha da Madeira...\n\nComo posso afirmar: Ela é pau de todas as obras. FABULOSA!!!",
+    text: "Dra. Amanda, é uma querida. Uma pessoa que não só fez a minha aplicação para o meu cartão de residência, devo dizer, ela é extremamente competente em várias áreas. Residência e de todos os trâmites para a abertura da minha sociedade de vinhos na Ilha da Madeira...",
     avatarSrc: "/Icons/Feedback/ProfileWoman.png",
   },
   {
