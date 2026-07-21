@@ -3,6 +3,7 @@ import { Inter, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import PopUpWhatsApp from "@components/PopUpWhatsApp";
 import CookieBanner from "@components/CookieBanner/CookieBanner";
+import GoogleAnalytics from "@components/CookieBanner/GoogleAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,6 +70,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         {children}
         <PopUpWhatsApp />
+        <GoogleAnalytics />
         <CookieBanner />
       </body>
     </html>

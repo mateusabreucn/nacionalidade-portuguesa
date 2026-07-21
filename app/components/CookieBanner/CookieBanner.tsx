@@ -4,12 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { CookieIcon } from "../Icons/CookieIcon";
 import { dadosDosCookies } from "./cookiesData";
+import {
+  initGoogleAnalytics,
+  type CookieConsent,
+} from "./analytics";
 
-interface CookiePreferences {
-  essential: boolean;
-  dataProcessing: boolean;
-  marketing: boolean;
-}
+type CookiePreferences = Omit<CookieConsent, "timestamp">;
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
@@ -36,10 +36,12 @@ export default function CookieBanner() {
   }, []);
 
   const saveConsent = (prefs: CookiePreferences) => {
-    localStorage.setItem(
-      "cookie_consent",
-      JSON.stringify({ ...prefs, timestamp: new Date().toISOString() })
-    );
+    const consent: CookieConsent = {
+      ...prefs,
+      timestamp: new Date().toISOString(),
+    };
+    localStorage.setItem("cookie_consent", JSON.stringify(consent));
+    initGoogleAnalytics(consent);
     setShowBanner(false);
   };
 
